@@ -89,10 +89,10 @@
 
 <!--Show movie-->
 <style> .album{
-    background-image: url('WebsiteBG.jpg');
+    background-color: #222222 ;
 }</style>
 
-<div class="album py-5 bg-light">
+<div class="album py-5">
     <div class="container" >
       <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-1">
 
@@ -291,9 +291,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid">
-  ...
-</div>
+ 
 
   
 </body>

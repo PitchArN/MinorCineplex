@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="Bookingstyle.css" />
     <title>Movie Seat Booking</title>
   </head>
+  
   <body>
+
     <div class="movie-container">
       <label> Select a movie:</label>
       <select id="movie">
@@ -105,6 +107,6 @@
         >0</span
       >
     </p>
-    
+
   </body>
 </html>
