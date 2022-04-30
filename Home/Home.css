@@ -4,7 +4,7 @@
 }
 .image__img{
     display: block;
-    width: 80%;
+    width: 100%;
 }
 .image__overlay{
     position: absolute;

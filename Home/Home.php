@@ -100,7 +100,7 @@
           <div class="card shadow-sm">
             <div class ="image">
               <div class = "image__img"> 
-                <img src = "https://s.onlineoops.com/upload3/2/20190621/0bcd6398af08473d060d36352ce2035f.jpg" alt = "X-MEN" width="80%" height="300"><rect width="100%" height="100%" fill="#55595c"></rect></img>
+                <img src = "https://s.onlineoops.com/upload3/2/20190621/0bcd6398af08473d060d36352ce2035f.jpg" alt = "X-MEN" width="100%" height="450"><rect width="100%" height="100%" fill="#55595c"></rect></img>
                 <a href= "Detail.php" >
                   <div class="image__overlay">
                     <div class="image__title">X-MEN</div>
