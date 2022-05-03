@@ -38,7 +38,7 @@
           Product
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="BuyPop.php">Popcorn</a></li>
+          <li><a class="dropdown-item" href="MinorCineplex\Popcron\BuyPop.php">Popcorn</a></li>
             <li><a class="dropdown-item" href="#">Another Products</a></li>
             
             <!--<li><hr class="dropdown-divider"></li>
