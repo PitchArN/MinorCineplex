@@ -26,7 +26,7 @@
         <div class="row">
             <div class="box">
                 <p>Promotion</p>
-                <a class="button" href="Bill.html">purchase</a>
+                <a class="button" href="Bill.php">purchase</a>
             </div>
         </div>
     </div>

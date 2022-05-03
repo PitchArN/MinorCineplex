@@ -21,11 +21,11 @@
             </div>
             
                 <h2>purchase Method</h2>
-                <a class="button" href="Bill-con.html">Wallet</a>
-                <a class="button" href="Bill-con.html">Shopee</a>
-                <a class="button" href="Bill-con.html">Prompay</a>
+                <a class="button" href="Bill-con.php">Wallet</a>
+                <a class="button" href="Bill-con.php">Shopee</a>
+                <a class="button" href="Bill-con.php">Prompay</a>
             </div>
-        <center><div class="box"><a class="button" href="Bill-con.html">Confirm</a></div></center>
+        <center><div class="box"><a class="button" href="Bill-con.php">Confirm</a></div></center>
 
     </body></center>
 </html>
