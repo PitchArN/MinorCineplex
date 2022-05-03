@@ -122,12 +122,15 @@
 <?php
   }
 ?>
-        <!-- Contact -->
 
-  <style> .bg{
+      </div>
+    </div>
+  </div>
+     <!-- Contact -->
+
+     <style> .bg{
     background: rgba(0,0,0,0.6);
     color: white;
-;
 } 
 </style>
 
@@ -183,11 +186,6 @@
   </footer>
   </div>
 </div>
-
-      </div>
-    </div>
-  </div>
- 
 
   
 </body>
