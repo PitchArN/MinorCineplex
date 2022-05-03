@@ -298,7 +298,6 @@
   <style> .bg{
     background: rgba(0,0,0,0.6);
     color: white;
-;
 } 
 </style>
 
