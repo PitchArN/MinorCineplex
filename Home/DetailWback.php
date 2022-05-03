@@ -91,7 +91,7 @@ if(isset($_GET['movieID'])){
 
               <div class="row">
                 <div class="col">
-                    <iframe width="560" height="315"  src="<?php echo $movieTrailer; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>>
+                    <iframe width="560" height="315"  src="<?php echo $movieTrailer; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
                 <div class="col">
@@ -100,22 +100,57 @@ if(isset($_GET['movieID'])){
               </div>
               <!-------------- Actor Tab---------------------->
               <div class="row">
-                <?php ?>
-
+                <h3>Feature Actors</h3>
+              </div>
+            <div class="row">
+                <div class="form-group">
+                <?php 
+                  $actor = "SELECT * FROM actor INNER JOIN movieactor ON actor.ActorID = movieactor.ActorID WHERE MovieID ='$mID' ";
+                  $actorQuery = mysqli_query($connect,$actor);
+                  while($anActor = mysqli_fetch_assoc($actorQuery)){
+                ?>
+                
+                  <button class="btn btn-warning btn-lg" type="button">
+                    <?php echo $anActor['ActorName']; ?></button>
+                
+                <?php
+                  }
+                ?>
+                <br><br>
+              </div>
               </div>
               <!-------------- Booking Tab ------------------->
               <div class="row">
+                <h3>Showtime</h3>
+              </div>
+              <div class="row">
                 <?php
-                    $showTime = "SELECT * FROM movietime WHERE MovieID='$mID'";
+                    $lastDate = "0";
+                    $showTime = "SELECT * FROM movietime WHERE MovieID='$mID' ORDER BY StartDateTime ASC";
                     $showTimeQuery = mysqli_query($connect,$showTime);
                     while($show = mysqli_fetch_assoc($showTimeQuery)){
+                      $dataDate = date("d M",strtotime($show['StartDateTime']));
+                      if($lastDate=="0"){
+                        echo "<h3>".$dataDate."</h3>";
+                      }else if($dataDate!=$lastDate){
+                        echo "</div><div class='row'><h3>".$dataDate."</h3></div><div class='row'>";
+                      }
+                      $dataTime = date("h:i",strtotime($show['StartDateTime']));
+                      $lastDate = $dataDate;
                 ?>
                 <div class="col">
-                  <a href= "Booking.php" > <button class="btn btn-warning btn-lg" type="button"><?php echo $show['StartDateTime']; ?></button></a>
+                  <form action="Booking.php" method="post" enctype="multipart/form-data">
+                  <input type="text" name="StartDateTime" id="StartDateTime" value="<?php echo $show['StartDateTime'];?>" readonly hidden>
+                  <input type="text" name="movieID" id="movieID" value="<?php echo $mID; ?>" readonly hidden>
+                  <input type="text" name="roomID" id="roomID" value="<?php echo $show['SeatID']; ?>" readonly hidden>
+
+                  <input type="submit" name="bookSeat" class="btn-warning rounded-3 form-control" value="<?php echo $dataTime; ?>">
+                  </form>
                 </div>
                 <?php
                   }
                 ?>
+
               </div>
 
             </div>
