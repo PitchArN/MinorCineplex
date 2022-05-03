@@ -9,14 +9,6 @@
         </div>
         <hr>
         <div class="PromotionBannerB">
-
-        </div>
-        <div class="PromotionDetail">
-            <div class="Detail">
-                <span>Detail</span>
-                <h3>50% 0ff</h3>
-                <p>offer ends after 5 days</p>
-            </div>
         </div>
     </body>
 </html>
