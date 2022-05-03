@@ -14,9 +14,17 @@
   <body>
 <?php
   if(isset($_POST['bookSeat'])){
+    //$room = mysqli_real_escape_string($_POST['roomID']);
+    //$StartDateTime = mysqli_real_escape_string($_POST['StartDateTime']);
+    $movieID = mysqli_real_escape_string($_POST['movieID']);
+
+    $movieIn = "SELECT * FROM movie WHERE MovieID='$movieID'";
+    $movieInQuery = mysqli_query($connect,$movieIn);
+    $movie = mysqli_fetch_assoc($movieInQuery);
+
 ?>
     <div class="movie-container">
-
+      <h3><?php echo $movie['MovieName']; ?></h3>
       <!---label> Select a movie:</label>
       <select id="movie">
         <option value="220">X-MEN DARK POENIX (RS.160)</option>
