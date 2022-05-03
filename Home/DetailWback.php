@@ -98,6 +98,11 @@ if(isset($_GET['movieID'])){
                     <p class="col-md-8 fs-4" ><?php echo $movieDes; ?></p>
                 </div>
               </div>
+              <!-------------- Actor Tab---------------------->
+              <div class="row">
+                <?php ?>
+
+              </div>
               <!-------------- Booking Tab ------------------->
               <div class="row">
                 <?php
