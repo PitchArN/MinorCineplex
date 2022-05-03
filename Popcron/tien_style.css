@@ -1,0 +1,54 @@
+body {
+
+    background-image: url('WebsiteBG.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+html,body {
+    background-color: lightgrey;
+    margin: auto;
+    padding: 0;
+}
+.pop {
+    background-color: rgb(163, 163, 163);
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 700px;
+    height: 750px;
+    display: inline-block;
+
+}
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.image{
+    width: 900px;
+    height: 600px;
+    
+}
+.box{
+    background-color: rgb(170, 169, 169);
+    padding: 20px;
+    margin: auto;
+    max-width: 400px;
+    max-height: 500px;
+    display: inline-block;
+    
+}
+.button{
+    color: black;
+    background-color: lightgray;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+input{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+}
