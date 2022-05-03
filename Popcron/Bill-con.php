@@ -12,11 +12,14 @@
         <center><div class="box">
             <h1>Cart</h1>
         </div></center>
+        <q></q>
+
+        <center>
             <div class="box">
             <p>Code for receive popcorn</p>
             <input type="text" placeholder="Confirmation Code">
             <a class="button" href="Receive-pop.php">Confirm</a>
             </div>
-
+        </center>
     </body>
 </html>
