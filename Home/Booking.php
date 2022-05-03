@@ -12,15 +12,18 @@
   </head>
   
   <body>
-
+<?php
+  if(isset($_POST['bookSeat'])){
+?>
     <div class="movie-container">
-      <label> Select a movie:</label>
+
+      <!---label> Select a movie:</label>
       <select id="movie">
         <option value="220">X-MEN DARK POENIX (RS.160)</option>
         <option value="320">Radhe (RS.320)</option>
         <option value="250">RRR (RS.250)</option>
         <option value="260">F9 (RS.260)</option>
-      </select>
+      </select---->
     </div>
 
     <ul class="showcase">
@@ -106,9 +109,10 @@
     <p class="text">
       You have selected <span id="count">0</span> seat for a price of RS.<span
         id="total"
-        >0</span
-      >
+        >0</span>
     </p>
-
+<?php 
+  }
+?>
   </body>
 </html>
