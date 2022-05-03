@@ -98,8 +98,19 @@ if(isset($_GET['movieID'])){
                     <p class="col-md-8 fs-4" ><?php echo $movieDes; ?></p>
                 </div>
               </div>
+              <!-------------- Booking Tab ------------------->
               <div class="row">
-                  <a href= "Booking.php" > <button class="btn btn-primary btn-lg" type="button">Buy</button></a>
+                <?php
+                    $showTime = "SELECT * FROM movietime WHERE MovieID='$mID'";
+                    $showTimeQuery = mysqli_query($connect,$showTime);
+                    while($show = mysqli_fetch_assoc($showTimeQuery)){
+                ?>
+                <div class="col">
+                  <a href= "Booking.php" > <button class="btn btn-warning btn-lg" type="button"><?php echo $show['StartDateTime']; ?></button></a>
+                </div>
+                <?php
+                  }
+                ?>
               </div>
 
             </div>
