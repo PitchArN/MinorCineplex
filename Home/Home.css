@@ -34,3 +34,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+
+.nav-item{
+    color: white;
+}
