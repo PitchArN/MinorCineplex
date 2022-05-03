@@ -115,7 +115,7 @@
     padding:10px;
     text-transform: uppercase;
 }
-.banner-container .banner .content .btn{
+.PromotionBanner .Promotion1 .Content1 .btn{
     display: block;
     height:40px;
     width:150px;
@@ -124,4 +124,17 @@
     color:#d63031;
     margin:5px auto;
     text-decoration: none;
+}
+.PromotionBanner .Promotion1 .Content1{
+    flex:1 1 250px;
+    text-align: center;
+    padding:10px;
+    text-transform: uppercase;
+}
+body {
+
+    background-image: url('WebsiteBG.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
