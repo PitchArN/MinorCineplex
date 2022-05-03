@@ -1,0 +1,21 @@
+genre
+action
+advanture
+comedy
+fantasy
+
+horror
+mystery
+drama
+romance
+SCI-FI
+
+rateAge
+https://atlascinemas.net/ratings.html
+
+000000000000 
+
+how to check interupt time 
+fetch start time 
+use strtotime(startdatetime) to get start Time
+fetch movie lenght
