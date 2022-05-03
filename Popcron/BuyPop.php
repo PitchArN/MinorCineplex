@@ -1,5 +1,3 @@
-<php
-?>
 <html>
     <head>
         <title>Purchasing</title>
@@ -15,22 +13,25 @@
         <h1>Pop Corn</h1>
         <p>Promotion</p>
     </div></center>
+<p></p>
+    
+<div class="container">
+    <div class="row">
+<div class="pop">
+                        <img class="image" src="1.jpg">
+                        <h1>Sweet</h1>
+                        <input type="number" placeholder="quantity">
+                        <a class="button" href="Cart.html">Add to Cart</a>
+                    </div>
+                </div>
+                </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="pop">
-                <img class="image" src="3.png">
-                <h1>Sweet</h1>
-                <input type="number" placeholder="quantity">
-                <a class="button" href="Cart.html">Add to Cart</a>
-            </div>
-        </div>
-    </div>
+
 
     <div class="container">
         <div class="row">
     <div class="pop">
-        <img class="image" src="2.png" >
+        <img class="image" src="2.jpg" >
         <h1>Salty</h1>
         <input type="number" placeholder="quantity">
         <a class="button" href="Cart.html">Add to Cart</a>
@@ -42,7 +43,7 @@
 <div class="container">
     <div class="row">
     <div class="pop">
-        <img class="image" src="1.png" >
+        <img class="image" src="3.jpg" >
         <h1>BQQ</h1>
         <input type="number" placeholder="quantity">
         <a class="button" href="Cart.html">Add to Cart</a>
