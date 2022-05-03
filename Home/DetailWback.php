@@ -140,9 +140,9 @@ if(isset($_GET['movieID'])){
                 ?>
                 <div class="col">
                   <form action="Booking.php" method="post" enctype="multipart/form-data">
-                  <input type="text" name="StartDateTime" id="StartDateTime" value="<?php echo $show['StartDateTime'];?>" readonly hidden>
-                  <input type="text" name="movieID" id="movieID" value="<?php echo $mID; ?>" readonly hidden>
-                  <input type="text" name="roomID" id="roomID" value="<?php echo $show['SeatID']; ?>" readonly hidden>
+                  <input type="text" name="StartDateTime" id="StartDateTime" value="<?php echo $show['StartDateTime'];?>"  hidden>
+                  <input type="text" name="movieID" id="movieID" value="<?php echo $mID; ?>"  hidden>
+                  <input type="text" name="roomID" id="roomID" value="<?php echo $show['SeatID']; ?>"  hidden>
 
                   <input type="submit" name="bookSeat" class="btn-warning rounded-3 form-control" value="<?php echo $dataTime; ?>">
                   </form>
