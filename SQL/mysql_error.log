@@ -274,3 +274,498 @@ Version: '10.4.22-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribut
 2022-05-03 15:16:25 0 [Note] InnoDB: Loading buffer pool(s) from D:\XAMPP\mysql\data\ib_buffer_pool
 2022-05-03 15:16:25 0 [Note] InnoDB: Buffer pool(s) load completed at 220503 15:16:25
 2022-05-03 15:16:25 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2022-05-03 15:21:29 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2022-05-03 15:21:29 0 [Note] InnoDB: Uses event mutexes
+2022-05-03 15:21:29 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-05-03 15:21:29 0 [Note] InnoDB: Number of pools: 1
+2022-05-03 15:21:29 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2022-05-03 15:21:29 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2022-05-03 15:21:29 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-05-03 15:21:29 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3862547
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\actor.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`actor``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`actor` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\genre.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`genre``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`genre` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\itemorder.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`itemorder``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`itemorder` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\itemstock.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`itemstock``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`itemstock` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\member.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`member``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`member` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\movie.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`movie``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`movie` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\movieactor.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`movieactor``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`movieactor` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\moviegenre.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`moviegenre``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`moviegenre` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\movietime.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`movietime``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`movietime` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\promotion.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`promotion``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`promotion` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\rateage.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`rateage``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`rateage` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\seat4room.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`seat4room``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`seat4room` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\staff.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`staff``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`staff` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\staffcheck.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`staffcheck``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`staffcheck` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\staffwork.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`staffwork``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`staffwork` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\ticket_order.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`ticket_order``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`ticket_order` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\ticketproduct.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`ticketproduct``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`ticketproduct` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\actor.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`actor``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`actor` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\genre.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`genre``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`genre` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\itemorder.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`itemorder``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`itemorder` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\itemstock.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`itemstock``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`itemstock` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\member.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`member``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`member` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\movie.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`movie``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`movie` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\moviegenre.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`moviegenre``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`moviegenre` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\movietime.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`movietime``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`movietime` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\promotion.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`promotion``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`promotion` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\rateage.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`rateage``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`rateage` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\seat4room.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`seat4room``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`seat4room` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\staff.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`staff``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`staff` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\staffcheck.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`staffcheck``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`staffcheck` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\staffwork.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`staffwork``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`staffwork` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\ticket_order.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`ticket_order``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`ticket_order` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\ticketproduct.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`ticketproduct``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`ticketproduct` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\epiz_27121407_db_tutor_bookin\comment.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``epiz_27121407_db_tutor_bookin`.`comment``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `epiz_27121407_db_tutor_bookin`.`comment` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\epiz_27121407_db_tutor_bookin\meeting.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``epiz_27121407_db_tutor_bookin`.`meeting``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `epiz_27121407_db_tutor_bookin`.`meeting` because it could not be opened.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\epiz_27121407_db_tutor_bookin\user.ibd' OS error: 203
+2022-05-03 15:21:29 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``epiz_27121407_db_tutor_bookin`.`user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:21:29 0 [Warning] InnoDB: Ignoring tablespace for `epiz_27121407_db_tutor_bookin`.`user` because it could not be opened.
+2022-05-03 15:21:29 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2022-05-03 15:21:29 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2022-05-03 15:21:29 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-05-03 15:21:29 0 [Note] InnoDB: Setting file 'D:\Xammp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-05-03 15:21:29 0 [Note] InnoDB: File 'D:\Xammp\mysql\data\ibtmp1' size is now 12 MB.
+2022-05-03 15:21:29 0 [Note] InnoDB: Waiting for purge to start
+2022-05-03 15:21:29 0 [Note] InnoDB: 10.4.14 started; log sequence number 3862556; transaction id 5222
+2022-05-03 15:21:29 0 [Note] InnoDB: Loading buffer pool(s) from D:\Xammp\mysql\data\ib_buffer_pool
+2022-05-03 15:21:29 0 [Note] Plugin 'FEEDBACK' is disabled.
+2022-05-03 15:21:29 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2022-05-03 15:28:38 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2022-05-03 15:28:38 0 [Note] InnoDB: Uses event mutexes
+2022-05-03 15:28:38 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-05-03 15:28:38 0 [Note] InnoDB: Number of pools: 1
+2022-05-03 15:28:38 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2022-05-03 15:28:38 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2022-05-03 15:28:38 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-05-03 15:28:38 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3864827
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\actor.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`actor``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`actor` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\genre.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`genre``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`genre` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\itemorder.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`itemorder``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`itemorder` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\itemstock.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`itemstock``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`itemstock` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\member.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`member``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`member` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\movie.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`movie``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`movie` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\movieactor.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`movieactor``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`movieactor` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\moviegenre.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`moviegenre``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`moviegenre` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\movietime.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`movietime``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`movietime` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\promotion.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`promotion``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`promotion` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\rateage.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`rateage``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`rateage` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\seat4room.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`seat4room``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`seat4room` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\staff.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`staff``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`staff` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\staffcheck.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`staffcheck``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`staffcheck` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\staffwork.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`staffwork``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`staffwork` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\ticket_order.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`ticket_order``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`ticket_order` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\b4_minorcineplex\ticketproduct.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``b4_minorcineplex`.`ticketproduct``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `b4_minorcineplex`.`ticketproduct` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\actor.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`actor``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`actor` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\genre.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`genre``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`genre` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\itemorder.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`itemorder``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`itemorder` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\itemstock.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`itemstock``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`itemstock` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\member.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`member``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`member` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\movie.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`movie``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`movie` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\moviegenre.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`moviegenre``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`moviegenre` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\movietime.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`movietime``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`movietime` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\promotion.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`promotion``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`promotion` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\rateage.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`rateage``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`rateage` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\seat4room.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`seat4room``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`seat4room` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\staff.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`staff``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`staff` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\staffcheck.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`staffcheck``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`staffcheck` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\staffwork.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`staffwork``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`staffwork` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\ticket_order.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`ticket_order``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`ticket_order` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\cinema_test\ticketproduct.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``cinema_test`.`ticketproduct``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `cinema_test`.`ticketproduct` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\epiz_27121407_db_tutor_bookin\comment.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``epiz_27121407_db_tutor_bookin`.`comment``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `epiz_27121407_db_tutor_bookin`.`comment` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\epiz_27121407_db_tutor_bookin\meeting.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``epiz_27121407_db_tutor_bookin`.`meeting``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `epiz_27121407_db_tutor_bookin`.`meeting` because it could not be opened.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\epiz_27121407_db_tutor_bookin\user.ibd' OS error: 203
+2022-05-03 15:28:39 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``epiz_27121407_db_tutor_bookin`.`user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2022-05-03 15:28:39 0 [Warning] InnoDB: Ignoring tablespace for `epiz_27121407_db_tutor_bookin`.`user` because it could not be opened.
+2022-05-03 15:28:39 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2022-05-03 15:28:39 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2022-05-03 15:28:39 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-05-03 15:28:39 0 [Note] InnoDB: Setting file 'D:\Xammp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-05-03 15:28:39 0 [Note] InnoDB: File 'D:\Xammp\mysql\data\ibtmp1' size is now 12 MB.
+2022-05-03 15:28:39 0 [Note] InnoDB: Waiting for purge to start
+2022-05-03 15:28:39 0 [Note] InnoDB: 10.4.14 started; log sequence number 3864836; transaction id 5251
+2022-05-03 15:28:39 0 [Note] InnoDB: Loading buffer pool(s) from D:\Xammp\mysql\data\ib_buffer_pool
+2022-05-03 15:28:39 0 [Note] Plugin 'FEEDBACK' is disabled.
+2022-05-03 15:28:39 0 [Note] Server socket created on IP: '::'.
+2022-05-03 15:37:26 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2022-05-03 15:37:26 0 [Note] InnoDB: Uses event mutexes
+2022-05-03 15:37:26 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-05-03 15:37:26 0 [Note] InnoDB: Number of pools: 1
+2022-05-03 15:37:26 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2022-05-03 15:37:26 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2022-05-03 15:37:26 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-05-03 15:37:26 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3069300
+2022-05-03 15:37:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2022-05-03 15:37:26 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2022-05-03 15:37:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-05-03 15:37:26 0 [Note] InnoDB: Setting file 'D:\XAMPP\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-05-03 15:37:26 0 [Note] InnoDB: File 'D:\XAMPP\mysql\data\ibtmp1' size is now 12 MB.
+2022-05-03 15:37:26 0 [Note] InnoDB: Waiting for purge to start
+2022-05-03 15:37:26 1 [ERROR] InnoDB: Page [page id: space=16, page number=3] log sequence number 3902145 is in the future! Current system log sequence number 3069318.
+2022-05-03 15:37:26 1 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2022-05-03 15:37:26 1 [ERROR] InnoDB: Page [page id: space=2, page number=3] log sequence number 3891701 is in the future! Current system log sequence number 3069318.
+2022-05-03 15:37:26 1 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2022-05-03 15:37:26 4 [ERROR] InnoDB: Page [page id: space=1, page number=3] log sequence number 3891247 is in the future! Current system log sequence number 3069318.
+2022-05-03 15:37:26 4 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2022-05-03 15:37:26 0 [Note] InnoDB: 10.4.22 started; log sequence number 3069309; transaction id 2989
+2022-05-03 15:37:26 0 [Note] Plugin 'FEEDBACK' is disabled.
+2022-05-03 15:37:26 0 [Note] InnoDB: Loading buffer pool(s) from D:\XAMPP\mysql\data\ib_buffer_pool
+2022-05-03 15:37:26 0 [Note] InnoDB: Buffer pool(s) load completed at 220503 15:37:26
+2022-05-03 15:37:26 0 [Note] Server socket created on IP: '::'.

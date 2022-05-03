@@ -1,4 +1,6 @@
-<?php?>
+<?php 
+  include 'connect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Bookingstyle.css" />
-    <title>Movie Seat Booking</title>
+    <title>MinorCineplex | Seat Booking</title>
   </head>
   
   <body>
