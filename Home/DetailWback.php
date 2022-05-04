@@ -26,7 +26,7 @@
 <meta name="theme-color" content="#7952b3">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="Detail.css">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -53,6 +53,47 @@
     
 </head>
 <body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="" class="vsc-initialized">
+  <!-- web head-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">
+      <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      Minor Cineplex
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../Home/HomeWback.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Product
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
+            <li><a class="dropdown-item" href="../PointPromotion/Test.php">Another Products</a></li>
+        
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Contact</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+      </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
 <?php
 if(isset($_GET['movieID'])){
   $mID = mysqli_real_escape_string($connect,$_GET['movieID']); 
@@ -73,7 +114,7 @@ if(isset($_GET['movieID'])){
       <div class="container py-4">
         <div class="row">
         <header class="pb-3 mb-4 border-bottom">
-          <a href="Home.php" class="d-flex align-items-center text-dark text-decoration-none">
+          <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
             <span class="fs-4">Movie Detail</span>
           </a>
         </header>
@@ -82,22 +123,22 @@ if(isset($_GET['movieID'])){
         <div class="row">
           <div class="p-5 mb-4 bg-light rounded-3">
             <div class="container-fluid py-5">
-              <div class="row">
-                <div class="col">
+              
+                <div class="row-col-2">
                     <img src = "<?php echo $moviePoster ?>" alt = "<?php echo $movieName; ?>" width="30%" height="450"><rect width="100%" height="100%" fill="#55595c"></rect></img>
                     <h1 class="display-5 fw-bold"  ><?php echo $movieName; ?></h1>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
+      
+              
                     <iframe width="560" height="315"  src="<?php echo $movieTrailer; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe>
-                </div>
+                  </div>
+                
+                
+                
                 <div class="col">
-                    <p class="col-md-8 fs-4" ><?php echo $movieDes; ?></p>
+                    <p class="col-md-8 " ><?php echo $movieDes; ?></p>
                 </div>
-              </div>
+
               <!-------------- Actor Tab---------------------->
               <div class="row">
                 <h3>Feature Actors</h3>
@@ -156,15 +197,71 @@ if(isset($_GET['movieID'])){
             </div>
           </div>
         </div>
-          <footer class="pt-3 mt-4 text-muted border-top">
-          </footer>
       </div>
     </main>
     
     
         
-      
-    
 <?php } ?>
+<style> .bg{
+    background: rgba(0,0,0,0.6);
+    color: white;
+} 
+</style>
+
+<div class = "bg">
+  <div class="container">
+  <footer class="row row-cols-5 py-5 border-top">
+    <div class="col">
+      <a href="/" class="d-flex align-items-center mb-3 text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <p class="text-muted">© 2022</p>
+    </div>
+
+    <div class="col">
+
+    </div>
+
+    <div class="col" >
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+      </ul>
+    </div>
+    <div class="d-flex justify-content-between py-4 my-4 border-top">
+      <p>© 2022 Minor Cineplex</p>
+    </div>
+  </footer>
+  </div>
+</div>
+
+  
 </body>
 </html>
