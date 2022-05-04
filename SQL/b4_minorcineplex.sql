@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2022 at 08:21 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: May 04, 2022 at 12:04 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -142,8 +142,8 @@ CREATE TABLE `movie` (
 --
 
 INSERT INTO `movie` (`MovieID`, `MovieName`, `Length`, `Details`, `Rating`, `RateAges`, `Poster`, `TrailerURL`) VALUES
-(0, 'MovieName', 212, 'asda', 1, 'PG', 'minorcineplex.ci.th', 'minorcineplex.co.th'),
-(1, 'MovieName', 212, 'asda', 1, 'PG', 'minorcineplex.ci.th', 'minorcineplex.co.th'),
+(0, 'Kimetzu no yaiba', 212, 'asda', 1, 'PG', 'minorcineplex.ci.th', 'minorcineplex.co.th'),
+(1, 'Sing 2', 212, 'Sing 2', 1, 'PG', 'minorcineplex.ci.th', 'minorcineplex.co.th'),
 (2, 'Your Namae', 180, 'Your Name Adaptation by Makoto Gupai', 4, 'G', 'https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg', 'https://www.youtube.com/embed/mPsjLnEtJZI'),
 (3, 'My Namae', 200, 'My Name Adaptation by Makoto Gupai', 0, 'G', 'https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg', 'https://www.youtube.com/embed/mPsjLnEtJZI');
 
