@@ -20,7 +20,7 @@
 <div class="pop">
                         <img class="image" src="1.jpg">
                         <h1>Sweet</h1>
-                        <input type="number" placeholder="quantity">
+                        <input type="number" placeholder="quantity" min = "0">
                         <a class="button" href="Cart.php">Add to Cart</a>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
     <div class="pop">
         <img class="image" src="2.jpg" >
         <h1>Salty</h1>
-        <input type="number" placeholder="quantity">
+        <input type="number" placeholder="quantity" min = "0">
         <a class="button" href="Cart.php">Add to Cart</a>
     </div>
 </div>
@@ -45,7 +45,7 @@
     <div class="pop">
         <img class="image" src="3.jpg" >
         <h1>BQQ</h1>
-        <input type="number" placeholder="quantity">
+        <input type="number" placeholder="quantity" min = "0">
         <a class="button" href="Cart.php">Add to Cart</a>
     </div>
 </div>
