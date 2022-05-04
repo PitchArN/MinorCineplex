@@ -1,3 +1,6 @@
+<?php
+  include 'D:\connect.php';
+?>
 <html>
     <head>
         <title>Purchasing</title>
@@ -14,14 +17,19 @@
         <p>Promotion</p>
     </div></center>
 <p></p>
-    
+    <form action = "Cart.php" method = "post" enctype = "multipart/form-data">
 <div class="container">
     <div class="row">
 <div class="pop">
                         <img class="image" src="1.jpg">
                         <h1>Sweet</h1>
-                        <input type="number" placeholder="quantity" min = "0">
-                        <a class="button" href="Cart.php">Add to Cart</a>
+						<?php
+							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 0";
+							$result = mysqli_query($connect,$sql) or die("Bad query");
+							$row = mysqli_fetch_row($result);
+							echo $row[0];
+						?>
+                        <input type="number" name = "Sweet" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>">
                     </div>
                 </div>
                 </div>
@@ -33,8 +41,13 @@
     <div class="pop">
         <img class="image" src="2.jpg" >
         <h1>Salty</h1>
-        <input type="number" placeholder="quantity" min = "0">
-        <a class="button" href="Cart.php">Add to Cart</a>
+						<?php
+							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 1";
+							$result = mysqli_query($connect,$sql) or die("Bad query");
+							$row = mysqli_fetch_row($result);
+							echo $row[0];
+						?>
+        <input type="number" name = "Salty" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>">
     </div>
 </div>
 </div>
@@ -45,11 +58,17 @@
     <div class="pop">
         <img class="image" src="3.jpg" >
         <h1>BQQ</h1>
-        <input type="number" placeholder="quantity" min = "0">
-        <a class="button" href="Cart.php">Add to Cart</a>
+						<?php
+							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 2";
+							$result = mysqli_query($connect,$sql) or die("Bad query");
+							$row = mysqli_fetch_row($result);
+							echo $row[0];
+						?>
+        <input type="number" name = "BQQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>">
+        <input type = "submit" name = "AddToCart" value = "add to cart">
     </div>
 </div>
 </div>
-
+</form>
     </body>
 </html>
