@@ -48,8 +48,8 @@
 
         
         <div class="PromotionBanner">
+            <h1>Promotion</h1>
             <div class="Promotion1">
-                <h1>Promotion</h1>
                 <div class="Content1">
                     
                     <span>ContentPromote1</span>
