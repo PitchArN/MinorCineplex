@@ -138,3 +138,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+.nav-item{
+    color: white;
+}
