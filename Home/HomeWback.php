@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="../Home/HomeWback.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"></a>
@@ -155,7 +155,7 @@
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact us</a></li>
       </ul>
     </div>
 
