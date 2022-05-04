@@ -22,7 +22,7 @@
     text-transform: uppercase;
 }
 .PromotionBanner .Promotion1{
-    background:linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
+    background:linear-gradient(-55deg, #62516d 29%, #222222 29.1%, #222222 68%, #62516d 68.1%);
     border-radius: 5px;
     margin:10px;
     display: flex;
@@ -31,9 +31,10 @@
     flex-wrap: wrap;
     box-shadow: 0 5px 10px #CCCCCC;
     overflow: hidden;
+    color:#FFFFFF;
 }
 .PromotionBanner .Promotion2{
-    background:linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
+    background:linear-gradient(-55deg, #62516d 29%, #222222 29.1%, #222222 68%, #62516d 68.1%);
     border-radius: 5px;
     margin:10px;
     display: flex;
@@ -42,9 +43,10 @@
     flex-wrap: wrap;
     box-shadow: 0 5px 10px #CCCCCC;
     overflow: hidden;
+    color:#FFFFFF;
 }
 .PromotionBanner .Promotion3{
-    background:linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
+    background:linear-gradient(-55deg, #62516d 29%, #222222 29.1%, #222222 68%, #62516d 68.1%);
     border-radius: 5px;
     margin:10px;
     display: flex;
@@ -53,6 +55,7 @@
     flex-wrap: wrap;
     box-shadow: 0 5px 10px #CCCCCC;
     overflow: hidden;
+    color:#FFFFFF;
 }
 .PromotionBanner{
     display: flex;
@@ -65,7 +68,7 @@
     justify-content: left;
 }
 .ForMember .MemberPro1 {
-    background:linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
+    background:linear-gradient(-55deg, #62516d 29%, #222222 29.1%, #222222 68%, #62516d 68.1%);
     border-radius: 5px;
     margin:10px;
     display: flex;
@@ -76,7 +79,7 @@
     overflow: hidden;
 }
 .ForMember .MemberPro2 {
-    background:linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
+    background:linear-gradient(-55deg, #62516d 29%, #222222 29.1%, #222222 68%, #62516d 68.1%);
     border-radius: 5px;
     margin:10px;
     display: flex;
@@ -87,7 +90,7 @@
     overflow: hidden;
 }
 .ForMember .MemberPro3 {
-    background:linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
+    background:linear-gradient(-55deg, #62516d 29%, #222222 29.1%, #222222 68%, #62516d 68.1%);
     border-radius: 5px;
     margin:10px;
     display: flex;
@@ -170,4 +173,10 @@ body {
 .image__title{
     font-size: 1.25em;
     margin-top: 0.25em;
+}
+.Promotion {
+    color: #ffffff ;
+}
+.F1 {
+    color: #ffffff ;
 }
