@@ -64,7 +64,7 @@
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
-        <input type="number" name = "BQQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>">
+        <input type="number" name = "BBQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>">
         <input type = "submit" name = "AddToCart" value = "add to cart">
     </div>
 </div>
