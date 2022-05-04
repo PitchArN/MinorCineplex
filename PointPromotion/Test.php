@@ -46,10 +46,12 @@
     </div>
     </nav>
 
-        <h1>Promotion</h1>
+        
         <div class="PromotionBanner">
             <div class="Promotion1">
+                <h1>Promotion</h1>
                 <div class="Content1">
+                    
                     <span>ContentPromote1</span>
                     <h3>50% 0ff</h3>
             <p>offer ends after 5 days</p>
@@ -67,8 +69,9 @@
                 </div>
             </div>
         </div>
-        <h1>For Member</h1>
+        
         <div class="ForMember">
+            <h1>For Member</h1>
             <div class="MemberPro1">
                 <div class="Procontent1">
                     <span>ContentFormember1</span>
