@@ -12,6 +12,7 @@
   </head>
   
   <body>
+<script src="testScript.js"></script>
 <?php
   if(isset($_POST['bookSeat'])){
     $room = mysqli_real_escape_string($connect,$_POST['roomID']);
@@ -72,6 +73,7 @@
 
     <div class="container">
       <div class="screen"></div>
+
       <!------------ Row A ------------------------->
       <div class="row">
         <div class="seat
@@ -871,12 +873,13 @@
 
         
       </div>
+<div class="row">
+  <div class="form-group">
+    <input class="form-control" type="text" name="Selected Seat">
+  </div>
+</div>
+</div>
 
-    <p class="text">
-      You have selected <span id="count">0</span> seat for a price of RS.<span
-        id="total"
-        >0</span>
-    </p>
 <?php 
   }
 ?>
