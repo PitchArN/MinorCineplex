@@ -1,3 +1,10 @@
 .fs-4{
     color: rgb(254, 157, 10);
 }
+.MovieName{
+    color: aliceblue;
+}
+.Trailer{
+    display: flex;
+    column-gap: 50px;
+}
