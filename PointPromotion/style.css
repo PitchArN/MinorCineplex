@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    box-shadow: 0 5px 10px #0005;
+    box-shadow: 0 5px 10px #CCCCCC;
     overflow: hidden;
 }
 .PromotionBanner .Promotion2{
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    box-shadow: 0 5px 10px #0005;
+    box-shadow: 0 5px 10px #CCCCCC;
     overflow: hidden;
 }
 .PromotionBanner .Promotion3{
@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    box-shadow: 0 5px 10px #0005;
+    box-shadow: 0 5px 10px #CCCCCC;
     overflow: hidden;
 }
 .PromotionBanner{
@@ -120,8 +120,8 @@
     height:40px;
     width:150px;
     line-height: 40px;
-    background: #fff;
-    color:#d63031;
+    background: #f77a36;
+    color:#FFFFFF;
     margin:5px auto;
     text-decoration: none;
 }

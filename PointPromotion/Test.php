@@ -15,7 +15,7 @@
                     <span>ContentPromote1</span>
                     <h3>50% 0ff</h3>
             <p>offer ends after 5 days</p>
-                    <a href="Promotion1.html" class="btn">view offer</a>
+                    <a href="Promotion1.php" class="btn">view offer</a>
                 </div>
             </div>
             <div class="Promotion2">
