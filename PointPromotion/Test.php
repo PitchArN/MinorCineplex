@@ -45,10 +45,11 @@
         </div>
     </div>
     </nav>
-
-        
-        <div class="PromotionBanner">
+        <div class="Promotion">
             <h1>Promotion</h1>
+        </div>
+        <div class="PromotionBanner">
+            
             <div class="Promotion1">
                 <div class="Content1">
                     
@@ -69,9 +70,12 @@
                 </div>
             </div>
         </div>
+        <div class="F1">
+            <h1>For Member</h1>
+        </div>
         
         <div class="ForMember">
-            <h1>For Member</h1>
+            
             <div class="MemberPro1">
                 <div class="Procontent1">
                     <span>ContentFormember1</span>
