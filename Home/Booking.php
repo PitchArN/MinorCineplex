@@ -14,16 +14,43 @@
   <body>
 <?php
   if(isset($_POST['bookSeat'])){
+    $room = mysqli_real_escape_string($connect,$_POST['roomID']);
+    $StartDateTime = mysqli_real_escape_string($connect,$_POST['StartDateTime']);
+    $movieID = mysqli_real_escape_string($connect,$_POST['movieID']);
+    $roomSearch = $room."_%";
+
+    $movieIn = "SELECT * FROM movie WHERE MovieID='$movieID'";
+    $movieInQuery = mysqli_query($connect,$movieIn);
+    $movie = mysqli_fetch_assoc($movieInQuery);
+
+    //each seat must search for the seat in the room got from post method
+    // how to get fast query? 
+    // dont know
+
+    //same movieID StartDateTime and begin with same roomID
+    $seatSql = "SELECT * FROM seat4room WHERE MovieID='$movieID' AND StartDateTime = '$StartDateTime' AND SeatID LIKE '$roomSearch' ";
+    $seatQuery = mysqli_query($connect,$seatSql);
+    //$freeSeatArray = array();
+    $bookSeatArray = array();
+    $i = 0;
+
+    while($seat = mysqli_fetch_assoc($seatQuery)){
+      if($seat['SeatStatus']==1)
+        $bookSeatArray[$i++] = $seat['SeatID'];
+    }
+
+    
+    //can I use this?
+    $checkSeat = $room."_1A"; // change 1A to any seat mark
+    foreach ($bookSeatArray as $seat) {
+      if($seat == $checkSeat)
+        echo "sold";
+    }
+
 ?>
     <div class="movie-container">
-
-      <!---label> Select a movie:</label>
-      <select id="movie">
-        <option value="220">X-MEN DARK POENIX (RS.160)</option>
-        <option value="320">Radhe (RS.320)</option>
-        <option value="250">RRR (RS.250)</option>
-        <option value="260">F9 (RS.260)</option>
-      </select---->
+      
+    <h1><?php echo $movie['MovieName']; ?></h1>
     </div>
 
     <ul class="showcase">
@@ -40,10 +67,21 @@
         <small>Sold</small>
       </li>
     </ul>
+
     <div class="container">
       <div class="screen"></div>
-
+      <!------------ Row A ------------------------->
       <div class="row">
+        <div class="seat
+        <?php //can I use this?
+        $checkSeat = $room."_1A"; // change 1A to any seat mark
+        echo $checkSeat;
+        foreach ($bookSeatArray as $seat) {
+            if($seat == $checkSeat)
+              echo "sold";
+        }?>
+        "></div>
+        <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
@@ -54,27 +92,10 @@
         <div class="seat"></div>
       </div>
 
+      <!------------ Row B ------------------------->
       <div class="row">
         <div class="seat"></div>
         <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat sold"></div>
-        <div class="seat sold"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat sold"></div>
-        <div class="seat sold"></div>
-      </div>
-      <div class="row">
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
@@ -84,16 +105,59 @@
         <div class="seat"></div>
         <div class="seat"></div>
       </div>
+      <!------------ Row C ------------------------->
       <div class="row">
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat sold"></div>
         <div class="seat sold"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
       </div>
+      <!------------ Row D ------------------------->
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <!------------ Row E ------------------------->
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <!------------ Row F ------------------------->
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <!------------ Row G ------------------------->
       <div class="row">
         <div class="seat"></div>
         <div class="seat"></div>
@@ -102,6 +166,8 @@
         <div class="seat sold"></div>
         <div class="seat sold"></div>
         <div class="seat sold"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
         <div class="seat"></div>
       </div>
     </div>
