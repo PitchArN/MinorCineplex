@@ -120,21 +120,32 @@ if(isset($_GET['movieID'])){
         </header>
         </div>
         
+
         <div class="row">
-          <div class="p-5 mb-4 bg-light rounded-3">
+          <div class = "MovieName">
+        <h1 class="display-5 fw-bold" ><?php echo $movieName; ?></h1>
+</div>
             <div class="container-fluid py-5">
-              
-                <div class="row-col-2">
-                    <img src = "<?php echo $moviePoster ?>" alt = "<?php echo $movieName; ?>" width="30%" height="450"><rect width="100%" height="100%" fill="#55595c"></rect></img>
-                    <h1 class="display-5 fw-bold"  ><?php echo $movieName; ?></h1>
+
+      <div class="container" >
       
-              
-                    <iframe width="560" height="315"  src="<?php echo $movieTrailer; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      <div class="row row-cols-md-4 g-1">
+
+        <div class="col">
+              <img src = "<?php echo $moviePoster ?>" alt = "<?php echo $movieName; ?>" width="100%" height="450"><rect width="100%" height="100%" fill="#55595c"></rect></img>
+        </div>
+    
+        <div class="col">
+        <iframe width="700" height="400"  src="<?php echo $movieTrailer; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe>
-                  </div>
-                
-                
-                
+        </div> 
+
+      </div>
+
+    </div>
+    </div>
+
+            <div class="p-5 mb-4 bg-light rounded-3">
                 <div class="col">
                     <p class="col-md-8 " ><?php echo $movieDes; ?></p>
                 </div>
@@ -197,7 +208,8 @@ if(isset($_GET['movieID'])){
             </div>
           </div>
         </div>
-      </div>
+      
+      
     </main>
     
     
