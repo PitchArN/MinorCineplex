@@ -180,3 +180,23 @@ body {
 .F1 {
     color: #ffffff ;
 }
+.ForMember .MemberPro1 .Procontent1 .btnFM1{
+    display: block;
+    height:40px;
+    width:150px;
+    line-height: 40px;
+    background: #f77a36;
+    color:#FFFFFF;
+    margin:5px auto;
+    text-decoration: none;
+}
+.ForMember .MemberPro2 .Procontent2 .btnFM2{
+    display: block;
+    height:40px;
+    width:150px;
+    line-height: 40px;
+    background: #f77a36;
+    color:#FFFFFF;
+    margin:5px auto;
+    text-decoration: none;
+}

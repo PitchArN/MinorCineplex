@@ -79,12 +79,17 @@
             
             <div class="MemberPro1">
                 <div class="Procontent1">
-                    <span>ContentFormember1</span>
+                    <span>มา 3 คน</span>
+                    <h3>จ่ายแค่ 2 คน! </h3>
+                    <a href="Promotion1.php" class="btnFM1">view offer</a>
                 </div>
             </div>
             <div class="MemberPro2">
                 <div class="Procontent2">
-                    <span>ContentFormember2</span>
+                    <span>หนาวนี้กอดใคร   
+                      หนาวมั้ยมาดูหนังกัน
+                    </span>
+                    <a href="Promotion1.php" class="btnFM2">view offer</a>
                 </div>
             </div>
             <div class="MemberPro3">
