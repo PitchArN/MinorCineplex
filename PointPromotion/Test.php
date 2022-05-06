@@ -81,6 +81,7 @@
                 <div class="Procontent1">
                     <span>มา 3 คน</span>
                     <h3>จ่ายแค่ 2 คน! </h3>
+                    <p>offer ends after 3 days</p>
                     <a href="Promotion1.php" class="btnFM1">view offer</a>
                 </div>
             </div>
@@ -89,6 +90,8 @@
                     <span>หนาวนี้กอดใคร   
                       หนาวมั้ยมาดูหนังกัน
                     </span>
+                    <h3>รับฟรี! ของสมนาคุณเพิ่มเติม </h3>
+                    <p>offer ends after 2 days</p>
                     <a href="Promotion1.php" class="btnFM2">view offer</a>
                 </div>
             </div>
