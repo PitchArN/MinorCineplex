@@ -12,7 +12,7 @@
   </head>
   
   <body>
-    
+          
 <?php
   if(isset($_POST['bookSeat'])){
     $room = mysqli_real_escape_string($connect,$_POST['roomID']);
@@ -24,22 +24,18 @@
     $movieInQuery = mysqli_query($connect,$movieIn);
     $movie = mysqli_fetch_assoc($movieInQuery);
 
-    //each seat must search for the seat in the room got from post method
-    // how to get fast query? 
-    // dont know
-
     //same movieID StartDateTime and begin with same roomID
     $seatSql = "SELECT * FROM seat4room WHERE MovieID='$movieID' AND StartDateTime = '$StartDateTime' AND SeatID LIKE '$roomSearch' ";
     $seatQuery = mysqli_query($connect,$seatSql);
     //$freeSeatArray = array();
     $bookSeatArray = array();
     $i = 0;
-
-    if(mysqli_num_rows($seatQuery)!= 0)
+    
     while($seat = mysqli_fetch_assoc($seatQuery)){
       if($seat['SeatStatus']==1)
         $bookSeatArray[$i++] = $seat['SeatID'];
-    }
+    
+  }
 
     
     //can I use this?
@@ -76,7 +72,7 @@
     <div class="container">
 
       <div class="screen"></div>
-      <form action="Booking_process.php" enctype="multipart/form-data" method="post">
+
       <!------------ Row A ------------------------->
       <div class="row">
 
@@ -89,7 +85,7 @@
             echo " sold";         
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
         
         <div class="seat
         <?php //-------------------------------------------------------- 1A
@@ -100,10 +96,7 @@
             echo " sold";         
           
         }?>
-        ">
-        
-
-        </div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 2A
@@ -114,7 +107,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 3A
@@ -125,7 +118,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 4A
@@ -136,7 +129,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 5A
@@ -147,7 +140,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 6A
@@ -158,7 +151,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 7A
@@ -169,7 +162,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 8A
@@ -180,7 +173,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 9A
@@ -191,7 +184,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         
       </div>
@@ -207,7 +200,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
         
         <div class="seat
         <?php //-------------------------------------------------------- 1B
@@ -218,7 +211,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 2B
@@ -229,7 +222,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 3B
@@ -240,7 +233,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 4B
@@ -251,7 +244,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 5B
@@ -262,7 +255,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 6B
@@ -273,7 +266,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 7B
@@ -284,7 +277,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 8B
@@ -295,7 +288,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 9B
@@ -306,7 +299,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         
       </div>
@@ -321,7 +314,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
         
         <div class="seat
         <?php //-------------------------------------------------------- 1C
@@ -332,7 +325,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 2C
@@ -343,7 +336,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 3C
@@ -354,7 +347,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 4C
@@ -365,7 +358,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 5C
@@ -376,7 +369,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 6C
@@ -387,7 +380,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 7C
@@ -398,7 +391,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 8C
@@ -409,7 +402,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 9C
@@ -420,7 +413,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         
       </div>
@@ -435,7 +428,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
         
         <div class="seat
         <?php //-------------------------------------------------------- 1D
@@ -446,7 +439,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 2D
@@ -457,7 +450,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 3D
@@ -468,7 +461,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 4D
@@ -479,7 +472,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 5D
@@ -490,7 +483,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 6D
@@ -501,7 +494,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 7D
@@ -512,7 +505,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 8D
@@ -523,7 +516,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 9D
@@ -534,7 +527,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         
       </div>
@@ -549,7 +542,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
         
         <div class="seat
         <?php //-------------------------------------------------------- 1E
@@ -560,7 +553,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 2E
@@ -571,7 +564,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 3E
@@ -582,7 +575,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 4E
@@ -593,7 +586,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 5E
@@ -604,7 +597,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 6E
@@ -615,7 +608,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 7E
@@ -626,7 +619,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 8E
@@ -637,7 +630,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 9E
@@ -648,7 +641,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         
       </div>
@@ -663,7 +656,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
         
         <div class="seat
         <?php //-------------------------------------------------------- 1F
@@ -674,7 +667,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 2F
@@ -685,7 +678,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 3F
@@ -696,7 +689,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 4F
@@ -707,7 +700,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 5F
@@ -718,7 +711,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 6F
@@ -729,7 +722,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 7F
@@ -740,7 +733,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 8F
@@ -751,7 +744,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 9F
@@ -762,7 +755,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         
       </div>
@@ -777,7 +770,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
         
         <div class="seat
         <?php //-------------------------------------------------------- 1G
@@ -788,7 +781,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 2G
@@ -799,7 +792,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 3G
@@ -810,7 +803,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 4G
@@ -821,7 +814,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 5G
@@ -832,7 +825,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 6G
@@ -843,7 +836,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 7G
@@ -854,7 +847,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 8G
@@ -865,7 +858,7 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 9G
@@ -876,19 +869,20 @@
             echo " sold";          
           
         }?>
-        "></div>
+        " Onclick="addSeat(this)" id="<?php echo $checkSeat; ?>" ></div>
 
         
       </div>
 
       
     </div>
+    <form action="Booking_process.php" enctype="multipart/form-data" method="post">
     <div class="">
 
-        <input type="text" name="movieID" value="<?php echo $movieID; ?>" readonly>
-        <input type="text" name="StartDateTime" value="<?php echo $StartDateTime; ?>" readonly>
-        <input type="text" name="SeatSelected" ><br>
-        <input type="submit" name="ConfirmBookSeat">
+        <input type="text" name="movieID" id="movieID" value="<?php echo $movieID; ?>" readonly>
+        <input type="text" name="StartDateTime" id="StartDateTime" value="<?php echo $StartDateTime; ?>" readonly>
+        <input type="text" name="SeatSelected" id="SeatSelected" ><br>
+        <input type="submit" name="ConfirmBookSeat" value="Confirm">
       </div>
   </form>
 <?php 
@@ -896,5 +890,25 @@
 ?>
 
   </body>
+<script type="text/javascript">
+
+
+  function addSeat(element){
+
+
+        if (element.classList.contains("seat") && !element.classList.contains("sold")){
+          if(element.classList.contains("selected")){
+            var removeSeat = document.getElementById("SeatSelected").value.replace(element.id+",",'');
+            document.getElementById("SeatSelected").value = removeSeat;
+            element.classList.toggle("selected");
+
+          }else{
+            element.classList.toggle("selected");
+            document.getElementById("SeatSelected").value += element.id+",";
+          }
+        }
+  }
+
+</script>
 
 </html>
