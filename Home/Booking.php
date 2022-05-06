@@ -12,6 +12,7 @@
   </head>
   
   <body>
+    
 <?php
   if(isset($_POST['bookSeat'])){
     $room = mysqli_real_escape_string($connect,$_POST['roomID']);
@@ -34,6 +35,7 @@
     $bookSeatArray = array();
     $i = 0;
 
+    if(mysqli_num_rows($seatQuery)!= 0)
     while($seat = mysqli_fetch_assoc($seatQuery)){
       if($seat['SeatStatus']==1)
         $bookSeatArray[$i++] = $seat['SeatID'];
@@ -49,6 +51,7 @@
     //}
 
 ?>
+
     <div class="movie-container">
       
     <h1><?php
@@ -71,21 +74,19 @@
     </ul>
 
     <div class="container">
+
       <div class="screen"></div>
+      <form action="Booking_process.php" enctype="multipart/form-data" method="post">
       <!------------ Row A ------------------------->
       <div class="row">
 
-        <!---label class="seat"--->
-          <input type="checkbox" class="seat">
-        <!----/label---->
-
-        <div class="seat
+        <div class="seat 
         <?php //-------------------------------------------------------- 0A
         $checkSeat = $room."_0A"; // change 1A to any seat mark
         //echo $checkSeat;
         foreach ($bookSeatArray as $seat) {
           if($seat == $checkSeat)
-            echo " sold";          
+            echo " sold";         
           
         }?>
         "></div>
@@ -96,10 +97,13 @@
         //echo $checkSeat;
         foreach ($bookSeatArray as $seat) {
           if($seat == $checkSeat)
-            echo " sold";          
+            echo " sold";         
           
         }?>
-        "></div>
+        ">
+        
+
+        </div>
 
         <div class="seat
         <?php //-------------------------------------------------------- 2A
@@ -877,11 +881,16 @@
         
       </div>
 
-    <p class="text">
-      You have selected <span id="count">0</span> seat for a price of RS.<span
-        id="total"
-        >0</span>
-    </p>
+      
+    </div>
+    <div class="">
+
+        <input type="text" name="movieID" value="<?php echo $movieID; ?>" readonly>
+        <input type="text" name="StartDateTime" value="<?php echo $StartDateTime; ?>" readonly>
+        <input type="text" name="SeatSelected" ><br>
+        <input type="submit" name="ConfirmBookSeat">
+      </div>
+  </form>
 <?php 
   }
 ?>
