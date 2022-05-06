@@ -38,8 +38,15 @@
   <div class="col">
     <h5>
       <?php
+        $totalPrice = 0;
         foreach($seatList as $s){
-          echo $s."<br>";
+          if($s!=""){
+            echo $s."<br>";
+            $priceSearch = "SELECT Price FROM seat4room WHERE SeatID = '$s'";
+            $priceQuery = mysqli_query($connect,$priceSearch);
+            $price = mysqli_fetch_assoc($priceQuery);
+            $totalPrice += $price['Price'];
+          }
         }
       ?>
     </h5>
@@ -47,17 +54,23 @@
 
 </div>
   <div class="row">
-    <?php echo count($seatList)." seat(s)"; ?>
+    <?php
+      $seatCount = count($seatList) - 1; 
+      echo $seatCount." seat(s)"; ?>
   </div>
   <form action="payTicket.php" enctype="multipart/form-data" method="post">
   <div class="row">
-    
+      <input type="hidden" name="seats" value="<?php echo $seats ?>">
+      <label for="ticketPromotion">Promotion Code</label>
       <input type="text" name="ticketPromotion">
   </div>
   <div class="row">
-      <?php echo "... ฿"; ?>
+      <label for="confirmTicketOrder">
+        <?php echo $totalPrice."  ฿"; ?>
+          
+      </label>
       <input type="submit" name="confirmTicketOrder" class="btn-warning rounded-3">
-    
+
   </div>
   </form>
 </div>
