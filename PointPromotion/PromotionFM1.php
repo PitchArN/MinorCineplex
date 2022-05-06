@@ -28,8 +28,8 @@
             Product
            </a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
-             <li><a class="dropdown-item" href="#">Another Products</a></li>
+           <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
+              <li><a class="dropdown-item" href="../PointPromotion/Test.php">PointPromotion</a></li>
              </ul>
              </li>
              <li class="nav-item">
@@ -46,5 +46,5 @@
     </div>
     </nav>
     <div class ="ProFM1">
-
+        <span>Detail มา 3 จ่าย 2</span>
     </div>
