@@ -1,3 +1,7 @@
+<?php
+	include 'D:\connect.php';
+	$POP = array($_POST['Sweet'], $_POST['Salty'], $_POST['BBQ']);
+?>
 <html>
     <head>
         <title>Bill-Confirmation</title>
@@ -84,38 +88,25 @@
 								<td class="Hours"><h2>Qty</h2></td>
 								<td class="Rate"><h2>Total</h2></td>
 							</tr>
-
+							<?php
+								$c = 0;
+								$sum = 0;
+								while($c <= 2){
+									$sql = "SELECT ItemName, Price FROM itemstock WHERE ItemID = $c";
+									$result = mysqli_query($connect,$sql) or die("Bad query");
+									$row = mysqli_fetch_row($result);
+									$total = $row[1]*$POP[$c];
+									$sum = $sum + $total;
+							?>
 							<tr class="service">
-								<td class="tableitem"><p class="itemtext">Popkuy</p></td>
-								<td class="tableitem"><p class="itemtext">5</p></td>
-								<td class="tableitem"><p class="itemtext">$375.00</p></td>
+								<td class="tableitem"><p class="itemtext"><?php echo $row[0]; ?></p></td>
+								<td class="tableitem"><p class="itemtext"><?php echo $POP[$c]; ?></p></td>
+								<td class="tableitem"><p class="itemtext"><?php echo $total; ?></p></td>
 							</tr>
-
-							<tr class="service">
-								<td class="tableitem"><p class="itemtext">Poppy</p></td>
-								<td class="tableitem"><p class="itemtext">3</p></td>
-								<td class="tableitem"><p class="itemtext">$225.00</p></td>
-							</tr>
-
-							<tr class="service">
-								<td class="tableitem"><p class="itemtext">Poppo</p></td>
-								<td class="tableitem"><p class="itemtext">5</p></td>
-								<td class="tableitem"><p class="itemtext">$375.00</p></td>
-							</tr>
-
-							<tr class="service">
-								<td class="tableitem"><p class="itemtext">Popcron sweety</p></td>
-								<td class="tableitem"><p class="itemtext">20</p></td>
-								<td class="tableitem"><p class="itemtext">$1500.00</p></td>
-							</tr>
-
-							<tr class="service">
-								<td class="tableitem"><p class="itemtext">PopCorn Horny</p></td>
-								<td class="tableitem"><p class="itemtext">10</p></td>
-								<td class="tableitem"><p class="itemtext">$750.00</p></td>
-							</tr>
-
-
+							<?php
+								$c++;
+								}
+							?>
 							<tr class="tabletitle">
 								<td></td>
 								<td class="Rate"><h2>tax</h2></td>
@@ -125,7 +116,7 @@
 							<tr class="tabletitle">
 								<td></td>
 								<td class="Rate"><h2>Total</h2></td>
-								<td class="payment"><h2>$3,644.25</h2></td>
+								<td class="payment"><h2><?php echo $sum; ?></h2></td>
 							</tr>
 
 						</table>

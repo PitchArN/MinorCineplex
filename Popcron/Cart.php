@@ -1,5 +1,5 @@
 <?php
-
+	echo $_POST['Sweet'];
 ?>
 <html>
     <head>
