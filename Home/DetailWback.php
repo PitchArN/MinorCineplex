@@ -43,7 +43,8 @@
       }
 
       body {
-        background-image: url('WebsiteBG.jpg');
+        background-image: url('WebsiteBG1.jpg');
+        background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
       }

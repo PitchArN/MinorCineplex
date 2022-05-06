@@ -40,7 +40,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
-            <li><a class="dropdown-item" href="../PointPromotion/Test.php">Another Products</a></li>
+            <li><a class="dropdown-item" href="../PointPromotion/Test.php">Point Promotion</a></li>
         
           </ul>
         </li>
@@ -99,7 +99,6 @@
   $sql = "SELECT MovieID,MovieName,Poster FROM movie ORDER BY movieID DESC";
   $result = mysqli_query($connect,$sql);
   while($row = mysqli_fetch_assoc($result)){
-
 ?>
 
 <!--Show Movie-->
