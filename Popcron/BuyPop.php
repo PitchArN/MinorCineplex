@@ -61,7 +61,6 @@
 
     <center><div class="box">
         <h1>Pop Corn</h1>
-        <p>Promotion</p>
     </div></center>
 <p></p>
     <form action = "Cart.php" method = "post" enctype = "multipart/form-data">
@@ -111,12 +110,18 @@
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
-        <center><input type="number" name = "BQQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>"></center>
-        <center><q>Add all selected popcorn to the cart</q></center>
-        <center><input type = "submit" name = "AddToCart" value = "add to cart"></center>
+        <center><input type="number" name = "BBQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>"></center>
+        
     </div>
 </div>
 </div>
+
+<center><div class="box">
+<center><q>Add all selected popcorn to the cart</q></center>
+<center><input type = "submit" name = "AddToCart" value = "add to cart"></center>
+    </div></center>
+
+
 </form>
 <!-- Contact -->
 
