@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2022 at 08:21 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: May 06, 2022 at 07:09 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -142,10 +142,10 @@ CREATE TABLE `movie` (
 --
 
 INSERT INTO `movie` (`MovieID`, `MovieName`, `Length`, `Details`, `Rating`, `RateAges`, `Poster`, `TrailerURL`) VALUES
-(0, 'MovieName', 212, 'asda', 1, 'PG', 'minorcineplex.ci.th', 'minorcineplex.co.th'),
-(1, 'MovieName', 212, 'asda', 1, 'PG', 'minorcineplex.ci.th', 'minorcineplex.co.th'),
-(2, 'Your Namae', 180, 'Your Name Adaptation by Makoto Gupai', 4, 'G', 'https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg', 'https://www.youtube.com/embed/mPsjLnEtJZI'),
-(3, 'My Namae', 200, 'My Name Adaptation by Makoto Gupai', 0, 'G', 'https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg', 'https://www.youtube.com/embed/mPsjLnEtJZI');
+(0, 'Kimetsu no Yaiba  District Arc', 212, '\nAs the fierce battle draws to an end, Tanjiro and Uzui behead Gyutaro just as Zenitsu and Inosuke behead Daki. But then, Gyutaro unleashes a devastating Blood Demon Art, burying the city in rubble. When Tanjiro awakens, he joins Nezuko and Zenitsu, only to find Inosuke and Uzui on the brink of death from Gyutaro’s poison...', 1, 'PG', 'https://img1.ak.crunchyroll.com/i/spire3/09211a5ab1a7a41cbd18c90b1c8f076b1641869179_full.jpg', 'https://www.youtube.com/embed/Jd_B6ox3qGc'),
+(1, 'Sing 2', 212, 'With his theatrical company a local success, Buster Moon is dreaming of bigger things. Unfortunately, when a talent scout dismisses their work as inadequate for the big time, Buster is driven to prove her wrong. With that goal in mind, Buster inspires his players to gamble everything to sneak into a talent audition in Redshore City for the demanding entertainment mogul Jimmy Crystal. Against the odds, they catch his interest with some frantic creative improvisation and even more desperate lies like personally knowing the reclusive rock star, Clay Calloway, who has not been seen in 15 years. Now faced with a tight production window with only a vague story idea and dire consequences for failure, Buster and his friends must all stretch their talents put on a show against all odds. In that struggle, the gang\'s challenges seem insurmountable, but each of them finds new inspirations and friends where they least expect them to pursue an artistic dream worthy of them.', 1, 'PG', 'https://cdn.majorcineplex.com/uploads/movie/3170/thumb_3170.jpg?220320222200', 'https://www.youtube.com/embed/AAnkc01ITpw'),
+(2, 'Your Name', 180, 'Your Name Adaptation by Makoto Gupai', 4, 'G', 'https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg', 'https://www.youtube.com/embed/mPsjLnEtJZI'),
+(3, 'Fate/stay night: Heaven\'s Feel III ', 200, 'My Name Adaptation by Makoto Gupai', 0, 'G', 'https://www.metalbridges.com/wp-content/uploads/2020/08/fatestay-night-heavens-feel-iii-spring-song-4dx-1.jpg', 'https://www.youtube.com/embed/u-QsmHjvNek');
 
 -- --------------------------------------------------------
 
