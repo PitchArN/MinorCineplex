@@ -69,7 +69,7 @@
         <?php echo $totalPrice."  ฿"; ?>
           
       </label>
-      <input type="submit" name="confirmTicketOrder" class="btn-warning rounded-3">
+      <input type="submit" name="confirmTicketOrder" class="btn-warning rounded-3" value="Confirm Order">
 
   </div>
   </form>

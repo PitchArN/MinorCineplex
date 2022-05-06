@@ -23,6 +23,14 @@
     if(isset($_POST['AddShowtime'])&& isset($_POST['movieID'])){
         $movieID = mysqli_real_escape_string($connect,$_POST['movieID']);
         $DateCount = mysqli_real_escape_string($connect,$_POST['DateCount']);
+        //set price for each room
+        $NormalPrice = mysqli_real_escape_string($connect,$_POST['NormalSeatPrice']);
+        $PremiumPrice = mysqli_real_escape_string($connect,$_POST['PremiumSeatPrice']);
+
+        //add seats+ seat price to seat4room
+        $normalSeat = array("_0A","_1A","_2A","_3A","_4A","_5A","_6A","_7A","_8A","_9A","_0A","_1B","_2B","_3B","_4B","_5B","_6B","_7B","_8B","_9B","_0C","_1C","_2C","_3C","_4C","_5C","_6C","_7C","_8C","_9C","_0D","_1D","_2D","_3D","_4D","_5D","_6D","_7D","_8D","_9D","_0E","_1E","_2E","_3E","_4E","_5E","_6E","_7E","_8E","_9E");
+        $premiumSeat = array("_0F","_1F","_2F","_3F","_4F","_5F","_6F","_7F","_8F","_9F","_0G","_1G","_2G","_3G","_4G","_5G","_6G","_7G","_8G","_9G");
+
         echo "movieID = ".$movieID."<br>";
         echo "DateCount = ".$DateCount."<br>";;
         $i = 1; // date index
@@ -57,6 +65,20 @@
                     
                     $sql = "INSERT INTO movietime(MovieID, StartDateTime, SeatID) VALUES('$movieID', '$startDateTime' , '$room' )";
                     $result = mysqli_query($connect,$sql);
+
+                    foreach($normalSeat as $ns){
+                        //combine room and seat
+                        $seatID = $room.$ns;
+                        $seatSql = "INSERT INTO seat4room(SeatID,MovieID,StartDateTime,SeatStyle,Price,SeatStatus) VALUES('$seatID','$movieID','$startDateTime','NORMAL','$NormalPrice',0)";
+                        $seat4roomQuery = mysqli_query($connect,$seatSql); 
+                    }
+
+                    foreach($premiumSeat as $ps){
+                        //combine room and seat
+                        $seatID = $room.$ps;
+                        $seatSql = "INSERT INTO seat4room(SeatID,MovieID,StartDateTime,SeatStyle,Price,SeatStatus) VALUES('$seatID','$movieID','$startDateTime','PREMIUM','$PremiumPrice',0)";
+                        $seat4roomQuery = mysqli_query($connect,$seatSql); 
+                    }
                     
                     //go to next time
                     $j++;

@@ -105,6 +105,9 @@
 </div>
 </div>
 <br>
+
+
+
 <div class="row gx-3">
   <div class="col">
 <input type="submit" name="add_movie" class="btn-warning rounded-3" value="ADD MOVIE">

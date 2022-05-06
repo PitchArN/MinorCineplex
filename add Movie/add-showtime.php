@@ -109,6 +109,7 @@
 <form action="add-showtime_process.php" enctype="multipart/form-data" method="post">
     <input type="text" name="movieID" id="movieID" value="<?php echo $movieID;?>" hidden>
 
+
 <div class="row gx-3">
 <div class="col">
     <br><br>
@@ -153,7 +154,7 @@
         <option value="R5">Room 5</option>
         <option value="R6">Room 6</option>
     </select>
-    <?php echo $DateInputCount."time"; ?>
+    <?php //echo $DateInputCount."time"; ?>
     <input type="text" id="<?php echo $DateInputCount; ?>time" name="<?php echo $DateInputCount++; ?>time" class="time-pickable form-control" placeholder="Showtime" readonly>
 </div>
  </div>
@@ -167,7 +168,7 @@
         <option value="R5">Room 5</option>
         <option value="R6">Room 6</option>
     </select>
-    <?php echo $DateInputCount."time"; ?>
+    <?php //echo $DateInputCount."time"; ?>
     <input type="text" id="<?php echo $DateInputCount; ?>time" name="<?php echo $DateInputCount++; ?>time" class="time-pickable form-control" placeholder="Showtime" readonly>
 </div>
 </div>
@@ -220,6 +221,24 @@
 <?php
     }
 ?>
+<div class="row gx-3">
+  <div class="col">
+    <h5>Price Rate</h3>
+  </div></div>
+<div class="row gx-3">
+  <div class="col">
+   <label class="form-label" for="NormalSeatPrice">Normal Seat</label>
+   <input class="form-control" type="number" name="NormalSeatPrice" min="0" required>
+   <br>
+  </div>
+  <div class="col">
+    <label class="form-label" for="PremiumSeatPrice">Premium Seat</label>
+    <input class="form-control" type="number" name="PremiumSeatPrice" min="0" required>
+    <br>
+  </div>
+  
+</div>
+
 <div class="row gx-3">
 <div class="col">
     <input type="text" name="DateCount" value="<?php echo $DateCount ?>" hidden>

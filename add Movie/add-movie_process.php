@@ -27,6 +27,7 @@
 		$trailerURL = mysqli_real_escape_string($connect,$_POST['trailerURL']);
 		$movieDes = mysqli_real_escape_string($connect,$_POST['movieDes']);
 
+		
 		$genreNum = 0;
 		$genreI=0;
 		$genreToAdd = array();
@@ -60,6 +61,8 @@
       		$sql = "INSERT INTO moviegenre(movieID,genre) VALUES('$row','$addGenre')";
       		mysqli_query($connect,$sql);
       	}
+
+
 
       	header( "location: add-actor.php?movieID=".$row);
  		exit(0);
