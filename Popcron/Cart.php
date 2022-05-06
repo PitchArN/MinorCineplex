@@ -1,5 +1,5 @@
 <?php
-
+	echo $_POST['BBQ'];
 ?>
 <html>
     <head>
@@ -29,7 +29,12 @@
         <div class="row">
             <div class="box">
                 <p>Promotion</p>
-                <a class="button" href="Bill.php">purchase</a>
+                <form action = "Bill.php" method = "post" enctype = "multipart/form-data">
+				<input type = "hidden" name = "Sweet" value = "<?php echo $_POST['Sweet']; ?>">
+				<input type = "hidden" name = "Salty" value = "<?php echo $_POST['Salty']; ?>">
+				<input type = "hidden" name = "BBQ" value = "<?php echo $_POST['BBQ']; ?>">
+                <input type = "submit" name = "Purchase" value = "Purchase">
+				</form>
             </div>
         </div>
     </div>
