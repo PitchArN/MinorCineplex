@@ -74,6 +74,11 @@
       <div class="screen"></div>
       <!------------ Row A ------------------------->
       <div class="row">
+
+        <!---label class="seat"--->
+          <input type="checkbox" class="seat">
+        <!----/label---->
+
         <div class="seat
         <?php //-------------------------------------------------------- 0A
         $checkSeat = $room."_0A"; // change 1A to any seat mark
