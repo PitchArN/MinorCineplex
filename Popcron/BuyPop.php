@@ -111,20 +111,9 @@
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <center><input type="number" name = "BQQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>"></center>
         <center><q>Add all selected popcorn to the cart</q></center>
         <center><input type = "submit" name = "AddToCart" value = "add to cart"></center>
-=======
-=======
->>>>>>> b6e7c4feb9617a64f648ecbb3896c85495456c9d
-=======
->>>>>>> fd4fa734332afc597afab472da64a3529fc5eda7
-        <input type="number" name = "BBQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>">
-        <input type = "submit" name = "AddToCart" value = "add to cart">
->>>>>>> b6e7c4feb9617a64f648ecbb3896c85495456c9d
     </div>
 </div>
 </div>
