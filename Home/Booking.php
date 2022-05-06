@@ -11,7 +11,7 @@
     <title>MinorCineplex | Seat Booking</title>
   </head>
   
-  <body>
+  <body onload="clearSeat()">
           
 <?php
   if(isset($_POST['bookSeat'])){
@@ -881,7 +881,7 @@
 
         <input type="text" name="movieID" id="movieID" value="<?php echo $movieID; ?>" readonly>
         <input type="text" name="StartDateTime" id="StartDateTime" value="<?php echo $StartDateTime; ?>" readonly>
-        <input type="text" name="SeatSelected" id="SeatSelected" ><br>
+        <input type="text" name="SeatSelected" id="SeatSelected" value=""><br>
         <input type="submit" name="ConfirmBookSeat" value="Confirm">
       </div>
   </form>
@@ -891,6 +891,7 @@
 
   </body>
 <script type="text/javascript">
+  document.getElementById("SeatSelected").value = "";
 
 
   function addSeat(element){
@@ -907,6 +908,10 @@
             document.getElementById("SeatSelected").value += element.id+",";
           }
         }
+  }
+
+  function clearSeat(){
+    document.getElementById("SeatSelected").value="";
   }
 
 </script>
