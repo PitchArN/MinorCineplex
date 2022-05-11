@@ -16,13 +16,50 @@
   <body>
     <?php 
       if(isset($_POST['confirmTicketOrder'])){
-        
+
+        $proID = mysqli_real_escape_string($connect,$_POST['ticketPromotion']);
+         
+        $seats = mysqli_real_escape_string($connect,$_POST['seats']);
+        //create Array of seat
+        $seatList = explode(',',$seats);
+
+        $movieID = mysqli_real_escape_string($connect,$_POST['movieID']);
+        $StartDateTime = mysqli_real_escape_string($connect,$_POST['StartDateTime']);
+
+        $howManyInTicketProduct= "SELECT TicketProductID FROM ticketproduct";
+        $ticketProductQuery= mysqli_query($connect,$howManyInTicketProduct);
+        $ticketProductID = mysqli_num_rows($ticketProductQuery);
+        //--------------------------------------- Query All Data to ticketproduct -------
+        foreach($seatList as $s){
+          if($s!=""){
+            //echo $s."<br>";
+            $insertTicketProduct = "INSERT INTO ticketproduct(TicketProductID,SeatID,ProID,StartDateTime) VALUES('$ticketProductID','$s','$proID','$StartDateTime')";
+            $insertTicketProductQuery = mysqli_query($connect,$insertTicketProduct);
+            
+            //------------------------- Update seat4room
+            $startDateTime = date("y-m-d h:i:s",strtotime($StartDateTime));
+            //$startDateTime = strtotime($StartDateTime);
+            $updateSeat = "UPDATE seat4room SET SeatStatus = 1 WHERE (SeatID = '$s'AND MovieID = '$movieID' AND StartDateTime = '$startDateTime' )";
+            $updateSeatQuery = mysqli_query($connect,$updateSeat);
+
+            $ticketProductID++;
+          }
+        }
+
+
       }
     ?>
     <div class="container">
       <div class="row  d-flex justify-content-center">
       <h1>
-        Ticket Purchased, Thank You
+        Ticket Purchased, Thank You 
+        <?php 
+          $wtf = "SELECT * FROM movietime";
+          $wtfQuery = mysqli_query($connect,$wtf);
+          while($result = mysqli_fetch_assoc($wtfQuery)){
+            echo result['StartDateTime']."<br>";  
+          }
+        ?>
       </h1>
     </div>
     <div class="row  d-flex justify-content-center">

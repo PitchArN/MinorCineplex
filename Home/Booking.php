@@ -893,7 +893,6 @@
 <script type="text/javascript">
   document.getElementById("SeatSelected").value = "";
 
-
   function addSeat(element){
 
 

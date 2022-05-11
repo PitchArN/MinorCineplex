@@ -60,7 +60,9 @@
   </div>
   <form action="payTicket.php" enctype="multipart/form-data" method="post">
   <div class="row">
+      <input type="hidden" name="movieID" value="<?php echo $movieID ?>">
       <input type="hidden" name="seats" value="<?php echo $seats ?>">
+      <input type="hidden" name="StartDateTime" value="<?php echo $StartDateTime ?>">
       <label for="ticketPromotion">Promotion Code</label>
       <input type="text" name="ticketPromotion">
   </div>
@@ -69,7 +71,7 @@
         <?php echo $totalPrice."  ฿"; ?>
           
       </label>
-      <input type="submit" name="confirmTicketOrder" class="btn-warning rounded-3" value="Confirm Order">
+      <input type="submit" name="confirmTicketOrder" class="btn-warning rounded-3" value="Confirm">
 
   </div>
   </form>

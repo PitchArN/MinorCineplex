@@ -66,6 +66,7 @@
                     $sql = "INSERT INTO movietime(MovieID, StartDateTime, SeatID) VALUES('$movieID', '$startDateTime' , '$room' )";
                     $result = mysqli_query($connect,$sql);
 
+                    //------------------ INSERT EACH SEAT TO THE SEAT4ROOM -----------------
                     foreach($normalSeat as $ns){
                         //combine room and seat
                         $seatID = $room.$ns;
