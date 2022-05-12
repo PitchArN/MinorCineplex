@@ -98,3 +98,13 @@
     display: inline-block;
     
 }
+body {
+
+    background-image: url('WebsiteBG.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    margin-top:20px;
+    color: #484b51;
+}
