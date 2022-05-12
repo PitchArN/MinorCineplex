@@ -50,6 +50,6 @@
         <h4>Detail มา 3 จ่าย 2</br>
         เงื่อนไขเป็นไปตามที่บริษัทกำหนด</br>
         Point Need : 100</br>
-        Point Have : ...</h4>
+        Point Have : ...</br></h4>
         <a href="ProFinish1.php" class="btnCFM1">Confirm Offer</a>
     </div>
