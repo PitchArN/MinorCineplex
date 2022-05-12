@@ -89,7 +89,7 @@
 <div class="row gx-3">
 <div class="col">
     <input type="text" name="movieID" id="movieID" value="<?php echo $movieID ?>" hidden>
-    <input class="btn-warning" type="submit" name="selectedDate" id= "selectedDate" value="CONFIRM DATE">
+    <input class="btn-warning rounded-3" type="submit" name="selectedDate" id= "selectedDate" value="CONFIRM DATE">
     <br><br>
 </div>
 </div>
@@ -174,7 +174,7 @@
 </div>
 <div class="col">
 <div class="form-group">
-    <select class="btn btn-secondary form-control" name="<?php echo $DateInputCount; ?>room" id="<?php echo $DateInputCount; ?>room">
+    <select class="btn btn-secondary form-control rounded-3" name="<?php echo $DateInputCount; ?>room" id="<?php echo $DateInputCount; ?>room">
         <option value="R1">Room 1</option>
         <option value="R2">Room 2</option>
         <option value="R3">Room 3</option>
@@ -242,7 +242,7 @@
 <div class="row gx-3">
 <div class="col">
     <input type="text" name="DateCount" value="<?php echo $DateCount ?>" hidden>
-    <input type="submit" class="btn-warning" value="ADD SHOW TIME" id="AddShowtime" name="AddShowtime">
+    <input type="submit" class="btn-warning rounded-3" value="ADD SHOW TIME" id="AddShowtime" name="AddShowtime">
     <br><br>
 </div></div>
 </form>
