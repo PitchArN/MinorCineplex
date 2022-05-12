@@ -37,7 +37,7 @@
             $insertTicketProductQuery = mysqli_query($connect,$insertTicketProduct);
             
             //------------------------- Update seat4room
-            $startDateTime = date("y-m-d h:i:s",strtotime($StartDateTime));
+            $startDateTime = date("Y-m-d h:i:s",strtotime($StartDateTime));
             //$startDateTime = strtotime($StartDateTime);
             $updateSeat = "UPDATE seat4room SET SeatStatus = 1 WHERE (SeatID = '$s'AND MovieID = '$movieID' AND StartDateTime = '$startDateTime' )";
             $updateSeatQuery = mysqli_query($connect,$updateSeat);
@@ -52,14 +52,7 @@
     <div class="container">
       <div class="row  d-flex justify-content-center">
       <h1>
-        Ticket Purchased, Thank You 
-        <?php 
-          $wtf = "SELECT * FROM movietime";
-          $wtfQuery = mysqli_query($connect,$wtf);
-          while($result = mysqli_fetch_assoc($wtfQuery)){
-            echo result['StartDateTime']."<br>";  
-          }
-        ?>
+        Ticket Purchased, Thank You <?php echo $startDateTime; ?>
       </h1>
     </div>
     <div class="row  d-flex justify-content-center">
