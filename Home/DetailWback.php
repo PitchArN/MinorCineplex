@@ -48,7 +48,9 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
       }
-
+      .MovieName{
+          color:white;
+      }
     </style>
     
     

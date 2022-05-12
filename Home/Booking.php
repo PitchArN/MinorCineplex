@@ -9,9 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Bookingstyle.css" />
     <title>MinorCineplex | Seat Booking</title>
+    
   </head>
   
   <body onload="clearSeat()">
+  
           
 <?php
   if(isset($_POST['bookSeat'])){
@@ -877,12 +879,13 @@
       
     </div>
     <form action="Booking_process.php" enctype="multipart/form-data" method="post">
+   
     <div class="">
 
         <input type="text" name="movieID" id="movieID" value="<?php echo $movieID; ?>" readonly hidden>
         <input type="text" name="StartDateTime" id="StartDateTime" value="<?php echo $StartDateTime; ?>" readonly hidden>
         <input type="text" name="SeatSelected" id="SeatSelected" value="" hidden><br>
-        <input type="submit" name="ConfirmBookSeat" value="Confirm">
+        <input type="submit" name="ConfirmBookSeat" class="w3-btn w3-hover-Yellow" value="Confirm">
       </div>
   </form>
 <?php 
