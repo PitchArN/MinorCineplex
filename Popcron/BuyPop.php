@@ -1,5 +1,7 @@
 <?php
   include 'D:\connect.php';
+  $_SESSION['empty'] = 0;
+  session_start();
 ?>
 <html>
     <head>
@@ -62,6 +64,12 @@
     <center><div class="box">
         <h1>Pop Corn</h1>
     </div></center>
+	<?php
+  if ($_SESSION['empty'] == 1) {
+    echo "Cannot create order";
+  }
+  $_SESSION['empty'] = 0;
+?>
 <p></p>
     <form action = "Cart.php" method = "post" enctype = "multipart/form-data">
 <div class="container">
@@ -75,7 +83,7 @@
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
-                        <center><input type="number" name = "Sweet" placeholder="quantity"  min = "0" max = "<?php echo $row[0]; ?>" font ></center>
+                        <center><input type="number" name = "Sweet" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>" font ></center>
                     </div>
                 </div>
                 </div>

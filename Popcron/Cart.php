@@ -1,5 +1,9 @@
 <?php
-	echo $_POST['Sweet'];
+	session_start();
+	if(empty($_POST['Sweet']) && empty($_POST['Salty']) && empty($_POST['BBQ'])){
+		$_SESSION['empty'] = 1;
+		header('Location:BuyPop.php');
+	}
 ?>
 <html>
     <head>

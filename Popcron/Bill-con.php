@@ -92,6 +92,7 @@
 								$c = 0;
 								$sum = 0;
 								while($c <= 2){
+									if($POP[$c] > 0){
 									$sql = "SELECT ItemName, Price FROM itemstock WHERE ItemID = $c";
 									$result = mysqli_query($connect,$sql) or die("Bad query");
 									$row = mysqli_fetch_row($result);
@@ -104,6 +105,7 @@
 								<td class="tableitem"><p class="itemtext"><?php echo $total; ?></p></td>
 							</tr>
 							<?php
+									}
 								$c++;
 								}
 							?>
@@ -121,7 +123,7 @@
 
 						</table>
 					</div><!--End Table-->
-
+					
 					<div id="legalcopy">
 						<p class="legal"><strong><a class="button" href="../Home/Home1.php">ชำระเสร็จสิ้น</a></strong>   
 						</p>
