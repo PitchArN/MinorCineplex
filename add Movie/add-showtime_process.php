@@ -17,7 +17,7 @@
 
 <body>
     <br><br>
-<div class="container px-4 bg-light rounded-3">
+<div class="container px-4 bg-secondary rounded-3">
 
 <?php 
     if(isset($_POST['AddShowtime'])&& isset($_POST['movieID'])){
@@ -34,8 +34,6 @@
         echo "movieID = ".$movieID."<br>";
         echo "DateCount = ".$DateCount."<br>";;
         $i = 1; // date index
-
-
         //loop all date in the list
         while($i<=$DateCount){
             echo "today(i) is :".$i."<br>";
@@ -48,6 +46,11 @@
                 $timeInput = $j."time";
                 //loop all time input that is not empty
                 while(!empty($_POST[$timeInput])){
+                ?>
+                <br><br>
+                <div class="row rounded-3 bg-light">
+                <?php
+   
                     echo "timeInput = ".$timeInput." <br>";
                     $roomInput = $j."room";
                     $date = mysqli_real_escape_string($connect,$_POST[$dateInput]);
@@ -61,29 +64,71 @@
                     $startDateTime = date("y-m-d h:i:s",strtotime($dateTime));
                     //$startDateTime = strtotime($dateTime);
                     echo "time = ".$startDateTime."<br>";
-                    
-                    
-                    $sql = "INSERT INTO movietime(MovieID, StartDateTime, SeatID) VALUES('$movieID', '$startDateTime' , '$room' )";
-                    $result = mysqli_query($connect,$sql);
 
-                    //------------------ INSERT EACH SEAT TO THE SEAT4ROOM -----------------
-                    foreach($normalSeat as $ns){
-                        //combine room and seat
-                        $seatID = $room.$ns;
-                        $seatSql = "INSERT INTO seat4room(SeatID,MovieID,StartDateTime,SeatStyle,Price,SeatStatus) VALUES('$seatID','$movieID','$startDateTime','NORMAL','$NormalPrice',0)";
-                        $seat4roomQuery = mysqli_query($connect,$seatSql); 
+
+                    //---------------- find end time of the movie
+                    $endDateTimeSearch = "SELECT Length FROM movie WHERE MovieID= '$movieID'";
+                    $endDateTimeSearchQuery = mysqli_query($connect,$endDateTimeSearch);
+                    $movieLenghtAs = mysqli_fetch_assoc($endDateTimeSearchQuery);
+                    $movieLenght = $movieLenghtAs['Length']+40;
+
+                    // 40 min for cleaning + ads
+                    $endDateTime = date("y-m-d h:i:s",strtotime($startDateTime." + ".$movieLenght." minute"));
+
+                    $dateForSearch = $date."%";
+                    $roomForSearch = $room."%";
+                    $listAllmovieShowInSameDayRoom = "SELECT * FROM movietime INNER JOIN movie ON (movie.MovieID = movietime.MovieID) WHERE StartDateTime LIKE '$dateForSearch' AND SeatID LIKE '$roomForSearch' ";
+                    $allmovieShowSameDayRoomQuery = mysqli_query($connect,$listAllmovieShowInSameDayRoom);
+                    $sameDayRoomCount = mysqli_num_rows($allmovieShowSameDayRoomQuery);
+                    $sameDateTime = 0;
+                    if($sameDayRoomCount!=0){
+                        while($checker = mysqli_fetch_assoc($allmovieShowSameDayRoomQuery) ){
+                            $checkerStart = $checker['StartDateTime'];
+                            $checkerLenght = $checker['Length']+40;
+                            $checkerEnd = date("y-m-d h:i:s",strtotime($checkerStart." + ".$checkerLenght." minute"));
+                            //----------------- check collision ---------------------
+                            if(
+                                ($startDateTime >= $checkerStart && $endDateTime <= $checkerEnd)||// start later end first
+                                ($startDateTime >= $checkerStart && $endDateTime >= $checkerEnd)||// start later end later
+                                ($startDateTime <= $checkerStart && $endDateTime >= $checkerEnd)||// start first end later
+                                ($startDateTime <= $checkerStart && $endDateTime <= $checkerEnd)// start first end first
+                            ){
+                                $sameDateTime++;
+                            }
+                        }    
                     }
+                    
+                    //--------------------- no collision --------------------------
+                    if($sameDateTime == 0){
+                        echo "--------- Added --------------</div><br><br>";
+                        //----------------- INSERT INTO MOVIETIME
+                        $sql = "INSERT INTO movietime(MovieID, StartDateTime, SeatID) VALUES('$movieID', '$startDateTime' , '$room' )";
+                        $result = mysqli_query($connect,$sql);
 
-                    foreach($premiumSeat as $ps){
-                        //combine room and seat
-                        $seatID = $room.$ps;
-                        $seatSql = "INSERT INTO seat4room(SeatID,MovieID,StartDateTime,SeatStyle,Price,SeatStatus) VALUES('$seatID','$movieID','$startDateTime','PREMIUM','$PremiumPrice',0)";
-                        $seat4roomQuery = mysqli_query($connect,$seatSql); 
+                        //------------------ INSERT EACH SEAT TO THE SEAT4ROOM -----------------
+                        foreach($normalSeat as $ns){
+                            //combine room and seat
+                            $seatID = $room.$ns;
+                            $seatSql = "INSERT INTO seat4room(SeatID,MovieID,StartDateTime,SeatStyle,Price,SeatStatus) VALUES('$seatID','$movieID','$startDateTime','NORMAL','$NormalPrice',0)";
+                            $seat4roomQuery = mysqli_query($connect,$seatSql); 
+                        }
+
+                        foreach($premiumSeat as $ps){
+                            //combine room and seat
+                            $seatID = $room.$ps;
+                            $seatSql = "INSERT INTO seat4room(SeatID,MovieID,StartDateTime,SeatStyle,Price,SeatStatus) VALUES('$seatID','$movieID','$startDateTime','PREMIUM','$PremiumPrice',0)";
+                            $seat4roomQuery = mysqli_query($connect,$seatSql); 
+                        }
+                    }else{
+                        echo "--------- HAS COLLISION CANNOT ADD --------------</div><br><br>";
                     }
                     
                     //go to next time
                     $j++;
                     $timeInput = $j."time";
+                            
+    
+
                 }
             }
             //go to next date
@@ -91,13 +136,9 @@
             $dateInput = "date".$i;
 
             
-        }
+    }
     }
 
 ?>
 </div>
-
-
-
-
 </body>
