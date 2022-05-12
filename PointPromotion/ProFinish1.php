@@ -29,48 +29,6 @@
       </div>
     </div><!--End Invoice Mid-->
     <div id="bot">
-
-					<div id="table">
-						<table>
-							<tr class="tabletitle">
-								<td class="item"><h2>Item</h2></td>
-								<td class="Hours"><h2>Qty</h2></td>
-								<td class="Rate"><h2>Total</h2></td>
-							</tr>
-							<?php
-								$c = 0;
-								$sum = 0;
-								while($c <= 2){
-									$sql = "SELECT ItemName, Price FROM itemstock WHERE ItemID = $c";
-									$result = mysqli_query($connect,$sql) or die("Bad query");
-									$row = mysqli_fetch_row($result);
-									$total = $row[1]*$POP[$c];
-									$sum = $sum + $total;
-							?>
-							<tr class="service">
-								<td class="tableitem"><p class="itemtext"><?php echo $row[0]; ?></p></td>
-								<td class="tableitem"><p class="itemtext"><?php echo $POP[$c]; ?></p></td>
-								<td class="tableitem"><p class="itemtext"><?php echo $total; ?></p></td>
-							</tr>
-							<?php
-								$c++;
-								}
-							?>
-							<tr class="tabletitle">
-								<td></td>
-								<td class="Rate"><h2>tax</h2></td>
-								<td class="payment"><h2>$419.25</h2></td>
-							</tr>
-
-							<tr class="tabletitle">
-								<td></td>
-								<td class="Rate"><h2>Total</h2></td>
-								<td class="payment"><h2><?php echo $sum; ?></h2></td>
-							</tr>
-
-						</table>
-					</div><!--End Table-->
-
 					<div id="legalcopy">
 						<p class="legal"><strong><a class="button" href="../Home/Home1.php">ชำระเสร็จสิ้น</a></strong>   
 						</p>
