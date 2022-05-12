@@ -47,7 +47,7 @@
     </div>
     </nav>
     <div class ="ProFM1">
-        <h4>Detail มา 3 จ่าย 2</br>
+        <h4>Detail มา 3 จ่าย 2</br></br></br></br></br>
         เงื่อนไขเป็นไปตามที่บริษัทกำหนด</br>
         Point Need : 100</br>
         Point Have : ...</br></h4>
