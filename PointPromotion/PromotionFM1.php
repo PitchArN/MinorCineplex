@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <title>MinorCineplex | PointPromotion</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="StyleTest.css">
+        <link rel="stylesheet" href="StyleTest2.css">
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,5 +47,10 @@
     </div>
     </nav>
     <div class ="ProFM1">
-        <span>Detail มา 3 จ่าย 2</span>
+        <h4>Detail มา 3 จ่าย 2</br></br></br></br></br>
+        เงื่อนไขเป็นไปตามที่บริษัทกำหนด</br>
+        Point Need : 100</br>
+        Point Have : ...</br></h4>
+        <p></p>
+        <a href="ProFinish1.php" class="btnCFM1">Confirm Offer</a>
     </div>

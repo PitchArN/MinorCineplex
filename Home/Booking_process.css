@@ -61,3 +61,13 @@ a {
     color : #585858;
     text-decoration: none;
 }
+.box{
+        background-color: white;
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        margin: auto;
+        max-width: 400px;
+        max-height: 500px;
+        display: inline-block;
+       
+}
