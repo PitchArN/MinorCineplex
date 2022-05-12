@@ -214,6 +214,10 @@ body {
     box-shadow: 0 5px 10px #0005;
     overflow: hidden;
     color:#FFFFFF;
+    flex:1 1 250px;
+    text-align: left;
+    padding:10px;
+    text-transform: uppercase;
 }
 .ProFM1 .btnCFM1 {
     display: block;
