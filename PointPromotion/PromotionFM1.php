@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include 'D:\connect.php';
+  $_SESSION['empty'] = 0;
+  session_start();
+?>
 <html>
     <head>
     <title>MinorCineplex | PointPromotion</title>
@@ -57,8 +61,14 @@
         เงื่อนไขเป็นไปตามที่บริษัทกำหนด</br></p>
         <h3>
         Point Need : 100</br>
-        Point Have : ...</br>
+        Point Have : </br>
         </h3>
+        <?php
+							$sql = "SELECT MemberPoint FROM Member WHERE MemberID = 0";
+							$result = mysqli_query($connect,$sql) or die("Bad query");
+							$row = mysqli_fetch_row($result);
+							echo $row[0];
+						?>
         
         <a href="ProFinish1.php" class="btnCFM1">Confirm Offer</a>
     </div>
