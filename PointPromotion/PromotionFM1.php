@@ -51,5 +51,6 @@
         เงื่อนไขเป็นไปตามที่บริษัทกำหนด</br>
         Point Need : 100</br>
         Point Have : ...</br></h4>
+        <p></p>
         <a href="ProFinish1.php" class="btnCFM1">Confirm Offer</a>
     </div>
