@@ -879,9 +879,9 @@
     <form action="Booking_process.php" enctype="multipart/form-data" method="post">
     <div class="">
 
-        <input type="text" name="movieID" id="movieID" value="<?php echo $movieID; ?>" readonly>
-        <input type="text" name="StartDateTime" id="StartDateTime" value="<?php echo $StartDateTime; ?>" readonly>
-        <input type="text" name="SeatSelected" id="SeatSelected" value=""><br>
+        <input type="text" name="movieID" id="movieID" value="<?php echo $movieID; ?>" readonly hidden>
+        <input type="text" name="StartDateTime" id="StartDateTime" value="<?php echo $StartDateTime; ?>" readonly hidden>
+        <input type="text" name="SeatSelected" id="SeatSelected" value="" hidden><br>
         <input type="submit" name="ConfirmBookSeat" value="Confirm">
       </div>
   </form>

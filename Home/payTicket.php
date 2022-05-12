@@ -57,7 +57,7 @@
     </div>
     <div class="row  d-flex justify-content-center">
       <label>CONFIRMATION CODE:</label>
-      <input type="texr" name="" readonly value="************************">
+      <input type="password" name="" readonly value="<?php echo date("ymdsih",strtotime("now")); ?>">
     </div>
     <div class="row  d-flex justify-content-center">
       <h3>Use this confirmation code at the Cinema</h3>
