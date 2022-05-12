@@ -47,4 +47,7 @@
     </nav>
     <div class ="ProFM1">
         <span>Detail มา 3 จ่าย 2</span>
+        <h3>เงื่อนไขเป็นไปตามที่บริษัทกำหนด</h3>
+        <h4>Point Need : 100     Point Have : ...<h4>
+        <a href="ProFinish1.php" class="btnCFM1">Confirm Offer</a>
     </div>
