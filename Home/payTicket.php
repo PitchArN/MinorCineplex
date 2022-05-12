@@ -29,6 +29,11 @@
         $howManyInTicketProduct= "SELECT TicketProductID FROM ticketproduct";
         $ticketProductQuery= mysqli_query($connect,$howManyInTicketProduct);
         $ticketProductID = mysqli_num_rows($ticketProductQuery);
+        //--------------------------------------- Query Data to ticket_Order
+        $dateTime = date("y-m-d h:i:s",strtotime("now"));
+        $ticketOrderID = strtotime("now");
+
+
         //--------------------------------------- Query All Data to ticketproduct -------
         foreach($seatList as $s){
           if($s!=""){
@@ -42,6 +47,11 @@
             $updateSeat = "UPDATE seat4room SET SeatStatus = 1 WHERE (SeatID = '$s'AND MovieID = '$movieID' AND StartDateTime = '$startDateTime' )";
             $updateSeatQuery = mysqli_query($connect,$updateSeat);
 
+            //-------------------------- Insert Into Ticket Order
+            $insertTicketOrder = "INSERT INTO ticket_order(TicketOrderID,TimeDate,TicketProductID,MemberID,StaffID,PurchaseType) VALUES('$ticketOrderID','$dateTime','$ticketProductID',0,0,'Online')";
+            $insertTicketOrderQuery = mysqli_query($connect,$insertTicketOrder);
+
+
             $ticketProductID++;
           }
         }
@@ -52,7 +62,7 @@
     <div class="container">
       <div class="row  d-flex justify-content-center">
       <h1>
-        Ticket Purchased, Thank You <?php echo $startDateTime; ?>
+        Ticket Purchased, Thank You
       </h1>
     </div>
     <div class="row  d-flex justify-content-center">
