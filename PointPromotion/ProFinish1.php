@@ -24,7 +24,9 @@
         <h2>Promotion :
         </h2>
         <p> 
-            มา 3 จ่าย 2</br>
+            มา 3 จ่าย 2</br></p>
+            <h4>QRCODE<h4>
+            <p>
             Point Used :</br>
             Point Remain :</br>
         </p>
