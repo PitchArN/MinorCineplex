@@ -17,7 +17,7 @@
 
 <body>
     <br><br>
-<div class="container px-4 bg-secondary rounded-3">
+<div class="container px-4 bg-secondary rounded-3 gx-3">
 
 <?php 
     if(isset($_POST['AddShowtime'])&& isset($_POST['movieID'])){
@@ -47,8 +47,8 @@
                 //loop all time input that is not empty
                 while(!empty($_POST[$timeInput])){
                 ?>
-                <br><br>
-                <div class="row rounded-3 bg-light">
+                <br>
+                <div class="row rounded-3 bg-light gx-3"><div class="col">
                 <?php
    
                     echo "timeInput = ".$timeInput." <br>";
@@ -57,7 +57,7 @@
                     $time = mysqli_real_escape_string($connect,$_POST[$timeInput]);
                     $room = mysqli_real_escape_string($connect,$_POST[$roomInput]);
 
-                    echo $roomInput." = ".$room." ";
+                    echo $roomInput." = ".$room." | ";
 
                     $dateTime = $date." ".$time;
                     echo "DateTime = ".$dateTime."<br>";
@@ -100,7 +100,7 @@
                     
                     //--------------------- no collision --------------------------
                     if($sameDateTime == 0){
-                        echo "--------- Added --------------</div><br><br>";
+                        echo "<div class='btn-success round-3 gx-3'>--------- Added --------------</div></div></div>";
                         //----------------- INSERT INTO MOVIETIME
                         $sql = "INSERT INTO movietime(MovieID, StartDateTime, SeatID) VALUES('$movieID', '$startDateTime' , '$room' )";
                         $result = mysqli_query($connect,$sql);
@@ -120,7 +120,7 @@
                             $seat4roomQuery = mysqli_query($connect,$seatSql); 
                         }
                     }else{
-                        echo "--------- HAS COLLISION CANNOT ADD --------------</div><br><br>";
+                        echo "<div class='btn-danger round-3 gx-3'>--------- HAS COLLISION CANNOT ADD --------------</div></div></div>";
                     }
                     
                     //go to next time
@@ -140,5 +140,20 @@
     }
 
 ?>
+<br>
+<div class="row">
+<div class="col">
+<a href="../Home/homeWback.php">
+    <input type="submit" class="btn-danger rounded-3" value="Back To Home">
+</a>
 </div>
+<div class="col">
+<form action="add-movie.php">
+    <input type="submit" class="btn-warning rounded-3" value="ADD MORE MOVIE">  
+</form>
+</div>
+</div>
+<br>
+</div>
+<br><br>
 </body>
