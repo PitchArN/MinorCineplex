@@ -3,7 +3,7 @@
 ?>
 <html>
     <head>
-        <title>Bill</title>
+        <title>MinorCineplex | Popcorn</title>
         <link rel="stylesheet" href="tien_style.css">
         <!---------- Responsive ------->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">
-      <img src="https://static.nhentai.net/img/logo.090da3be7b51.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="../Utility/pngtree-initial-m-graphic-design-template-vector-isolated-illustration-png-image_1716255-removebg-preview.PNG" alt="" width="30" height="24" class="d-inline-block align-text-top">
       Minor Cineplex
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
