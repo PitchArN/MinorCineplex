@@ -1,9 +1,11 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
 
 }
 .wrapper {
@@ -62,12 +64,40 @@ a {
     text-decoration: none;
 }
 .box{
-        background-color: white;
-        color: rgb(0, 0, 0);
-        padding: 20px;
-        margin: auto;
-        max-width: 400px;
-        max-height: 500px;
-        display: inline-block;
-       
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: auto;
+    max-width: 400px;
+    max-height: 500px;
+    display: inline-block;
+   
+}
+.label{
+    outline:none;
+    border-radius:5px;
+  }
+.btn-warning{
+    width: 80px;
+    height: 30px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f77a37 ;
+    transition: ease-out 0.3s;
+    outline :none;
+}
+.textbox{
+    padding: 1rem;
+    width: 80%;
+    height: 100%;
+    
+}
+.btn-warning:hover {
+    box-shadow: inset 80px 0 0 0 #f77a37  ;
+    cursor: pointer;
+}
+
+.bath{
+    color: #f77a37;
 }
