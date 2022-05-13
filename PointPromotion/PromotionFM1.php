@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
-              <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+              <img src="pngtree-initial-m-graphic-design-template-vector-isolated-illustration-png-image_1716255-removebg-preview.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                  Minor Cineplex
              </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,14 +61,14 @@
         เงื่อนไขเป็นไปตามที่บริษัทกำหนด</br></p>
         <h3>
         Point Need : 100</br>
-        Point Have : </br>
-        </h3>
-        <?php
+        Point Have : <?php
 							$sql = "SELECT MemberPoint FROM Member WHERE MemberID = 0";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
+         <br>
+        </h3>
         
         <a href="ProFinish1.php" class="btnCFM1">Confirm Offer</a>
     </div>

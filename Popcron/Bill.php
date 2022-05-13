@@ -68,9 +68,9 @@
             </div>
             
                 <h2>purchase Method</h2>
-                <a class="button" href="Bill-con.php">Wallet</a>
-                <a class="button" href="Bill-con.php">Shopee</a>
-                <a class="button" href="Bill-con.php">Prompay</a>
+                <a class="button" href="#">Wallet</a>
+                <a class="button" href="#">Shopee</a>
+                <a class="button" href="#">Prompay</a>
             </div>
         <form action = "Bill-con.php" method = "post" enctype = "multipart/form-data">
 				<input type = "hidden" name = "Sweet" value = "<?php echo $_POST['Sweet']; ?>">

@@ -23,9 +23,8 @@
 <div>
 
 <div id = "modalbox" class="modal">
-  <div class = "modalcontent">   
+  <div class = "modalcontent" align = "center">   
     <div>
-
 <?php
   if(isset($_POST['ConfirmBookSeat'])){
     $seats = mysqli_real_escape_string($connect,$_POST['SeatSelected']);
@@ -45,6 +44,7 @@
       echo $movie['MovieName'];
     ?>
     </h1>
+  
   </div>
   <div class="col">
     <h5>
@@ -62,31 +62,35 @@
       ?>
     </h5>
   </div>
-
+  <br>
 </div>
+
+
+        <div class = "label">
   <div class="row">
     <?php
       $seatCount = count($seatList) - 1; 
       echo $seatCount." seat(s)"; ?>
   </div>
-  <form action="payTicket.php" enctype="multipart/form-data" method="post">
+  <form action="payTicket.php" enctype="multipart/form-data" method="post"><br>
   <div class="row">
       <input type="hidden" name="movieID" value="<?php echo $movieID ?>">
       <input type="hidden" name="seats" value="<?php echo $seats ?>">
       <input type="hidden" name="StartDateTime" value="<?php echo $StartDateTime ?>">
-      <label for="ticketPromotion">Promotion Code</label>
-      <input type="text" name="ticketPromotion">
+      <h3><label for="ticketPromotion">Promotion Code</label><h3>
+      <input type="text" name="ticketPromotion" placeholder ="Enter Promotion Code" class ="textbox">
   </div>
   <div class="row">
-      <label for="confirmTicketOrder">
+   <div class = "bath">
+      <h3><label for="confirmTicketOrder">
         <?php echo $totalPrice."  ฿"; ?>
-          
-      </label>
+      </label></h3><br>
+      </div>
       <input type="submit" name="confirmTicketOrder" class="btn-warning rounded-3" value="Confirm">
-
   </div>
   </form>
 </div>
+      </div>
 <?php
   }
 
@@ -94,7 +98,6 @@
 </div>
   </div>
 </div>
-
 
 
 
