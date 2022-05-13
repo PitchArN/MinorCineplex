@@ -22,7 +22,7 @@
       if(isset($_POST['confirmTicketOrder'])){
 
         $proID = mysqli_real_escape_string($connect,$_POST['ticketPromotion']);
-         
+
         $seats = mysqli_real_escape_string($connect,$_POST['seats']);
         //create Array of seat
         $seatList = explode(',',$seats);

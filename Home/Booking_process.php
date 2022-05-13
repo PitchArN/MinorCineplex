@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!---------- Boothstrap ------->
-    
+
 <!---------- Responsive ------->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href = "Booking_process.css" rel="stylesheet"/> 
@@ -33,6 +33,9 @@
 
     $movieID = mysqli_real_escape_string($connect,$_POST['movieID']);
     $StartDateTime = mysqli_real_escape_string($connect,$_POST['StartDateTime']);
+
+    
+
 ?>
 <div class="row">
   <div class="col">
@@ -78,12 +81,29 @@
       <input type="hidden" name="seats" value="<?php echo $seats ?>">
       <input type="hidden" name="StartDateTime" value="<?php echo $StartDateTime ?>">
       <h3><label for="ticketPromotion">Promotion Code</label><h3>
-      <input type="text" name="ticketPromotion" placeholder ="Enter Promotion Code" class ="textbox">
+      <select name="" id="ProSelect" onchange="update()">
+      <option value="" class="btn-warning rounded-3">-----------------</option>
+      
+<?php 
+//------------ query all promotion
+    $today = date("y-m-d h:i:s",strtotime("now"));
+    $promoSearch = "SELECT * FROM promotion WHERE '$today' > ProStartDate AND '$today' < ProEndDate";
+    $promoSearchQuery = mysqli_query($connect,$promoSearch);
+    while($pro = mysqli_fetch_assoc($promoSearchQuery)){
+?>
+    <option value="<?php echo $pro['Protype'];?>"><?php echo $pro['ProName']; ?></option>
+<?php
+    }
+?>
+    </select>
+    <input type="hidden" name="ticketPromotion" id="ProID" readonly>
+
   </div>
   <div class="row">
    <div class = "bath">
       <h3><label for="confirmTicketOrder">
-        <?php echo $totalPrice."  ฿"; ?>
+        <input type="hidden" id="totalOriginal" name="" value= "<?php echo $totalPrice; ?>">
+        <input type="text" id="totalPrice">
       </label></h3><br>
       </div>
       <input type="submit" name="confirmTicketOrder" class="btn-warning rounded-3" value="Confirm">
@@ -104,3 +124,47 @@
 
 
   </body>
+
+  <script type="text/javascript">
+const totalPrice = document.getElementById("totalPrice");
+const promotionID = document.getElementById("ProID");
+const totalOriginal = document.getElementById("totalOriginal").value;
+//const proType = document.getElementById("ProType");
+
+function update() {
+        var select = document.getElementById('ProSelect');
+        var option = select.options[select.selectedIndex];
+
+        promotionID.value = option.value;
+        livePromotion();
+}
+
+
+promotionID.addEventListener('change', livePromotion);
+
+function resetPro(){
+  totalPrice.value = totalOriginal;
+}
+
+function livePromotion() {
+  //change proID to Protype
+
+
+  if(promotionID.value == 10){
+    var newPrice = totalOriginal * 0.9;
+    totalPrice.value = newPrice.toString(10);
+  }else if(promotionID.value== 20){
+    var newPrice = totalOriginal * 0.8;
+    totalPrice.value = newPrice.toString(10);
+  }else if(promotionID.value == 50){
+    var newPrice = totalOriginal * 0.5;
+    totalPrice.value = newPrice.toString(10);
+  }
+  else{
+    totalPrice.value = totalOriginal.toString(10);
+  }
+}
+
+update();
+
+</script>
