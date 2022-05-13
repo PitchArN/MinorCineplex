@@ -72,7 +72,7 @@
     </div>
     <div class="row  d-flex justify-content-center">
       <label>CONFIRMATION CODE:</label><br><br>
-     <input type="password" name="" readonly value="<?php echo date("ymdsih",strtotime("now")); ?>" class = "textbox1">
+     <input type="text" name="" readonly value="<?php echo date("ymdsih",strtotime("now")); ?>" class = "textbox1">
     </div><br>
     <div class="row-1 d-flex justify-content-center">
       <h3>Use this confirmation code at the Cinema</h3>
