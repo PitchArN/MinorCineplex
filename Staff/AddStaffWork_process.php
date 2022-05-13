@@ -105,7 +105,7 @@
 <br>
 
 <div class="row-1 d-flex justify-content-center">
-    <a href = "HomeWback.php"><button class = "btn-2" type= "button">Finish</button></a>
+    <a href = "../Home/HomeWback.php"><button class = "btn-2" type= "button">Finish</button></a>
 </div><br>
 </div>
 
