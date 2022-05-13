@@ -21,7 +21,7 @@
 		if(isset($_POST['addStaffWork'])){
 
 			$staffID = mysqli_real_escape_string($connect,$_POST['staffID']);
-			echo "<h3>".$staffID."</h3>";
+			echo "<br><h3>".$staffID."</h3>";
 			$days = array("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
 			foreach($days as $d){
 				$workTimeCheck = $d."time";
@@ -36,7 +36,7 @@
 						$startWorkTime = date("H:i:s",strtotime("9:00"));
 						$endWorkTime = date("H:i:s",strtotime("13:00"));
 						//StaffID WorkDay WorkStartTime WorkEndTime WorkType 	
-						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
+						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime, WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
 						$addWorkSQL = mysqli_query($connect,$addWork);
 						echo $dayShorts." | ".$startWorkTime." - ".$endWorkTime."</div>";
 						//echo $staffID.$dayShorts.$startWorkTime.$endWorkTime.$workType;
@@ -45,7 +45,7 @@
 						echo "<h5>Shift Added</h5><div class='row bg-success rounded-3'>";
 						$startWorkTime = date("H:i:s",strtotime("13:00"));
 						$endWorkTime = date("H:i:s",strtotime("17:00"));
-						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
+						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime, WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
 						$addWorkSQL = mysqli_query($connect,$addWork);
 						echo $dayShorts." | ".$startWorkTime." - ".$endWorkTime."</div>";
 
@@ -55,7 +55,7 @@
 						echo "<h5>Shift Added</h5><div class='row bg-success rounded-3'>";
 						$startWorkTime = date("H:i:s",strtotime("17:00"));
 						$endWorkTime = date("H:i:s",strtotime("21:00"));
-						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
+						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime, WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
 						$addWorkSQL = mysqli_query($connect,$addWork);
 						echo $dayShorts." | ".$startWorkTime." - ".$endWorkTime."</div>";
 
@@ -66,7 +66,7 @@
 						echo "<h5>Shift Added</h5><div class='row bg-success rounded-3'>";
 						$startWorkTime = date("H:i:s",strtotime("21:00"));
 						$endWorkTime = date("H:i:s",strtotime("1:00"));
-						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
+						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime, WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
 						$addWorkSQL = mysqli_query($connect,$addWork);
 						echo $dayShorts." | ".$startWorkTime." - ".$endWorkTime."</div>";
 
@@ -77,7 +77,7 @@
 						echo "<h5>Shift Added</h5><div class='row bg-success rounded-3'>";
 						$startWorkTime = date("H:i:s",strtotime("9:00"));
 						$endWorkTime = date("H:i:s",strtotime("18:00"));
-						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
+						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime, WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
 						$addWorkSQL = mysqli_query($connect,$addWork);
 						echo $dayShorts." | ".$startWorkTime." - ".$endWorkTime."</div>";
 
@@ -88,7 +88,7 @@
 						echo "<h5>Shift Added</h5><div class='row bg-success rounded-3'>";
 						$startWorkTime = date("H:i:s",strtotime("17:00"));
 						$endWorkTime = date("H:i:s",strtotime("1:00"));
-						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
+						$addWork = "INSERT INTO staffwork(StaffID,WorkDay,WorkStartTime, WorkEndTime,WorkType) VALUES('$staffID','$dayShorts','$startWorkTime','$endWorkTime','$workType')";
 						$addWorkSQL = mysqli_query($connect,$addWork);
 						echo $dayShorts." | ".$startWorkTime." - ".$endWorkTime."</div>";
 
