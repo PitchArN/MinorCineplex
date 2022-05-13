@@ -15,7 +15,7 @@
   </head>
 
   <body>
-  <div class = "wrapper">
+  <div class = "wrapper" align = "center">
   <div id = "modalbox" class="modal">
   <div class = "modalcontent">  
     <?php 
@@ -63,21 +63,23 @@
 
       }
     ?>
+    
     <div class="container">
-      <div class="row  d-flex justify-content-center">
+      <div class="row-2  d-flex justify-content-center">
       <h1>
         Ticket Purchased, Thank You
-      </h1>
+      </h1><br>
     </div>
     <div class="row  d-flex justify-content-center">
-      <label>CONFIRMATION CODE:</label>
-      <input type="password" name="" readonly value="<?php echo date("ymdsih",strtotime("now")); ?>">
-    </div>
-    <div class="row  d-flex justify-content-center">
+      <label>CONFIRMATION CODE:</label><br><br>
+     <input type="password" name="" readonly value="<?php echo date("ymdsih",strtotime("now")); ?>" class = "textbox1">
+    </div><br>
+    <div class="row-1 d-flex justify-content-center">
       <h3>Use this confirmation code at the Cinema</h3>
     </div>
+    <a href = "HomeWback.php"><button class = "btn-2" type= "button">Finish</button></a>
     </div>
     </div>
     </div>
-    </div>
+</div>
   </body>
