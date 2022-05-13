@@ -1,5 +1,9 @@
 <?php
 	include 'D:\connect.php';
+	if(!empty($_POST['Pro2']))
+		echo $_POST['Pro2'];
+	if(!empty($_POST['Pro3']))
+		echo $_POST['Pro3'];
 	$POP = array($_POST['Sweet'], $_POST['Salty'], $_POST['BBQ']);
 ?>
 <html>
@@ -89,19 +93,19 @@
 								<td class="Rate"><h2>Total</h2></td>
 							</tr>
 							<?php
-								$c = 0;
+								$c = 1;
 								$sum = 0;
-								while($c <= 2){
-									if($POP[$c] > 0){
+								while($c <= 3){
+									if($POP[$c-1] > 0){
 									$sql = "SELECT ItemName, Price FROM itemstock WHERE ItemID = $c";
 									$result = mysqli_query($connect,$sql) or die("Bad query");
 									$row = mysqli_fetch_row($result);
-									$total = $row[1]*$POP[$c];
+									$total = $row[1]*$POP[$c-1];
 									$sum = $sum + $total;
 							?>
 							<tr class="service">
 								<td class="tableitem"><p class="itemtext"><?php echo $row[0]; ?></p></td>
-								<td class="tableitem"><p class="itemtext"><?php echo $POP[$c]; ?></p></td>
+								<td class="tableitem"><p class="itemtext"><?php echo $POP[$c-1]; ?></p></td>
 								<td class="tableitem"><p class="itemtext"><?php echo $total; ?></p></td>
 							</tr>
 							<?php
@@ -111,7 +115,7 @@
 							?>
 							<tr class="tabletitle">
 								<td></td>
-								<td class="Rate"><h2>tax</h2></td>
+								<td class="Rate"><h2>discount</h2></td>
 								<td class="payment"><h2>$419.25</h2></td>
 							</tr>
 

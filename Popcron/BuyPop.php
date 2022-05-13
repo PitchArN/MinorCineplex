@@ -1,6 +1,5 @@
 <?php
   include 'D:\connect.php';
-  $_SESSION['empty'] = 0;
   session_start();
 ?>
 <html>
@@ -78,7 +77,7 @@
                         <img class="image" src="1.jpg">
                         <h1>Sweet</h1>
 						<?php
-							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 0";
+							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 1";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
@@ -96,7 +95,7 @@
         <img class="image" src="2.jpg" >
         <h1>Salty</h1>
 						<?php
-							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 1";
+							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 2";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
@@ -113,7 +112,7 @@
         <img class="image" src="3.jpg" >
         <h1>BQQ</h1>
 						<?php
-							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 2";
+							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 3";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
