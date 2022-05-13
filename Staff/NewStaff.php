@@ -159,7 +159,7 @@
 
 <br>
 
-<center><input type="submit" class = "btn btn-outline-success me-2 "  name="addNewStaff" value="SUBMIT"></center>
+<center><input type="submit" class = "btn btn-outline-success me-2 "  name="addNewStaff" value="ADD NEW STAFF"></center>
 <br>
 </form>
 </div>
