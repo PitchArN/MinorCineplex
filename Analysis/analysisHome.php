@@ -209,8 +209,7 @@ FROM (SELECT MovieID,StartDateTime FROM movietime WHERE MovieID = '$mostID')AS m
 		?></td>
 		<td>
 			<?php
-			echo $most['showCount'];
-				
+			echo $most['showCount'];				
 			?>
 		</td>
 	</tr>
@@ -235,6 +234,7 @@ FROM (SELECT MovieID,StartDateTime FROM movietime WHERE MovieID = '$mostID')AS m
   </tr>
 </thead>
 <tbody>
+	<?php ?>
 	<tr>
 		<th>
 			
@@ -250,26 +250,68 @@ FROM (SELECT MovieID,StartDateTime FROM movietime WHERE MovieID = '$mostID')AS m
   <div class="tab-pane fade" id="nav-staff" role="tabpanel" aria-labelledby="nav-staff-tab">
 <table  class="table">
   	<thead>
+
   <tr>
     <th scope="col">Staff ID</th>
     <th scope="col">Staff Name</th>
+    <th scope="col">Staff Type</th>
+    <th scope="col">CheckCount</th>
     <th scope="col">Late</th>
-    <th scope="col">Sales</th>
 
-    <th scope="col">Order Count</th>
-    <th scope="col">Salry</th>
+    <th scope="col">Sales Order Count</th>
+    <th scope="col">Salary</th>
     <th scope="col">Staff Mail</th>
   </tr>
+ 
 </thead>
 <tbody>
+	<?php
+	$listStaff = "SELECT * FROM staff ORDER BY StaffType";
+	$listStaffQuery = mysqli_query($connect,$listStaff);
+	while ($aStaff = mysqli_fetch_assoc($listStaffQuery)) {
+		$thisStaff = $aStaff['StaffID'];
+		$staffOntime = "SELECT COUNT(ontime.ontime) AS OntimeCount FROM
+(SELECT * FROM staffcheck WHERE StaffID = '$thisStaff' AND ontime = 1) AS ontime";
+		$staffOntimeQuery = mysqli_query($connect,$staffOntime);
+		$ontimeCount = mysqli_fetch_assoc($staffOntimeQuery);
+
+		$staffAlltime = "SELECT COUNT(ontime.ontime) AS AlltimeCount FROM
+(SELECT * FROM staffcheck WHERE StaffID = '$thisStaff') AS ontime";
+		$staffAlltimeQuery = mysqli_query($connect,$staffAlltime);
+		$AlltimeCount = mysqli_fetch_assoc($staffAlltimeQuery);
+?>
+
 	<tr>
 		<th>
-			
+			<?php echo $aStaff['StaffID']; ?>
 		</th>
+		<td><?php echo $aStaff['StaffName']; ?></td>
+		<td><?php echo $aStaff['StaffType']; ?></td>
+		<td><?php echo $AlltimeCount['AlltimeCount'];?></td>
+		<td><?php echo ($AlltimeCount['AlltimeCount'] - $ontimeCount['OntimeCount']);?></td>			
 		<td>
+			<?php
+				//----------- COUNT TICKET SALES ORDER
+				$staffTicketSale = "SELECT COUNT(tickOrder.TicketOrderID) AS SaleCount
+FROM (SELECT * FROM ticket_order WHERE StaffID = '$thisStaff' GROUP BY TicketOrderID) AS tickOrder";
+				$staffTicketSaleQuery = mysqli_query($connect,$staffTicketSale);
+				$ticketSale = mysqli_fetch_assoc($staffTicketSaleQuery);
+
+				//----------- COUNT ITEM SALES ORDER
+				$staffItemSale = "SELECT COUNT(tickOrder.OrderID) AS SaleCount
+FROM (SELECT * FROM itemorder WHERE StaffID = '$thisStaff' GROUP BY OrderID) AS tickOrder";
+				$staffItemSaleQuery = mysqli_query($connect,$staffItemSale);
+				$itemSale = mysqli_fetch_assoc($staffItemSaleQuery);
 			
+				echo ($ticketSale['SaleCount']+$itemSale['SaleCount']);
+			?>
 		</td>
+		<td><?php echo $aStaff['StaffSalary']; ?></td>
+		<td><?php echo $aStaff['StaffMail']; ?></td>
 	</tr>
+<?php 
+	} 
+ ?>
 </tbody>
 </table>
 </div>
