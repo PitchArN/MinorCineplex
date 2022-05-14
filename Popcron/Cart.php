@@ -87,15 +87,26 @@
 					$c = 1;
 					while($c <= 3){
 						if($POP[$c-1] > 0){
-							$sql = "SELECT i.ProID, p.ProName FROM itemstock i, promotion p WHERE i.ItemID = $c AND i.ProID = p.ProID;";
+							$sql = "SELECT i.ProID, p.ProName, i.ItemName FROM itemstock i, promotion p WHERE i.ItemID = $c AND i.ProID = p.ProID;";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
 							if($row[0] > 1){
-								
+								if($row[0] != 2){
+									echo $row[2];
 				?>
 				<input type="checkbox" id="SendPro<?php echo "$c";?>" name="Pro<?php echo "$c";?>" value="<?php echo $row[0];?>">
 				<label for="SendPro<?php echo "$c";?>"> <?php echo $row[1]?></label><br>
 				<?php
+								}
+								else{
+									if($POP[1] > 2){
+										echo $row[2];
+				?>
+				<input type="checkbox" id="SendPro<?php echo "$c";?>" name="Pro<?php echo "$c";?>" value="<?php echo $row[0];?>">
+				<label for="SendPro<?php echo "$c";?>"> <?php echo $row[1]?></label><br>
+				<?php
+									}
+								}
 							}
 						}
 						$c++;

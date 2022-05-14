@@ -65,7 +65,11 @@
     </div></center>
 	<?php
   if ($_SESSION['empty'] == 1) {
-    echo "Cannot create order";
+    ?>
+	
+	
+	
+	<?php
   }
   $_SESSION['empty'] = 0;
 ?>
