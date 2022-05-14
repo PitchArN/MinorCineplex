@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MinorCineplex | Add Staff</title>
+<title>MinorCineplex | Add Staff Work</title>
 <!---------- Boothstrap ------->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -61,254 +61,69 @@
 
 <br>
 
+<?php 
+	if(isset($_GET['staffID'])){
+		$staffID = mysqli_real_escape_string($connect,$_GET['staffID']);
+?>
+<!------------------------------ CONTENT FOR ADD WORK ------------------------------>
+<form action="AddStaffWork_process.php" enctype="multipart/form-data" method="post">
 <div class="container px-4 bg-light rounded-3">
 <br>
 <h1>Add Staff Work</h1>
+<?php 
+	$days = array("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
+	foreach($days as $d){
+?>
 <br>
-<h2>Monday</h2>
+<h2><?php echo $d ?></h2>
 <div class="row gx-3">
 <div class="col">
   <label for="staffType" class="form-label">Work Type</label>
-      <select id="staffType" name="staffType" class="form-select">
-	  <option>Manager</option>
+      <select name="<?php echo $d."work"; ?>" class="form-select">
+	  	<option>Manage</option>
         <option>SalesTicket</option>
         <option>SalesPopcorn</option>
+        <option>Receptionist</option>
       </select>
     </div>
-    <div class ="col">
-  <label for="staffName1" class="form-label">Start Time</label>
+  <div class ="col">
+  <label for="staffName1" class="form-label">Work Time</label>
   <br>
-  <input type="radio" id="9.00 - 13.00" name="drone1" value="9.00 - 13.00"
-             checked>
-      <label for="9.00 - 13.00">9.00 - 13.00</label>
+  	<h7>4 Hour Shift</h7><br>
+  	  <input class="btn-check" type="radio" name="<?php echo $d."time"; ?>" id="<?php echo $d."9"; ?>" value="9-13" required>
+      <label class="btn btn-outline-warning" for="<?php echo $d."9"; ?>">9.00 - 13.00</label>
 	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="13.00-17.00" name="drone1" value="13.00-17.00"
-             checked>
-      <label for="13.00-17.00">13.00-17.00</label>
+	  <input class="btn-check" type="radio" name="<?php echo $d."time"; ?>" id="<?php echo $d."13"; ?>" value="13-17" required>
+      <label class="btn btn-outline-warning" for="<?php echo $d."13"; ?>">13.00-17.00</label>
 	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="17.00-21.00" name="drone1" value="17.00-21.00"
-             checked>
-      <label for="17.00-21.00">17.00-21.00</label>
+	  <input class="btn-check" type="radio" name="<?php echo $d."time"; ?>" id="<?php echo $d."17"; ?>" value="17-21" required>
+      <label class="btn btn-outline-warning" for="<?php echo $d."17"; ?>">17.00-21.00</label>
 	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="21.00-1.00" name="drone1" value="21.00-1.00"
-             checked>
-      <label for="21.00-1.00">21.00-1.00</label>
+	  <input class="btn-check" type="radio" name="<?php echo $d."time"; ?>" id="<?php echo $d."21"; ?>" value="21-1" required>
+      <label class="btn btn-outline-warning" for="<?php echo $d."21"; ?>">21.00-1.00</label>
+      <br>
+      <h7>8 Hour Shift</h7><br>
+      <input class="btn-check" type="radio" name="<?php echo $d."time"; ?>" id="<?php echo $d."9-18"; ?>" value="9-18" required>
+      <label class="btn btn-outline-warning" for="<?php echo $d."9-18"; ?>">9.00-12.00 | 13.00-18.00</label>
+	  &nbsp;&nbsp;&nbsp;
+	  <input class="btn-check" type="radio" name="<?php echo $d."time"; ?>" id="<?php echo $d."18-1"; ?>" value="17-1" required>
+      <label class="btn btn-outline-warning" for="<?php echo $d."18-1"; ?>">17.00-1.00</label>
+      &nbsp;&nbsp;&nbsp;
+	  <input class="btn-check" type="radio" name="<?php echo $d."time"; ?>" id="<?php echo $d."df"; ?>" value="dayOff" required>
+      <label class="btn btn-outline-danger" for="<?php echo $d."df"; ?>">DAY OFF</label><br>
+
+
 </div>
 </div>
 
+<?php 
+	}
+?>
 <br>
-<br>
-
-<h2>Tuesday</h2>
 <div class="row gx-3">
-<div class="col">
-  <label for="staffType2" class="form-label">Work Type</label>
-      <select id="staffType" name="staffType" class="form-select">
-	  <option>Manager</option>
-        <option>SalesTicket</option>
-        <option>SalesPopcorn</option>
-      </select>
-    </div>
-    <div class ="col">
-  <label for="staffName2" class="form-label">Start Time</label>
-  <br>
-  <input type="radio" id="9.00 - 13.00" name="drone2" value="9.00 - 13.00"
-             checked>
-      <label for="9.00 - 13.00">9.00 - 13.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="13.00-17.00" name="drone2" value="13.00-17.00"
-             checked>
-      <label for="13.00-17.00">13.00-17.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="17.00-21.00" name="drone2" value="17.00-21.00"
-             checked>
-      <label for="17.00-21.00">17.00-21.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="21.00-1.00" name="drone2" value="21.00-1.00"
-             checked>
-      <label for="21.00-1.00">21.00-1.00</label>
-</div>
-</div>
-
-<br>
-<br>
-
-<h2>Wednesday</h2>
-<div class="row gx-3">
-<div class="col">
-  <label for="staffType" class="form-label">Work Type</label>
-      <select id="staffType" name="staffType" class="form-select">
-	  <option>Manager</option>
-        <option>SalesTicket</option>
-        <option>SalesPopcorn</option>
-      </select>
-    </div>
-    <div class ="col">
-  <label for="staffName3" class="form-label">Start Time</label>
-  <br>
-  <input type="radio" id="9.00 - 13.00" name="drone3" value="9.00 - 13.00"
-             checked>
-      <label for="9.00 - 13.00">9.00 - 13.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="13.00-17.00" name="drone3" value="13.00-17.00"
-             checked>
-      <label for="13.00-17.00">13.00-17.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="17.00-21.00" name="drone3" value="17.00-21.00"
-             checked>
-      <label for="17.00-21.00">17.00-21.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="21.00-1.00" name="drone3" value="21.00-1.00"
-             checked>
-      <label for="21.00-1.00">21.00-1.00</label>
-</div>
-</div>
-
-<br>
-<br>
-
-<h2>Thursday</h2>
-<div class="row gx-3">
-<div class="col">
-  <label for="staffType" class="form-label">Work Type</label>
-      <select id="staffType" name="staffType" class="form-select">
-	  <option>Manager</option>
-        <option>SalesTicket</option>
-        <option>SalesPopcorn</option>
-      </select>
-    </div>
-    <div class ="col">
-  <label for="staffName1" class="form-label">Start Time</label>
-  <br>
-  <input type="radio" id="9.00 - 13.00" name="drone4" value="9.00 - 13.00"
-             checked>
-      <label for="9.00 - 13.00">9.00 - 13.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="13.00-17.00" name="drone4" value="13.00-17.00"
-             checked>
-      <label for="13.00-17.00">13.00-17.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="17.00-21.00" name="drone4" value="17.00-21.00"
-             checked>
-      <label for="17.00-21.00">17.00-21.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="21.00-1.00" name="drone4" value="21.00-1.00"
-             checked>
-      <label for="21.00-1.00">21.00-1.00</label>
-</div>
-</div>
-
-<br>
-<br>
-
-<h2>Friday</h2>
-<div class="row gx-3">
-<div class="col">
-  <label for="staffType" class="form-label">Work Type</label>
-      <select id="staffType" name="staffType" class="form-select">
-	  <option>Manager</option>
-        <option>SalesTicket</option>
-        <option>SalesPopcorn</option>
-      </select>
-    </div>
-    <div class ="col">
-  <label for="staffName1" class="form-label">Start Time</label>
-  <br>
-  <input type="radio" id="9.00 - 13.00" name="drone5" value="9.00 - 13.00"
-             checked>
-      <label for="9.00 - 13.00">9.00 - 13.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="13.00-17.00" name="drone5" value="13.00-17.00"
-             checked>
-      <label for="13.00-17.00">13.00-17.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="17.00-21.00" name="drone5" value="17.00-21.00"
-             checked>
-      <label for="17.00-21.00">17.00-21.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="21.00-1.00" name="drone5" value="21.00-1.00"
-             checked>
-      <label for="21.00-1.00">21.00-1.00</label>
-</div>
-</div>
-
-<br>
-<br>
-
-<h2>Saturday</h2>
-<div class="row gx-3">
-<div class="col">
-  <label for="staffType" class="form-label">Work Type</label>
-      <select id="staffType" name="staffType" class="form-select">
-	  <option>Manager</option>
-        <option>SalesTicket</option>
-        <option>SalesPopcorn</option>
-      </select>
-    </div>
-    <div class ="col">
-  <label for="staffName1" class="form-label">Start Time</label>
-  <br>
-  <input type="radio" id="9.00 - 13.00" name="drone6" value="9.00 - 13.00"
-             checked>
-      <label for="9.00 - 13.00">9.00 - 13.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="13.00-17.00" name="drone6" value="13.00-17.00"
-             checked>
-      <label for="13.00-17.00">13.00-17.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="17.00-21.00" name="drone6" value="17.00-21.00"
-             checked>
-      <label for="17.00-21.00">17.00-21.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="21.00-1.00" name="drone6" value="21.00-1.00"
-             checked>
-      <label for="21.00-1.00">21.00-1.00</label>
-</div>
-</div>
-
-<br>
-<br>
-
-<h2>Sunday</h2>
-<div class="row gx-3">
-<div class="col">
-  <label for="staffType" class="form-label">Work Type</label>
-      <select id="staffType" name="staffType" class="form-select">
-        <option>Manager</option>
-        <option>SalesTicket</option>
-        <option>SalesPopcorn</option>
-      </select>
-    </div>
-    <div class ="col">
-  <label for="staffName1" class="form-label">Start Time</label>
-  <br>
-  <input type="radio" id="9.00 - 13.00" name="drone7" value="9.00 - 13.00"
-             checked>
-      <label for="9.00 - 13.00">9.00 - 13.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="13.00-17.00" name="drone7" value="13.00-17.00"
-             checked>
-      <label for="13.00-17.00">13.00-17.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="17.00-21.00" name="drone7" value="17.00-21.00"
-             checked>
-      <label for="17.00-21.00">17.00-21.00</label>
-	  &nbsp;&nbsp;&nbsp;
-	  <input type="radio" id="21.00-1.00" name="drone7" value="21.00-1.00"
-             checked>
-      <label for="21.00-1.00">21.00-1.00</label>
-</div>
-</div>
-
-<br>
-<br>
-
-
-
-<div class="row gx-3">
-<br>
-<br>
-<center><input type="submit" class = "btn btn-outline-success me-2 "  name="addNewStaff" value="SUBMIT"></center>
+<br><br>
+<input type="hidden" name="staffID" value="<?php echo $staffID; ?>">
+<center><input type="submit" class = "btn btn-outline-success me-2 "  name="addStaffWork" value="SUBMIT"></center>
 <br>
 </form>
 </div>
@@ -320,6 +135,10 @@
 
 </div>
 
+<?php 
+	}
+?>
+<!---------------------------- END OF CONTENT ----------------------------------------->
 <style> .bg{
     background: rgba(0,0,0,0.6);
     color: white;

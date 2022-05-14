@@ -1,9 +1,11 @@
 <?php
+	include 'D:\connect.php';
 	session_start();
 	if(empty($_POST['Sweet']) && empty($_POST['Salty']) && empty($_POST['BBQ'])){
 		$_SESSION['empty'] = 1;
 		header('Location:BuyPop.php');
 	}
+	$POP = array($_POST['Sweet'], $_POST['Salty'], $_POST['BBQ']);
 ?>
 <html>
     <head>
@@ -78,10 +80,39 @@
             <div class="box">
                 <p>Promotion</p>
                 <form action = "Bill.php" method = "post" enctype = "multipart/form-data">
-				<input type = "hidden" name = "Sweet" value = "<?php echo $_POST['Sweet']; ?>">
-				<input type = "hidden" name = "Salty" value = "<?php echo $_POST['Salty']; ?>">
-				<input type = "hidden" name = "BBQ" value = "<?php echo $_POST['BBQ']; ?>">
-                <input type = "submit" name = "Purchase" value = "Purchase">
+				<input type = "hidden" name = "Sweet" value = "<?php echo $POP[0]; ?>">
+				<input type = "hidden" name = "Salty" value = "<?php echo $POP[1]; ?>">
+				<input type = "hidden" name = "BBQ" value = "<?php echo $POP[2]; ?>">
+				<?php
+					$c = 1;
+					while($c <= 3){
+						if($POP[$c-1] > 0){
+							$sql = "SELECT i.ProID, p.ProName, i.ItemName FROM itemstock i, promotion p WHERE i.ItemID = $c AND i.ProID = p.ProID;";
+							$result = mysqli_query($connect,$sql) or die("Bad query");
+							$row = mysqli_fetch_row($result);
+							if($row[0] > 1){
+								if($row[0] != 2){
+									echo $row[2];
+				?>
+				<input type="checkbox" id="SendPro<?php echo "$c";?>" name="Pro<?php echo "$c";?>" value="<?php echo $row[0];?>">
+				<label for="SendPro<?php echo "$c";?>"> <?php echo $row[1]?></label><br>
+				<?php
+								}
+								else{
+									if($POP[1] > 2){
+										echo $row[2];
+				?>
+				<input type="checkbox" id="SendPro<?php echo "$c";?>" name="Pro<?php echo "$c";?>" value="<?php echo $row[0];?>">
+				<label for="SendPro<?php echo "$c";?>"> <?php echo $row[1]?></label><br>
+				<?php
+									}
+								}
+							}
+						}
+						$c++;
+					}
+				?>
+                <br><input type = "submit" name = "Purchase" class = "btn-3" value = "Purchase">
 				</form>
             </div>
         </div>

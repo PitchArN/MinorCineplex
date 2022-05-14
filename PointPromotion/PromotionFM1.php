@@ -70,6 +70,6 @@
          <br>
         </h3>
         
-        <a href="ProFinish1.php" class="btnCFM1">Confirm Offer</a>
+        <a href="Promotion_End.php" class="btnCFM1">Confirm Offer</a>
     </div>
     </div>

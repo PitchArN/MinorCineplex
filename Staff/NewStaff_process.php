@@ -37,7 +37,7 @@
 
 
 			//------------ find that staff
-			$findStaff = "SELECT StaffID FROM staff WHERE StaffMail = '$staffMail' AND StaffType = '$staffType' AND StaffName = '$staffName' AND StaffPassword = '$staffPassword' AND StaffSalary = '$staffSalary'"
+			$findStaff = "SELECT StaffID FROM staff WHERE StaffMail = '$staffMail' AND StaffType = '$staffType' AND StaffName = '$staffName' AND StaffPassword = '$staffPassword' AND StaffSalary = '$staffSalary'";
 			$findStaffQuery = mysqli_query($connect,$findStaff);
 			$thisStaff = mysqli_fetch_assoc($findStaffQuery);
 

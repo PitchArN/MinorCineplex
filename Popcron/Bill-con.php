@@ -71,11 +71,23 @@
     <center>
     <div id="mid">
       <div class="info">
-        <h2>Promotion :
-        </h2>
+        <h2>Promotion :</h2>
         <p> 
-            เด็ดดวง สุ่มในป็อปคอนมีทองก้อน</br>
-            (โปรอย่าเผลอแดกทองเข้าไป)</br></br>
+            <?php
+					$c = 1;
+					while($c <= 3){
+						if(!empty($_POST['Pro'.$c])){
+							$sql = "SELECT i.ProID, p.ProName, i.ItemName FROM itemstock i, promotion p WHERE i.ItemID = $c AND i.ProID = p.ProID;";
+							$result = mysqli_query($connect,$sql) or die("Bad query");
+							$row = mysqli_fetch_row($result);
+							if($row[0] > 1){
+								echo $row[2]."    ".$row[1];
+								echo "<br>";
+							}
+						}
+						$c++;
+					}
+				?>
         </p>
       </div>
     </div><!--End Invoice Mid-->
@@ -89,20 +101,27 @@
 								<td class="Rate"><h2>Total</h2></td>
 							</tr>
 							<?php
-								$c = 0;
+								$c = 1;
 								$sum = 0;
-								while($c <= 2){
-									if($POP[$c] > 0){
+								$discount = 0;
+								while($c <= 3){
+									if($POP[$c-1] > 0){
 									$sql = "SELECT ItemName, Price FROM itemstock WHERE ItemID = $c";
 									$result = mysqli_query($connect,$sql) or die("Bad query");
 									$row = mysqli_fetch_row($result);
-									$total = $row[1]*$POP[$c];
-									$sum = $sum + $total;
+									$price = $row[1]*$POP[$c-1];
+									if(!empty($_POST['Pro'.$c])){
+										if($_POST['Pro'.$c] == 2)
+											$discount += ($row[1]*10/100)*$POP[$c-1];
+										else if($_POST['Pro'.$c] == 3)
+											$discount += ($row[1]*10/100)*$POP[$c-1];
+									}
+									$sum += $price;
 							?>
 							<tr class="service">
 								<td class="tableitem"><p class="itemtext"><?php echo $row[0]; ?></p></td>
-								<td class="tableitem"><p class="itemtext"><?php echo $POP[$c]; ?></p></td>
-								<td class="tableitem"><p class="itemtext"><?php echo $total; ?></p></td>
+								<td class="tableitem"><p class="itemtext"><?php echo $POP[$c-1]; ?></p></td>
+								<td class="tableitem"><p class="itemtext"><?php echo $price; ?></p></td>
 							</tr>
 							<?php
 									}
@@ -111,21 +130,27 @@
 							?>
 							<tr class="tabletitle">
 								<td></td>
-								<td class="Rate"><h2>tax</h2></td>
-								<td class="payment"><h2>$419.25</h2></td>
+								<td class="Rate"><h2>Sum</h2></td>
+								<td class="payment"><h2><?php echo $sum; ?></h2></td>
+							</tr>
+							
+							<tr class="tabletitle">
+								<td></td>
+								<td class="Rate"><h2>discount</h2></td>
+								<td class="payment"><h2><?php echo $discount; ?></h2></td>
 							</tr>
 
 							<tr class="tabletitle">
 								<td></td>
 								<td class="Rate"><h2>Total</h2></td>
-								<td class="payment"><h2><?php echo $sum; ?></h2></td>
+								<td class="payment"><h2><?php echo $sum-$discount; ?></h2></td>
 							</tr>
 
 						</table>
 					</div><!--End Table-->
 					
 					<div id="legalcopy">
-						<p class="legal"><strong><a class="button" href="../Home/Home1.php">ชำระเสร็จสิ้น</a></strong>   
+						<p class="legal"><strong><a class="button" href="../Home/HomeWback.php">ชำระเสร็จสิ้น</a></strong>   
 						</p>
 					</div>
 

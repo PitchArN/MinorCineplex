@@ -1,5 +1,6 @@
 <?php
-	
+	/* if(!empty($_POST['Pro2']))
+		echo $_POST['Pro2']; */
 ?>
 <html>
     <head>
@@ -75,6 +76,17 @@
 				<input type = "hidden" name = "Sweet" value = "<?php echo $_POST['Sweet']; ?>">
 				<input type = "hidden" name = "Salty" value = "<?php echo $_POST['Salty']; ?>">
 				<input type = "hidden" name = "BBQ" value = "<?php echo $_POST['BBQ']; ?>">
+				<?php
+					$c = 1;
+					while($c <= 3){
+						if(!empty($_POST['Pro'.$c])){
+				?>
+				<input type = "hidden" name = "Pro<?php echo $c;?>" value = "<?php echo $_POST['Pro'.$c]; ?>">
+				<?php
+						}
+						$c++;
+					}
+				?>
                 <input type = "submit" name = "ConfirmBut" value = "Confirm">
 		</form>
 <!-- Contact -->
