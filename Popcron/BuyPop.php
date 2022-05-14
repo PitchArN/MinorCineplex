@@ -124,8 +124,8 @@
 </div>
 
 <center><div class="box">
-<center><q>Add all selected popcorn to the cart</q></center>
-<center><input type = "submit" name = "AddToCart" value = "add to cart"></center>
+<center><q>Add all selected popcorn to the cart</q></center><br>
+<center><input type = "submit" name = "AddToCart" class = "btn-3"value = "add to cart"></center>
     </div></center>
 
 

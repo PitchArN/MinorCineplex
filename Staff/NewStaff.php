@@ -50,8 +50,8 @@
       </ul>
       <form class="d-flex">
         <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success me-2" type="submit">Login</button>
-        <button class="btn btn-outline-success" type="submit">Signin</button>
+        <button class="btn-4 btn-outline-success me-2" type="submit">Login</button>
+        <button class="btn-4 btn-outline-success" type="submit">Signin</button>
       </form>
       </div>
     </div>

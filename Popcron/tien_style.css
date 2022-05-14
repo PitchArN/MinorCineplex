@@ -69,7 +69,7 @@ input{
     border-radius: 4px;
 
 }
-.btn{
+.btn-3,.purchase{
     width: 150px;
     height: 40px;
     border: none;
@@ -79,8 +79,9 @@ input{
     transition: ease-out 0.3s;
     outline :none;
 }
-.btn:hover{
+.btn-3:hover,.purchase:hover{
     box-shadow: inset 150px 0 0 0 #f77a37  ;
     cursor: pointer;
+    
 }
 
