@@ -57,7 +57,7 @@
 
 <br><br><br><br>
 
-<br><br><br><br><br><br><br><br><br><br>
+
 <!-- 5555555 -->
 
 
@@ -69,14 +69,12 @@
 
 
 <br>
-
+<div class="row gx-3">
+<h3>For Staff</h3>
+</div><br>
 
 <div class="row gx-3">
-<div class="col" >
-<form method="get" action="NewStaff.php">
-    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">AddStaff</button>
-</form>
-</div>
+
 <div class="col" >
 <form method="get" action="../add Movie/add-movie.php">
     <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">AddMovie</button>
@@ -84,11 +82,47 @@
 </div>
 <div class="col" >
 <form method="get" action="CheckStaff.php">
-    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">CheckStaff</button>
+    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">Staff Check</button>
 </form>
 </div>
 
+<div class="col" >
+<form method="get" action="">
+    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex ">Add Stock</button>
+</form>
 </div>
+</div>
+<br>
+
+<!---------------------------- Manager ------------------------------>
+<div class="row gx-3">
+<h3>For Manager</h3>
+</div><br>
+
+<div class="row gx-3">
+<div class="col" >
+<a href="../Analysis/analysisHome.php" class = "btn btn-outline-success me-2 p-3 d-flex justify-content-center">
+    Advance Anaylsis Report
+</a>
+</div>
+</div><br>
+<div class="row gx-3 form-group">
+  <div class="col" >
+<form method="get" action="NewStaff.php">
+    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Add Staff</button>
+</form>
+</div>
+<div class="col" >
+<form method="get" action="AddStaffWork.php">
+    <label for="staffID"></label>   
+    <select name="staffID" class=" form-control">
+      <option>1</option>
+    </select>
+    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Staff Work</button>
+</form>
+</div>
+</div>
+<br>
 
 <br>
 
@@ -100,9 +134,8 @@
 
 
 </div></center>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 
-<br><br><br><br>
 
 
 

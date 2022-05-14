@@ -148,9 +148,8 @@
 </a>
 </div>
 <div class="col">
-<form action="add-movie.php">
+    <a href="../Staff/LinkStaffMovie.php"></a>
     <input type="submit" class="btn-warning rounded-3" value="ADD MORE MOVIE">  
-</form>
 </div>
 </div>
 <br>

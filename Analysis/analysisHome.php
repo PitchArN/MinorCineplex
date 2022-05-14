@@ -74,10 +74,31 @@
 
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-  <h5>Home</h5>
-  
-  	
-	
+  	<div class="p-3">
+  	<br>
+  <h4><b>This page shows advanced analysis of the Project</b><br></h4>
+
+<b>Ticket Sales :</b> <br>
+This is a summary of movie ticket sales by ranking.<br> 
+Use data from <b>movie seat4room</b> and <b>movietime</b> 
+<br><br>
+<b>Movie Genre :</b><br>
+It sums up the types of movies that have the highest number of movie ticket buyers. <br>
+Use data from <b>movie moviegenre seat4room</b> and <b>movietime</b>
+<br><br>
+<b>Product Sale : </b><br>
+Sales of each product and popular products. <br>
+Use data from <b>itemstock itemorder</b> and <b>member</b>
+<br><br>
+<b>Staff work : </b> <br>
+Show all staff work and staff time. <br>
+Use data from <b>staff staffcheck ticketorder</b> and <b>itemorder</b>
+<br><br>
+<b>Promotion Usage : </b><br>
+Total Usage of each promotion.<br>
+Use data from <b>promotion ticketorder</b> and <b>itemorder</b>
+<br><br>	
+	</div>
 </div>
   <div class="tab-pane fade" id="nav-ticket" role="tabpanel" aria-labelledby="nav-ticket-tab">
   <table  class="table">

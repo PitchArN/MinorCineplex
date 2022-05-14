@@ -104,7 +104,7 @@
 <br>
 
 <div class="row-1 d-flex justify-content-center">
-    <center><a href = "Newstaff.php"><button class = "btn-2" type= "button">Finish</button></a></center>
+    <center><a href = "LinkStaffMovie.php"><button class = "btn-2" type= "button">Finish</button></a></center>
 </div><br>
 </div>
 
