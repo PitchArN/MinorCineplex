@@ -66,8 +66,8 @@
 	<?php
   if ($_SESSION['empty'] == 1) {
     ?>
-	
-	
+	<br>
+	<center><div class="box"><h5>Cannot create order</h5></div> </center>
 	
 	<?php
   }
