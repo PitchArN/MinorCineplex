@@ -1,9 +1,5 @@
 <?php
 	include 'D:\connect.php';
-	if(!empty($_POST['Pro2']))
-		echo $_POST['Pro2'];
-	if(!empty($_POST['Pro3']))
-		echo $_POST['Pro3'];
 	$POP = array($_POST['Sweet'], $_POST['Salty'], $_POST['BBQ']);
 ?>
 <html>
