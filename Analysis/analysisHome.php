@@ -96,12 +96,10 @@
 </thead>
 <tbody>
 	<?php
-		$movie = "SELECT m.MovieID AS MovieID,m.RateAges AS RateAges,m.Rating AS Rating,m.Length AS Length,m.MovieName AS MovieName,COUNT(showtime.StartDateTime) AS TotalShowtime
-FROM
-(SELECT StartDateTime,MovieID,SeatID FROM movietime)AS showtime, movie m
-WHERE m.MovieID = showtime.MovieID
-GROUP BY m.MovieID  
-ORDER BY TotalShowtime  DESC";
+		$movie = "SELECT m.MovieID AS MovieID,m.RateAges AS RateAges,m.Rating AS Rating,m.Length AS Length,m.MovieName AS MovieName,COUNT(showtime.StartDateTime) AS TotalShowtime FROM
+		(SELECT StartDateTime,MovieID,SeatID FROM movietime)AS showtime, movie m
+		WHERE m.MovieID = showtime.MovieID
+		GROUP BY m.MovieID  ORDER BY TotalShowtime  DESC";
 		$movieQuery = mysqli_query($connect,$movie);
 		while ($m = mysqli_fetch_assoc($movieQuery)) {	
 	?>
@@ -155,14 +153,70 @@ ORDER BY TotalShowtime  DESC";
   </tr>
 </thead>
 <tbody>
+	<?php 
+		$genre = "SELECT mg.Genre AS Genre,COUNT(showtime.StartDateTime) AS TotalShowtime
+		FROM(SELECT StartDateTime,MovieID FROM movietime)AS showtime, moviegenre mg
+		WHERE mg.MovieID = showtime.MovieID
+		GROUP BY mg.Genre
+		ORDER BY TotalShowtime  DESC";
+		$genreQuery = mysqli_query($connect,$genre);
+		while($g = mysqli_fetch_assoc($genreQuery)){
+
+	?>
 	<tr>
 		<th>
-			
+			<?php echo $g['Genre']; ?>
 		</th>
+
 		<td>
-			
+			<?php 
+				$thisGenre = $g['Genre'];
+				$genreSale = "SELECT COUNT(SeatID)AS SeatCount FROM seat4room s4 INNER JOIN moviegenre mg ON mg.MovieID=s4.MovieID WHERE Genre = '$thisGenre' AND SeatStatus = 1";
+				$genreSaleQuery = mysqli_query($connect,$genreSale);
+				$genSale = mysqli_fetch_assoc($genreSaleQuery);
+				echo $genSale['SeatCount'];
+			?>
+		</td>
+		<td>
+			<?php echo $g['TotalShowtime']; ?>
+		</td>
+		<td>
+			<?php
+			 	 $genreMovie = "SELECT COUNT(MovieID)AS movieCount FROM  moviegenre WHERE Genre = '$thisGenre'";
+			 	 $genreMovieQuery = mysqli_query($connect,$genreMovie);
+			 	 $genreMovieCount = mysqli_fetch_assoc($genreMovieQuery);
+			 	 echo $genreMovieCount['movieCount'];
+			?>
+		</td>
+		<td>
+			<?php 
+				$genreMostSale = "SELECT RoomMovie.MovieID AS MovieID, MAX(RoomMovie.SeatCount)AS MaxGenre ,Genre
+FROM (SELECT MovieID,COUNT(SeatID) AS SeatCount FROM seat4room  WHERE SeatStatus = 1 GROUP BY MovieID) AS RoomMovie INNER JOIN moviegenre ON moviegenre.MovieID = RoomMovie.MovieID
+WHERE Genre = '$thisGenre'";
+				$genreMostQuery = mysqli_query($connect,$genreMostSale);
+				$genMost = mysqli_fetch_assoc($genreMostQuery);
+				
+				$mostID = $genMost['MovieID'];
+				$countShowTime = "SELECT MovieName, COUNT(mov.StartDateTime) AS showCount
+FROM (SELECT MovieID,StartDateTime FROM movietime WHERE MovieID = '$mostID')AS mov INNER JOIN movie ON movie.MovieID = mov.MovieID";
+				$mostIDQuery = mysqli_query($connect,$countShowTime);
+				$most = mysqli_fetch_assoc($mostIDQuery);
+				echo $mostID." : ".$most['MovieName'];
+			?>
+		</td>
+		<td><?php
+			echo $genMost['MaxGenre'];
+		?></td>
+		<td>
+			<?php
+			echo $most['showCount'];
+				
+			?>
 		</td>
 	</tr>
+	<?php
+		}
+	?>
 </tbody>
 </table>
 </div>
