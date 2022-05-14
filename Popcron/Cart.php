@@ -112,7 +112,7 @@
 						$c++;
 					}
 				?>
-                <input type = "submit" name = "Purchase" value = "Purchase">
+                <br><input type = "submit" name = "Purchase" class = "btn-3" value = "Purchase">
 				</form>
             </div>
         </div>

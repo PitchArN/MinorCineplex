@@ -81,8 +81,8 @@
       <input type="hidden" name="seats" value="<?php echo $seats ?>">
       <input type="hidden" name="StartDateTime" value="<?php echo $StartDateTime ?>">
       <h3><label for="ticketPromotion">Promotion Code</label><h3>
-      <select name="" id="ProSelect" onchange="update()">
-      <option value="" class="btn-warning rounded-3">-----------------</option>
+      <select name="" id="ProSelect" class = "proselect" onchange="update()">
+      <option value="" class="btn-8 ">-----------------</option>
       
 <?php 
 //------------ query all promotion
@@ -101,10 +101,10 @@
   </div>
   <div class="row">
    <div class = "bath">
-      <h3><label for="confirmTicketOrder">
+      <h2><label for="confirmTicketOrder">
         <input type="hidden" id="totalOriginal" name="" value= "<?php echo $totalPrice; ?>">
-        <input type="text" id="totalPrice">
-      </label></h3><br>
+        <input type="text" id="totalPrice" readonly class = "label" >
+      </label></h2><br>
       </div>
       <input type="submit" name="confirmTicketOrder" class="btn-warning rounded-3" value="Confirm">
   </div>

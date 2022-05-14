@@ -154,7 +154,7 @@
 					</div><!--End Table-->
 					
 					<div id="legalcopy">
-						<p class="legal"><strong><a class="button" href="../Home/Home1.php">ชำระเสร็จสิ้น</a></strong>   
+						<p class="legal"><strong><a class="button" href="../Home/HomeWback.php">ชำระเสร็จสิ้น</a></strong>   
 						</p>
 					</div>
 
