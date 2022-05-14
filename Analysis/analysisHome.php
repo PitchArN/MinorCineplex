@@ -234,15 +234,44 @@ FROM (SELECT MovieID,StartDateTime FROM movietime WHERE MovieID = '$mostID')AS m
   </tr>
 </thead>
 <tbody>
-	<?php ?>
+	<?php 
+		$productList = "SELECT * FROM itemstock ORDER BY ProductType DESC";
+		$productListQuery = mysqli_query($connect,$productList);
+		while($product = mysqli_fetch_assoc($productListQuery)){
+			$thisProduct = $product['ItemID'];
+
+			//--------------------- FIND Quantity
+			$saleCount = "SELECT SUM(Quantity) AS itemSold FROM itemorder WHERE ItemID = '$thisProduct'";
+			$saleCountQuery = mysqli_query($connect,$saleCount);
+			$soldAmount = mysqli_fetch_assoc($saleCountQuery);
+
+
+			//--------------------- FIND Membertype
+			$memberCount = "SELECT MAX(mostMemType.itemSold) AS MaxSoldMemType,mostMemType.MemberType AS MemType
+FROM (SELECT SUM(Quantity) AS itemSold,MemberType
+FROM itemorder INNER JOIN member ON member.MemberID = itemorder.MemberID 
+WHERE ItemID = '$thisProduct' GROUP BY MemberType) AS mostMemType";
+			$memberCountQuery = mysqli_query($connect,$memberCount);
+			$mostMember = mysqli_fetch_assoc($memberCountQuery);
+	?>
 	<tr>
 		<th>
-			
+			<?php echo $thisProduct; ?>
 		</th>
 		<td>
-			
+			<?php echo $product['ItemName'];?>
 		</td>
+		<td>
+			<?php echo $product['ProductType'];?>
+		</td>
+		<td><?php echo ($product['Price']*$soldAmount['itemSold']);?></td>
+		<td><?php echo $soldAmount['itemSold']; ?></td>
+		<td><?php echo $product['Price'];?></td>
+		<td><?php echo $mostMember['MemType'];?></td>
 	</tr>
+	<?php
+}
+	?>
 </tbody>
 </table>
 
@@ -328,17 +357,43 @@ FROM (SELECT * FROM itemorder WHERE StaffID = '$thisStaff' GROUP BY OrderID) AS 
     <th scope="col">Start Date</th>
     <th scope="col">End Date</th>
     <th scope="col">Total Use</th>
+    <th scope="col">Ticket Use</th>
+    <th scope="col">Product Use</th>
   </tr>
 </thead>
 <tbody>
+	<?php 
+		$proFind = "SELECT p.ProID AS ProID,p.ProName AS ProName,p.Prodetails AS ProDetails,p.Protype AS Protype,p.ProCondition AS ProCon,p.ProStartDate AS ProStart,p.ProEndDate AS ProEnd,COUNT(ito.Quantity)AS UseProduct
+FROM promotion p
+INNER JOIN itemstock it ON p.ProID=it.ProID INNER JOIN itemorder ito ON it.ItemID=ito.ItemID
+GROUP BY p.ProID";
+		$proQuery = mysqli_query($connect,$proFind);
+		while($pro = mysqli_fetch_assoc($proQuery)){
+			$thisPro = $pro['ProID'];
+			$ticketPro = "SELECT COUNT(ito.TicketProductID)AS TicketUsed
+FROM ticketproduct ito WHERE ProID= '$thisPro'";
+			$ticketProQuery = mysqli_query($connect,$ticketPro);
+			$ticketProResult = mysqli_fetch_assoc($ticketProQuery);
+	?>
 	<tr>
 		<th>
-			
+			<?php echo $thisPro; ?>
 		</th>
 		<td>
-			
+			<?php echo $pro['ProName']; ?>
 		</td>
+		<td><?php echo $pro['ProDetails']; ?></td>
+		<td><?php echo $pro['Protype']; ?></td>
+		<td><?php echo $pro['ProCon']; ?></td>
+		<td><?php echo date("Y-M-d H:i:s",strtotime($pro['ProStart'])); ?></td>
+		<td><?php echo date("Y-M-d H:i:s",strtotime($pro['ProStart'])); ?></td>
+		<td><?php echo ($ticketProResult['TicketUsed']+$pro['UseProduct']);?></td>
+		<td><?php echo $ticketProResult['TicketUsed'];?></td>
+		<td><?php echo $pro['UseProduct']; ?></td>
 	</tr>
+<?php
+	}
+?>
 </tbody>
 </table>
 </div>
