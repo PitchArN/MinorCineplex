@@ -67,5 +67,9 @@ input{
     max-width: 90%;
     padding: 1em 2em;
     border-radius: 4px;
+    justify-content: center;
 
+}
+.labelLeft{
+    text-align: right;
 }
