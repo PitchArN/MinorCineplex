@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">
-      <img src="pngtree-initial-m-graphic-design-template-vector-isolated-illustration-png-image_1716255-removebg-preview.PNG" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="../Utility/pngtree-initial-m-graphic-design-template-vector-isolated-illustration-png-image_1716255-removebg-preview.PNG" alt="" width="30" height="24" class="d-inline-block align-text-top">
       Minor Cineplex
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
-            <li><a class="dropdown-item" href="../PointPromotion/Test.php">Point Promotion</a></li>
+            <li><a class="dropdown-item" href="../PointPromotion/Test.php">Another Products</a></li>
         
           </ul>
         </li>
@@ -49,9 +49,6 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success me-2" type="submit">Login</button>
-        <button class="btn btn-outline-success" type="submit">Signin</button>
       </form>
       </div>
     </div>

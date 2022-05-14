@@ -55,7 +55,7 @@
 
 
 
-
+<br><br><br><br>
 
 <br><br><br><br><br><br><br><br><br><br>
 <!-- 5555555 -->
@@ -65,7 +65,6 @@
 <!---- Sample -->
 <center><div class="modalcontent">
 <br>
-<h1>Check In Staff</h1>
 
 
 
@@ -73,18 +72,24 @@
 
 
 <div class="row gx-3">
-<div class="col" align = "left">
-<div class ="labelLeft"><label for="staffID" class="form-label">ID</label></div>
-  <input type="number" class="form-control" id="staffID" name="staffID">
+<div class="col" >
+<form method="get" action="NewStaff.php">
+    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">AddStaff</button>
+</form>
+</div>
+<div class="col" >
+<form method="get" action="../add Movie/add-movie.php">
+    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">AddMovie</button>
+</form>
+</div>
+<div class="col" >
+<form method="get" action="CheckStaff.php">
+    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">CheckStaff</button>
+</form>
 </div>
 
 </div>
-<div class="row gx-3">
-<div class="col" align = "left">
-  <label for="staffPassword" class="form-label">Staff Password</label>
-  <input type="password" class="form-control" id="staffPassword" name="staffPassword" required>
-</div>
-</div>
+
 <br>
 
 
@@ -93,12 +98,11 @@
 
 <br>
 
-<center><input type="submit" class = "btn btn-outline-success me-2 "  name="CheckIn" value="CheckIn"></center>
-<br>
+
 </div></center>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-
+<br><br><br><br>
 
 
 

@@ -30,21 +30,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="../Home/HomeWback.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href=""></a>
+          <a class="nav-link" href="#"></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Product
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
-            <li><a class="dropdown-item" href="#">Another Products</a></li>
-            
-            <!--<li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#"></a></li>-->
+            <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
+            <li><a class="dropdown-item" href="../PointPromotion/Test.php">Another Products</a></li>
+        
           </ul>
         </li>
         <li class="nav-item">
@@ -52,9 +50,6 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success me-2" type="submit">Login</button>
-        <button class="btn btn-outline-success" type="submit">Signin</button>
       </form>
       </div>
     </div>
