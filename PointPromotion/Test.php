@@ -57,22 +57,30 @@
     </div>
   </div>
 </nav>
-<br>
 
 
-<div class="container">
-<div class="row bg-secondary">
+<!---------slide---------->
 
-    <div>
-            <div class="carousel-item active">
-            </div>
+
+
+  <div id="slider">
+   <input type="radio" name="slider" id="slide1" checked>
+   <div id="slides">
+      <div id="overflow">
+         <div class="inner">
+           
             <?php 
               $today = date("Y-m-d",strtotime("now"));
               $sql = "SELECT * FROM promotion";
               $Query = mysqli_query($connect,$sql);
-              while ($result = mysqli_fetch_assoc($Query)) {
-            ?>
-            <div class="row">
+              $i = 1;
+              while ($result = mysqli_fetch_assoc($Query))  {
+            ?>  
+            
+            <div class="slide slide_<?php echo $i++;?>">
+            <div class="slide-content">
+               <div>
+                 
                   <p><?php echo $result['ProID']." : ".$result['ProName']?></p>
                   <span><?php echo $result['Prodetails']; ?><br>
                     <?php echo "<b>Condition:</b>".$result['ProCondition']; ?><br>
@@ -86,7 +94,30 @@
             <?php 
               }
             ?>
-    </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="controls">
+      <label for="slide1"></label>
+   </div>
+   <div id="bullets">
+      <label for="slide1"></label>
+   </div>
+</div>
+
+<!---------slide---------->
+
+
+<br>
+
+
+<div class="container">
+<div class="row bg-secondary">
+
+    
 </div>
 <br><br>
 <div class="row">
