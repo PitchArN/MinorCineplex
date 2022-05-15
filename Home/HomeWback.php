@@ -1,6 +1,15 @@
 <?php
   include 'connect.php';
+  session_start();
+  if(isset($_SESSION['memberID'])){
+    $memberID = $_SESSION['memberID'];
+  }
+  if(isset($_SESSION['staffID'])){
+    $staffID =$_SESSION['memberID'];
+    $staffRole = $_SESSION['role'];
+  }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +57,7 @@
           <a class="nav-link disabled">Contact</a>
         </li>
       </ul>
+      <a href="../Member/memberLogin.php"><button class = "btn-2">Login</button></a>
       <form class="d-flex">
       </form>
       </div>
