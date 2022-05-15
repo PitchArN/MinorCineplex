@@ -81,7 +81,7 @@
 </div>
 <div class="row gx-3">
 <div class="col" align = "left">
-  <label for="memberPassword" class="form-label">Staff Password</label>
+  <label for="memberPassword" class="form-label">Password</label>
   <input type="password" class="form-control" id="memberPassword" name="memberPassword" required>
 </div>
 </div>
