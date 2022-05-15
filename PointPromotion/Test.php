@@ -44,7 +44,7 @@
     </div>
   </div>
 </nav>
-        <div class="Promotion">
+        <div class="Promotion"><br>
             <h1>Promotion</h1>
         </div>
         <div class="PromotionBanner">
@@ -55,21 +55,12 @@
                     <span>ContentPromote1</span>
                     <h3>50% 0ff</h3>
             <p>offer ends after 5 days</p>
-                    <a href="Promotion1.php" class="btn">view offer</a>
+                    <a href="Promotion1.php"><button class="btn-1">view offer</button></a>
                 </div>
             </div>
-            <div class="Promotion2">
-                <div class="Content2">
-                    <span>ContentPromote2</span>
-                </div>
-            </div>
-            <div class="Promotion3">
-                <div class="Content3">
-                    <span>ContentPromote3</span>
-                </div>
-            </div>
+            
         </div>
-        <div class="F1">
+        <div class="F1"><br>
             <h1>For Member</h1>
         </div>
         
@@ -80,24 +71,10 @@
                     <span>มา 3 คน</span>
                     <h3>จ่ายแค่ 2 คน! </h3>
                     <p>offer ends after 3 days</p>
-                    <a href="PromotionFM1.php" class="btnFM1">view offer</a>
+                    <a href="PromotionFM1.php" ><button class="btn-2">view offer</button></a>
                 </div>
             </div>
-            <div class="MemberPro2">
-                <div class="Procontent2">
-                    <span>หนาวนี้กอดใคร   
-                      หนาวมั้ยมาดูหนังกัน
-                    </span>
-                    <h3>รับฟรี! ของสมนาคุณเพิ่มเติม </h3>
-                    <p>offer ends after 2 days</p>
-                    <a href="Promotion1.php" class="btnFM2">view offer</a>
-                </div>
-            </div>
-            <div class="MemberPro3">
-                <div class="Procontent3">
-                    <span>ContentFormember2</span>
-                </div>
-            </div>
+           
         </div>
         <!--Contact-->
         <style> .bg{
