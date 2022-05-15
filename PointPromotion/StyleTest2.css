@@ -184,8 +184,8 @@ h1{
   }
   .btn-1,.btn-2{
     font-size: 20px;
-    width: 100px;
-    height: 50px;
+    width: 130px;
+    height: 40px;
     border: none;
     background-color: rgb(255, 255, 255);
     border-radius: 4px;
@@ -196,13 +196,13 @@ h1{
   }
   .btn-1:hover, .btn-2:hover{
     
-    box-shadow: inset 100px 0 0 0 #f77a37  ;
+    box-shadow: inset 130px 0 0 0 #f77a37  ;
     cursor: pointer;
   }
   .btn-3{
     font-size: 18px;
     width: 130px;
-    height: 50px;
+    height: 80px;
     border: none;
     background-color: rgb(255, 255, 255);
     border-radius: 4px;
@@ -226,7 +226,9 @@ h1{
     overflow: hidden;
 
 }
-
+.needlog{
+    font-size: 10px;
+}
 
 
 
