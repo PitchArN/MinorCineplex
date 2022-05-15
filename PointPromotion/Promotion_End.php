@@ -1,3 +1,16 @@
+<?php
+  include '../sql/connect.php';
+  session_start();
+  if(isset($_SESSION['memberID'])){
+    $memberID = $_SESSION['memberID'];
+  }else{
+    $memberID = 0;
+  }
+  if(isset($_SESSION['staffID'])){
+    $staffID =$_SESSION['memberID'];
+    $staffRole = $_SESSION['role'];
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,8 +41,20 @@
         </p>
             <h4>QRCODE<h4>
         <p>
-            Point Used :</br>
-            Point Remain :</br>
+            Point Used :<?php
+							$sql = "SELECT Price FROM itemstock WHERE ItemID = 2";
+							$result = mysqli_query($connect,$sql) or die("Bad query");
+							$row = mysqli_fetch_row($result);
+							$price = $row[0];
+							echo $row[0];
+						?></br>
+            Point Remain :<?php
+							$sql = "SELECT MemberPoint FROM Member WHERE MemberID = $memberID";
+							$result = mysqli_query($connect,$sql) or die("Bad query");
+							$row = mysqli_fetch_row($result);
+							$point = $row[0];
+							echo $row[0];
+						?></br>
         </p>
       </div>
     </div>
