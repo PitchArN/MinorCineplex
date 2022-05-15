@@ -93,7 +93,7 @@
 
 <br>
 
-<center><input type="submit" class = "btn btn-outline-success me-2 "  name="CheckIn" value="CheckIn"></center>
+<center><input type="submit" class = "btn-1 "  name="CheckIn" value="CheckIn"></center>
 <br>
 </div></center>
 </form>
