@@ -52,7 +52,7 @@
     </div>
   </div>
 </nav>
-
+<form action = "Donesql.php" method = "post" enctype = "multipart/form-data">
     <div id="invoice-POS">
     
     <center id="top">
@@ -143,14 +143,16 @@
 
 						</table>
 					</div><!--End Table-->
-					
+					<input type = "hidden" name = "Sweet" value = "<?php echo $POP[0]; ?>">
+					<input type = "hidden" name = "Salty" value = "<?php echo $POP[1]; ?>">
+					<input type = "hidden" name = "BBQ" value = "<?php echo $POP[2]; ?>">
 					<div id="legalcopy">
-						<p class="legal"><strong><a class="button" href="../Home/HomeWback.php">ชำระเสร็จสิ้น</a></strong>   
-						</p>
+						<input type = "submit" name = "Finish" class = "btn-3"value = "ชำระเสร็จสิ้น">
 					</div>
 
 				</div><!--End InvoiceBot-->
-  </div><!--End Invoice-->
+			</div><!--End Invoice-->
+  </form>
   </center>
 
   <!-- Contact -->
