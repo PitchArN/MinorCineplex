@@ -75,7 +75,7 @@
 <div class="row gx-3">
 <div class="col" align = "left">
 <div class ="labelLeft"><label for="memberID" class="form-label">ID</label></div>
-  <input type="number" class="form-control" id="memberID" name="memberID">
+  <input type="number" class="form-control" id="memberID" name="memberID" min = "0">
 </div>
 
 </div>
