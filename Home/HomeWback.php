@@ -39,7 +39,7 @@
           Product
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
+            <li><a class="dropdown-item" href="../Popcron/GoToBuyPop.php">Popcorn</a></li>
             <li><a class="dropdown-item" href="../PointPromotion/Test.php">Another Products</a></li>
         
           </ul>
