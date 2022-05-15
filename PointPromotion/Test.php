@@ -89,18 +89,22 @@
         </div>
   </div>
 
-<div class="row bg-secondary">
+
 
            <h1>PROMOTION LIST</h1>
+           
+           <div class = "bg-2">
+           
+            <div class ="row">
             <?php 
               $today = date("Y-m-d",strtotime("now"));
               $sql = "SELECT * FROM promotion";
               $Query = mysqli_query($connect,$sql);
               while ($result = mysqli_fetch_assoc($Query))  {
             ?>  
- 
-               <div class="card">
-                 
+             
+               <div class ="col">
+                
                   <p><?php echo $result['ProID']." : ".$result['ProName']?></p>
                   <span><?php echo $result['Prodetails']; ?><br>
                     <?php echo "<b>Condition:</b>".$result['ProCondition']; ?><br>
@@ -110,12 +114,14 @@
                       echo "<b>Promotion Period: </b><br>".$start."-".$end;
                     ?>
                   </span>
-            </div>
+              </div>
             <?php 
               }
             ?>
-
+</div>
                </div>
+           
+            
 
 <br>
 
