@@ -12,6 +12,8 @@ $loginCheckQuery = mysqli_query($connect,$loginCheck);
 if(mysqli_num_rows($loginCheckQuery)!=0){
 	$s = mysqli_fetch_assoc($loginCheckQuery);
 	$_SESSION['memberID'] = $member;
+
+	header('Location: ../Home/HomeWback.php');
 ?>
 <div class="container bg-light">
 <div class="row d-flex justify-content-center">
@@ -26,6 +28,7 @@ if(mysqli_num_rows($loginCheckQuery)!=0){
 }else if(isset($_GET['logOut'])){
 	unset ( $_SESSION[‘memberID’] );
 	session_destroy();
+	header('Location: ../Home/HomeWback.php');
 ?>
 <div class="container bg-light">
 <div class="row d-flex justify-content-center">

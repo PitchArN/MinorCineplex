@@ -14,11 +14,11 @@ if(isset($_POST['Regis'])){
 
 	$regisTime = date("Y-m-d H:i:s",strtotime("now"));
 	$expTime = date("Y-m-d",strtotime("+1 Year"));
-	$sql = "INSERT INTO member(MemberID,MemberMail,MemberType,RegisterDateTime,Password,ExpDate,DateOfBirth) VALUES('$ID','$mail','$type','$regisTime','$pass','$expTime','$DoB') ";
+	$sql = "INSERT INTO member(MemberID,MemberName,MemberMail,MemberType,RegisterDateTime,Password,ExpDate,DateOfBirth) VALUES('$ID','$Name','$mail','$type','$regisTime','$pass','$expTime','$DoB') ";
 
 	$Query = mysqli_query($connect,$sql);
 		
-	header('Location: LinkStaffMovie.php');
+	header('Location: ../Home/HomeWback.php');
 	
 
 }
