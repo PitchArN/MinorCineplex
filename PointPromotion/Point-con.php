@@ -4,7 +4,7 @@
 ?>
 <html>
     <head>
-        <title>MinorCineplex | Popcorn</title>
+        <title>MinorCineplex | PointPromotion</title>
         <link rel="stylesheet" href="tien_style.scss">
         <!---------- Responsive ------->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,7 +66,7 @@
     <center>
     <div id="mid">
       <div class="info">
-        <h2>Promotion :</h2>
+       
         <p> 
             <?php
 					$c = 1;
