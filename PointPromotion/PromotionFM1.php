@@ -1,7 +1,13 @@
 <?php
-  include 'D:\connect.php';
-  $_SESSION['empty'] = 0;
+  include 'connect.php';
   session_start();
+  if(isset($_SESSION['memberID'])){
+    $memberID = $_SESSION['memberID'];
+  }
+  if(isset($_SESSION['staffID'])){
+    $staffID =$_SESSION['memberID'];
+    $staffRole = $_SESSION['role'];
+  }
 ?>
 <html>
     <head>
@@ -57,7 +63,7 @@
         <h4>
         Point Need : 100</br>
         Point Have : <?php
-							$sql = "SELECT MemberPoint FROM Member WHERE MemberID = 0";
+							$sql = "SELECT MemberPoint FROM Member WHERE MemberID = $memberID";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
