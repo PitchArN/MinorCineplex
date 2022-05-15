@@ -61,17 +61,34 @@
        ป๊อปคอนรสเกลือเพียงแค่ 100 แต้มก็แลกได้</br>
         เงื่อนไขเป็นไปตามที่บริษัทกำหนด</br></h4></br>
         <h4>
-        Point Need : 100</br>
+        Point Need : <?php
+							$sql = "SELECT Price FROM itemstock WHERE ItemID = 2";
+							$result = mysqli_query($connect,$sql) or die("Bad query");
+							$row = mysqli_fetch_row($result);
+							$price = $row[0];
+							echo $row[0];
+						?>
+		</br>
         Point Have : <?php
 							$sql = "SELECT MemberPoint FROM Member WHERE MemberID = $memberID";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
+							$point = $row[0];
 							echo $row[0];
 						?>
          <br>
          </h4><br>
-        
-         <a href="Promotion_End.php" ><button class="btn-3">Confirm Offer</button></a>
+        <?php
+			if($point < $price){
+				$dis = "disabled";
+			}
+			else{
+				$dis = '';
+			}
+		?>
+			<form action = "donePoint.php" method = "post" enctype = "multipart/form-data">
+			<input type = "submit" name = "Purchase" class = "btn-3" value = "Purchase" <?php echo $dis; ?>>
+			</form>
     </div>
     </div></center>
 </body>

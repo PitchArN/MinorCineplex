@@ -82,7 +82,20 @@
                     <span>Popcorn</span>
                     <h3>100 point</h3>
                     <p>offer ends after 3 days</p>
-                    <a href="PromotionFM1.php" ><button class="btn-2">view offer</button></a>
+					<?php
+						$sql = "SELECT Remain FROM itemstock WHERE ItemID = 2";
+						$result = mysqli_query($connect,$sql) or die("Bad query");
+						$row = mysqli_fetch_row($result);
+						if($row[0] > 0){
+							$ButtonShow = "view offer";
+							$dis = '';
+						}
+						else{
+							$ButtonShow = "Out";
+							$dis = "disabled";
+						}
+					?>
+                    <a href="PromotionFM1.php" ><button class="btn-2" <?php echo $dis?>><?php echo $ButtonShow?></button></a>
                 </div>
             </div>
            
