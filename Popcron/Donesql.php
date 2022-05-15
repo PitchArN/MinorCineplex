@@ -4,8 +4,10 @@
 	if(isset($_SESSION['memberID'])){
 		$memberID = $_SESSION['memberID'];
 	}
+	else
+		$memberID = 0;
 	if(isset($_SESSION['staffID'])){
-		$staffID =$_SESSION['memberID'];
+		$staffID =$_SESSION['staffID'];
 		$staffRole = $_SESSION['role'];
 	}
 	else
