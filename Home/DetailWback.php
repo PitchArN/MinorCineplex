@@ -118,26 +118,28 @@ if(isset($_GET['movieID'])){
         <div class="row">
         <header class="pb-3 mb-4 border-bottom">
           <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
-            <span class="fs-4">Movie Detail</span>
+            <!---span class="fs-4">Movie Detail</span--->
           </a>
         </header>
         </div>
         
 
         <div class="row">
+          <div class="col px-3">
 <div class = "MovieName">
         <h1 class="display-5 fw-bold" ><?php echo $movieName; ?></h1>
 </div>
+</div></div>
             <div class="container-fluid py-5">
       <div class="container" >
- <div class="row row-cols-md-4 g-1">
+ <div class="row row-cols-md-4 g-1 d-flex align-items-center">
 
         <div class="col">
               <img src = "<?php echo $moviePoster ?>" alt = "<?php echo $movieName; ?>" width="100%" height="450"><rect width="100%" height="100%" fill="#55595c"></rect></img>
         </div>
     
         <div class="col">
-        <iframe width="700" height="400"  src="<?php echo $movieTrailer; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        <iframe width="788" height="450"  src="<?php echo $movieTrailer; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe>
  </div> 
 
@@ -147,10 +149,23 @@ if(isset($_GET['movieID'])){
     </div>
 
             <div class="p-5 mb-4 bg-light rounded-3">
+               <div class="row">
                 <div class="col">
-                    <p class="col-md-8 " ><?php echo $movieDes; ?></p>
+                    <p class="col-md-8 " ><?php echo "<b>Lenght:</b> ".$movieLenght." minute" ; ?></p>
                 </div>
-
+                <div class="col">
+                    <p class="col-md-8 " ><?php echo "<b>Rating:</b> ".$movieRating; ?></p>
+                </div>
+                <div class="col">
+                    <p class="col-md-8 " ><?php echo "<b>Ages Rate</b>:".$movieRateAge; ?></p>
+                    
+                </div>
+              </div>
+               <div class="row">
+                <div class="col">
+                  <p class="col-md-8 " ><?php echo $movieDes; ?></p>
+                </div>
+               </div>
               <!-------------- Actor Tab---------------------->
               <div class="row">
                 <h3>Feature Actors</h3>
@@ -181,6 +196,7 @@ if(isset($_GET['movieID'])){
                     $lastDate = "0";
                     $showTime = "SELECT * FROM movietime WHERE MovieID='$mID' ORDER BY StartDateTime ASC";
                     $showTimeQuery = mysqli_query($connect,$showTime);
+                    if(mysqli_num_rows($showTimeQuery)>0){
                     while($show = mysqli_fetch_assoc($showTimeQuery)){
                       $dataDate = date("d M",strtotime($show['StartDateTime']));
                       if($lastDate=="0"){
@@ -201,6 +217,11 @@ if(isset($_GET['movieID'])){
                   </form>
                 </div>
                 <?php
+                  }}
+                  else{
+                ?>
+                    <div class="row d-flex justify-content-center"><h5>Coming Soon...</h5></div>
+                <?php 
                   }
                 ?>
 
