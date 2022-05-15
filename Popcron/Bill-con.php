@@ -1,5 +1,12 @@
 <?php
-	include 'D:\connect.php';
+	include '../sql/connect.php';
+	if(isset($_SESSION['memberID'])){
+		$memberID = $_SESSION['memberID'];
+	}
+	if(isset($_SESSION['staffID'])){
+		$staffID =$_SESSION['memberID'];
+		$staffRole = $_SESSION['role'];
+	}
 	$POP = array($_POST['Sweet'], $_POST['Salty'], $_POST['BBQ']);
 ?>
 <html>
