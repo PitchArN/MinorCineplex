@@ -55,7 +55,7 @@
     <button class="nav-link" id="nav-staff-tab" data-bs-toggle="tab" data-bs-target="#nav-staff" type="button" role="tab" aria-controls="nav-staff" aria-selected="false">
     	<div class="p-1 d-flex justify-content-center">
 					
-					<img class="align-self-center mr-3" src="https://cdn-icons.flaticon.com/png/512/2294/premium/2294104.png?token=exp=1652517293~hmac=49228a6bf3b67d3fc5501f27525eeb6e" width="50" height="50"><h4>Staff<br>Works</h4>
+					<img class="align-self-center mr-3" src="https://cdn-icons.flaticon.com/png/512/2294/premium/2294104.png?token=exp=1652640270~hmac=5a84a27eaca6bbd5babda1ea7da9705e" width="50" height="50"><h4>Staff<br>Works</h4>
 				</div>
     </button>
 

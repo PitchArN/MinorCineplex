@@ -239,7 +239,7 @@ if(isset($_GET['movieID'])){
                       }else if($dataDate!=$lastDate){
                         echo "</div><div class='row'><h3>".$dataDate."</h3></div><div class='row'>";
                       }
-                      $dataTime = date("h:i",strtotime($show['StartDateTime']));
+                      $dataTime = date("H:i",strtotime($show['StartDateTime']));
                       $lastDate = $dataDate;
                 ?>
                 <div class="col">

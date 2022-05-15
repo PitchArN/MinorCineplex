@@ -1,6 +1,6 @@
 <?php
 
-  include '../sql/connect.php';
+   include '../sql/connect.php';
   session_start();
   if(isset($_SESSION['memberID'])){
     $memberID = $_SESSION['memberID'];
@@ -8,7 +8,7 @@
     $memberID = 0;
   }
   if(isset($_SESSION['staffID'])){
-    $staffID =$_SESSION['memberID'];
+    $staffID =$_SESSION['staffID'];
     $staffRole = $_SESSION['role'];
   }else{
     $staffID = 0;
@@ -29,6 +29,22 @@
         <!---------- Boothstrap ------->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style type="text/css">
+        .btn-2{
+    width: 80px;
+    height: 30px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f77a37 ;
+    transition: ease-out 0.3s;
+    outline :none;
+}
+.btn-2:hover{
+    box-shadow: inset 150px 0 0 0 #f77a37  ;
+    cursor: pointer;
+}
+    </style>
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -76,24 +92,14 @@
     </div>
   </div>
 </nav>
-
-        <center><div class="box">
+<div class="container bg">
+        <center>
             <h1>Cart</h1>
-        </div></center>
-
-<q></q>
-                <div class="container">
+        </center>
+               
         <div class="row">
-            <div class="box">
-                    <!---------- Empty ------->
-                </div>
-            </div>
-        </div>
 
-
-               <div class="container">
-        <div class="row">
-            <div class="box">
+                <div class="form-group">
                 <p>Promotion</p>
                 <form action = "Bill.php" method = "post" enctype = "multipart/form-data">
 				<input type = "hidden" name = "Sweet" value = "<?php echo $POP[0]; ?>">
@@ -110,16 +116,18 @@
 								if($row[0] != 2){
 									echo $row[2];
 				?>
+                <br>
 				<input type="checkbox" id="SendPro<?php echo "$c";?>" name="Pro<?php echo "$c";?>" value="<?php echo $row[0];?>">
-				<label for="SendPro<?php echo "$c";?>"> <?php echo $row[1]?></label><br>
+				<label class="form-label btn-warning rounded-3" for="SendPro<?php echo "$c";?>"><?php echo $row[1]?></label><br>
 				<?php
 								}
 								else{
 									if($POP[1] > 2){
 										echo $row[2];
 				?>
+                <br>
 				<input type="checkbox" id="SendPro<?php echo "$c";?>" name="Pro<?php echo "$c";?>" value="<?php echo $row[0];?>">
-				<label for="SendPro<?php echo "$c";?>"> <?php echo $row[1]?></label><br>
+				<label class="form-lebel btn-warning rounded-3" for="SendPro<?php echo "$c";?>"><?php echo $row[1]?></label><br>
 				<?php
 									}
 								}
@@ -128,9 +136,10 @@
 						$c++;
 					}
 				?>
-                <br><input type = "submit" name = "Purchase" class = "btn-3" value = "Purchase">
+                <br><input type = "submit" name = "Purchase" class = "btn-2" value = "Purchase">
 				</form>
             </div>
+
         </div>
     </div>
 <!-- Contact -->

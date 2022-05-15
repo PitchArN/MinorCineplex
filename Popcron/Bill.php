@@ -1,6 +1,6 @@
 <?php
 
-  include '../sql/connect.php';
+   include '../sql/connect.php';
   session_start();
   if(isset($_SESSION['memberID'])){
     $memberID = $_SESSION['memberID'];
@@ -8,7 +8,7 @@
     $memberID = 0;
   }
   if(isset($_SESSION['staffID'])){
-    $staffID =$_SESSION['memberID'];
+    $staffID =$_SESSION['staffID'];
     $staffRole = $_SESSION['role'];
   }else{
     $staffID = 0;
@@ -26,6 +26,23 @@
         <!---------- Boothstrap ------->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<style type="text/css">
+        .btn-2{
+    width: 80px;
+    height: 30px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f77a37 ;
+    transition: ease-out 0.3s;
+    outline :none;
+}
+.btn-2:hover{
+    box-shadow: inset 150px 0 0 0 #f77a37  ;
+    cursor: pointer;
+}
+    </style>
+
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -73,23 +90,22 @@
     </div>
   </div>
 </nav>
-
-
-        <center><div class="box">
+<br><br>
+<div class="container bg">
+  <br><br>
+        <center>
             <h1>Cart</h1>
-        </div></center>
-        <q></q>
+        </center>
+<br>
 
-        <center><div class="box">
-            <div>
-                    <!---------- Empty ------->
-            </div>
+        <center>
+
             
-                <h2>purchase Method</h2>
-                <a class="button" href="#">Wallet</a>
-                <a class="button" href="#">Shopee</a>
-                <a class="button" href="#">Prompay</a>
-            </div>
+                <h2>Purchase Method</h2>
+                <button class="btn-2" disabled>Wallet</button>
+                <button class="btn-2" disabled>Shopee</button>
+                <button class="btn-2" disabled>Prompay</button>
+            <br><br>
         <form action = "Bill-con.php" method = "post" enctype = "multipart/form-data">
 				<input type = "hidden" name = "Sweet" value = "<?php echo $_POST['Sweet']; ?>">
 				<input type = "hidden" name = "Salty" value = "<?php echo $_POST['Salty']; ?>">
@@ -105,10 +121,15 @@
 						$c++;
 					}
 				?>
-                <input type = "submit" name = "ConfirmBut" value = "Confirm">
+                <input type = "submit" class="btn-2" name = "ConfirmBut" value = "Confirm">
 		</form>
 <!-- Contact -->
-
+</center>
+<br><br>
+<div class="d-flex justify-content-between py-4 my-4 border-top">
+      <p><center>© 2022 Minor Cineplex</center></p>
+    </div><br><br>
+</div>
 
 <style> .bg{
     background: rgba(0,0,0,0.6);
@@ -117,26 +138,4 @@
 </style>
 
 
-<!---------------------------- Footer ------------------------>
-<div class = "bg">
-  <div class="container">
-  <footer class="row row-cols-5 py-5 border-top">
-    <div class="col">
-      <a href="/" class="d-flex align-items-center mb-3 text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      </a>
-    </div>
-
-    <div class="col">
-
-    </div>
-
-    
-    <div class="d-flex justify-content-between py-4 my-4 border-top">
-      <p>© 2022 Minor Cineplex</p>
-    </div>
-  </footer>
-  </div>
-</div>
-    </body></center>
-</html>
+    </body></html>

@@ -7,7 +7,7 @@
     $memberID = 0;
   }
   if(isset($_SESSION['staffID'])){
-    $staffID =$_SESSION['memberID'];
+    $staffID =$_SESSION['staffID'];
     $staffRole = $_SESSION['role'];
   }else{
     $staffID = 0;
@@ -126,7 +126,7 @@
         <div class="col">
 
                     
-                <h1>BQQ</h1>
+                <h1>BBQ</h1>
                 <img class="image" src="3.jpg" ><br>
                 <?php
 							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 3";

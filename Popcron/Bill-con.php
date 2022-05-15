@@ -8,7 +8,7 @@
     $memberID = 0;
   }
   if(isset($_SESSION['staffID'])){
-    $staffID =$_SESSION['memberID'];
+    $staffID =$_SESSION['staffID'];
     $staffRole = $_SESSION['role'];
   }else{
     $staffID = 0;
@@ -95,16 +95,19 @@
     <center id="top">
       <div class="logo"></div>
       <div class="info"> 
-          ******************************</br>
-        <h2>RECEIPT</h2>
-        ******************************</br>
+ 
+        <h2 class="d-flex justify-content-center py-4 my-4 border-top border-bottom">
+        <center>RECEIPT</center>
+      </h2>
+
       </div><!--End Info-->
     </center><!--End InvoiceTop-->
     <center>
     <div id="mid">
       <div class="info">
-        <h2>Promotion :</h2>
-        <p> 
+        <h2 class="d-flex justify-content-center py-4 my-4 border-bottom">Promotion
+        </h2>
+        <p class="d-flex justify-content-center py-4 my-4 border-top border-bottom"> 
             <?php
 					$c = 1;
 					while($c <= 3){
@@ -125,12 +128,12 @@
     </div><!--End Invoice Mid-->
     <div id="bot">
 
-					<div id="table">
+					<div id="table border">
 						<table>
 							<tr class="tabletitle">
-								<td class="item"><h2>Item</h2></td>
-								<td class="Hours"><h2>Qty</h2></td>
-								<td class="Rate"><h2>Total</h2></td>
+								<th class="border-bottom border-Left">Item</th>
+								<th class="border-bottom border-Left">Qty</th>
+								<th class="border-bottom border-Left">Total</th>
 							</tr>
 							<?php
 								$c = 1;
@@ -151,40 +154,41 @@
 									$sum += $price;
 							?>
 							<tr class="service">
-								<td class="tableitem"><p class="itemtext"><?php echo $row[0]; ?></p></td>
-								<td class="tableitem"><p class="itemtext"><?php echo $POP[$c-1]; ?></p></td>
-								<td class="tableitem"><p class="itemtext"><?php echo $price; ?></p></td>
+								<th class=""><?php echo $row[0]; ?></th>
+								<td class="border-Left"><?php echo $POP[$c-1]; ?></td>
+								<td class="border-Left"><?php echo $price; ?></td>
 							</tr>
 							<?php
 									}
 								$c++;
 								}
 							?>
+							<tr><td><p class="d-flex justify-content-center py-4 my-4"></p></td></tr>
 							<tr class="tabletitle">
 								<td></td>
-								<td class="Rate"><h2>Sum</h2></td>
-								<td class="payment"><h2><?php echo $sum; ?></h2></td>
+								<th class="Rate">Sum</th>
+								<td class="payment"><?php echo $sum; ?></td>
 							</tr>
 							
 							<tr class="tabletitle">
 								<td></td>
-								<td class="Rate"><h2>discount</h2></td>
-								<td class="payment"><h2><?php echo $discount; ?></h2></td>
+								<th class="Rate">Discount</th>
+								<td class="payment"><?php echo $discount; ?></td>
 							</tr>
 
 							<tr class="tabletitle">
 								<td></td>
-								<td class="Rate"><h2>Total</h2></td>
-								<td class="payment"><h2><?php echo $sum-$discount; ?></h2></td>
+								<th class="Rate">Total</th>
+								<th class="payment"><?php echo $sum-$discount; ?></th>
 							</tr>
-
 						</table>
+						<br><br>
 					</div><!--End Table-->
 					<input type = "hidden" name = "Sweet" value = "<?php echo $POP[0]; ?>">
 					<input type = "hidden" name = "Salty" value = "<?php echo $POP[1]; ?>">
 					<input type = "hidden" name = "BBQ" value = "<?php echo $POP[2]; ?>">
 					<div id="legalcopy">
-						<input type = "submit" name = "Finish" class = "btn-3"value = "ชำระเสร็จสิ้น">
+						<input type = "submit" name = "Finish" class = "btn-2" value = "Done">
 					</div>
 
 				</div><!--End InvoiceBot-->

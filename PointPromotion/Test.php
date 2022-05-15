@@ -1,14 +1,16 @@
-<?php
+<?php 
   include '../sql/connect.php';
   session_start();
   if(isset($_SESSION['memberID'])){
     $memberID = $_SESSION['memberID'];
+  }else{
+    $memberID = 0;
   }
-  else
-	$memberID = 0;
   if(isset($_SESSION['staffID'])){
     $staffID =$_SESSION['staffID'];
     $staffRole = $_SESSION['role'];
+  }else{
+    $staffID = 0;
   }
 ?>
 <!DOCTYPE html>
@@ -42,7 +44,7 @@
           Product
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
+            <li><a class="dropdown-item" href="../Popcron/GoToBuyPop.php">Popcorn</a></li>
             <li><a class="dropdown-item" href="../PointPromotion/Test.php">Another Products</a></li>
         
           </ul>
@@ -51,20 +53,30 @@
           <a class="nav-link disabled">Contact</a>
         </li>
       </ul>
+      <?php
+        if($memberID ==0){
+      ?>
+        <a href="../Member/memberLogin.php"><button class = "btn-2">Login</button></a>
+      <?php }else {
+        echo "ID:".$memberID." ";?>
+        <a href="../Member/memberLogin_process.php?logOut=1"><button class = "btn-2">Logout</button></a>
+      <?php }?>
       <form class="d-flex">
       </form>
       </div>
     </div>
   </div>
 </nav>
+
+<br><br>
 <div class="container">
 <div class="row">
 
             <h1>POINT STORE</h1>
         
-        <div class="ForMember">
+        <div class="ForMember ">
             
-            <div class="MemberPro1">
+            <div class="MemberPro1 border border-light">
                 <div class="Procontent1">
                     <span>Popcorn</span>
                     <h3>100 point</h3>
@@ -87,7 +99,7 @@
 						$result = mysqli_query($connect,$sql) or die("Bad query");
 						$row = mysqli_fetch_row($result);
 						if($memberID == 0){
-							$ButtonShow = "Need Login";
+							$ButtonShow = "Login";
 							$dis = "disabled";
 						}
 						else if($row[0] > 0){
@@ -104,15 +116,15 @@
             </div>
            
         </div>
-  </div>
+  </div><br><br>
 
 
 
            <h1>PROMOTION LIST</h1>
            
-           <div class = "bg-2">
+           <div class = "bg-2 rounded-3">
            
-            <div class ="row">
+            <div class ="row gx-3">
             <?php 
               $today = date("Y-m-d",strtotime("now"));
               $sql = "SELECT * FROM promotion";
@@ -120,8 +132,8 @@
               while ($result = mysqli_fetch_assoc($Query))  {
             ?>  
              
-               <div class ="col">
-                
+               <div class ="col border border-light">
+                <div class="p-1 ">
                   <p><?php echo $result['ProID']." : ".$result['ProName']?></p>
                   <span><?php echo $result['Prodetails']; ?><br>
                     <?php echo "<b>Condition:</b>".$result['ProCondition']; ?><br>
@@ -131,6 +143,7 @@
                       echo "<b>Promotion Period: </b><br>".$start."-".$end;
                     ?>
                   </span>
+                </div>
               </div>
             <?php 
               }

@@ -61,7 +61,7 @@
 
                     $dateTime = $date." ".$time;
                     echo "DateTime = ".$dateTime."<br>";
-                    $startDateTime = date("y-m-d h:i:s",strtotime($dateTime));
+                    $startDateTime = date("y-m-d H:i:s",strtotime($dateTime));
                     //$startDateTime = strtotime($dateTime);
                     echo "time = ".$startDateTime."<br>";
 
@@ -73,7 +73,7 @@
                     $movieLenght = $movieLenghtAs['Length']+40;
 
                     // 40 min for cleaning + ads
-                    $endDateTime = date("y-m-d h:i:s",strtotime($startDateTime." + ".$movieLenght." minute"));
+                    $endDateTime = date("y-m-d H:i:s",strtotime($startDateTime." + ".$movieLenght." minute"));
 
                     $dateForSearch = $date."%";
                     $roomForSearch = $room."%";
@@ -85,7 +85,7 @@
                         while($checker = mysqli_fetch_assoc($allmovieShowSameDayRoomQuery) ){
                             $checkerStart = $checker['StartDateTime'];
                             $checkerLenght = $checker['Length']+40;
-                            $checkerEnd = date("y-m-d h:i:s",strtotime($checkerStart." + ".$checkerLenght." minute"));
+                            $checkerEnd = date("y-m-d H:i:s",strtotime($checkerStart." + ".$checkerLenght." minute"));
                             //----------------- check collision ---------------------
                             if(
                                 ($startDateTime >= $checkerStart && $endDateTime <= $checkerEnd)||// start later end first
