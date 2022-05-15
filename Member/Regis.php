@@ -70,8 +70,8 @@
 
 <div class="row gx-3">
     <div class ="col">
-  <label for="staffName" class="form-label">Name</label>
-  <input type="text" class="form-control" id="staffName" name="staffName" placeholder="Name" required>
+  <label for="memberName" class="form-label">Name</label>
+  <input type="text" class="form-control" id="memberName" name="memberName" placeholder="Name" required>
 </div>
 </div>
 
@@ -80,12 +80,12 @@
 
 <div class="row gx-3">
 <div class="col">
-  <label for="staffID" class="form-label">DateOfBirth</label>
-  <input type="Date" class="form-control" id="staffID" name="staffID">
+  <label for="memberDoB" class="form-label">DateOfBirth</label>
+  <input type="Date" class="form-control" id="memberDoB" name="memberDoB">
 </div>
 <div class="col">
-  <label for="staffType" class="form-label">Member Type</label>
-      <select id="staffType" name="staffType" class="form-select">
+  <label for="memberType" class="form-label">Member Type</label>
+      <select id="memberType" name="memberType" class="form-select">
         <option>Premium</option>
         <option>Normal</option>
       </select>
@@ -95,14 +95,14 @@
 
 <div class="row gx-3">
 <div class="col">
-  <label for="staffMail" class="form-label">E-Mail</label>
-  <input type="email" class="form-control" id="staffMail" name="staffMail" required>
+  <label for="memberMail" class="form-label">E-Mail</label>
+  <input type="email" class="form-control" id="memberMail" name="memberMail" required>
 </div>
 <br>
 
 <div class="col">
-  <label for="staffPassword" class="form-label">Password</label>
-  <input type="password" class="form-control" id="staffPassword" name="staffPassword" required>
+  <label for="memberPassword" class="form-label">Password</label>
+  <input type="password" class="form-control" id="memberPassword" name="memberPassword" required>
 </div>
 
 <br>
