@@ -5,7 +5,7 @@
     $memberID = $_SESSION['memberID'];
   }
   if(isset($_SESSION['staffID'])){
-    $staffID =$_SESSION['memberID'];
+    $staffID =$_SESSION['staffID'];
     $staffRole = $_SESSION['role'];
   }
 ?>
