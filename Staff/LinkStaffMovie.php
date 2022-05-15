@@ -107,7 +107,7 @@ if(empty($_SESSION['staffID'])){
  ?>
 
 
-<form method="get" action="">
+<form method="get" action="Stock.php">
     <button type="submit" name="EditWork" class = "btn-3 ">Add Stock</button>
 </form>
 
@@ -119,9 +119,9 @@ if(empty($_SESSION['staffID'])){
 <?php }if($staffRole=="TicketStaff"||$staffRole=="Manager"){ ?>
 
 
-<form method="get" action="">
+  <a href="../Home/homeWback.php">
     <button type="submit" name="EditWork" class = "btn-3">BuyTicket</button>
-</form>
+  </a>
 
 
 
@@ -176,19 +176,6 @@ if(empty($_SESSION['staffID'])){
 </form>
 
 
-<br>
-
-<br>
-
-
-
-
-
-<br>
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br>
 
 
 

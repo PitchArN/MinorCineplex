@@ -57,29 +57,49 @@
     </div>
   </div>
 </nav>
+<div class="container">
+<div class="row">
 
-
-<!---------slide---------->
-
-
-
-  <div id="slider">
-   <input type="radio" name="slider" id="slide1" checked>
-   <div id="slides">
-      <div id="overflow">
-         <div class="inner">
+            <h1>POINT STORE</h1>
+        
+        <div class="ForMember">
+            
+            <div class="MemberPro1">
+                <div class="Procontent1">
+                    <span>Popcorn</span>
+                    <h3>100 point</h3>
+                    <p>offer ends after 3 days</p>
+          <?php
+            $sql = "SELECT Remain FROM itemstock WHERE ItemID = 2";
+            $result = mysqli_query($connect,$sql) or die("Bad query");
+            $row = mysqli_fetch_row($result);
+            if($row[0] > 0){
+              $ButtonShow = "view offer";
+              $dis = '';
+            }
+            else{
+              $ButtonShow = "Out";
+              $dis = "disabled";
+            }
+          ?>
+                    <a href="PromotionFM1.php" ><button class="btn-2" <?php echo $dis?>><?php echo $ButtonShow?></button></a>
+                </div>
+            </div>
            
+        </div>
+  </div>
+
+<div class="row bg-secondary">
+
+           <h1>PROMOTION LIST</h1>
             <?php 
               $today = date("Y-m-d",strtotime("now"));
               $sql = "SELECT * FROM promotion";
               $Query = mysqli_query($connect,$sql);
-              $i = 1;
               while ($result = mysqli_fetch_assoc($Query))  {
             ?>  
-            
-            <div class="slide slide_<?php echo $i++;?>">
-            <div class="slide-content">
-               <div>
+ 
+               <div class="card">
                  
                   <p><?php echo $result['ProID']." : ".$result['ProName']?></p>
                   <span><?php echo $result['Prodetails']; ?><br>
@@ -96,60 +116,11 @@
             ?>
 
                </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div id="controls">
-      <label for="slide1"></label>
-   </div>
-   <div id="bullets">
-      <label for="slide1"></label>
-   </div>
-</div>
-
-<!---------slide---------->
-
 
 <br>
 
-
-<div class="container">
-<div class="row bg-secondary">
-
-    
-</div>
 <br><br>
-<div class="row">
 
-            <h1>POINT STORE</h1>
-        
-        <div class="ForMember">
-            
-            <div class="MemberPro1">
-                <div class="Procontent1">
-                    <span>Popcorn</span>
-                    <h3>100 point</h3>
-                    <p>offer ends after 3 days</p>
-					<?php
-						$sql = "SELECT Remain FROM itemstock WHERE ItemID = 2";
-						$result = mysqli_query($connect,$sql) or die("Bad query");
-						$row = mysqli_fetch_row($result);
-						if($row[0] > 0){
-							$ButtonShow = "view offer";
-							$dis = '';
-						}
-						else{
-							$ButtonShow = "Out";
-							$dis = "disabled";
-						}
-					?>
-                    <a href="PromotionFM1.php" ><button class="btn-2" <?php echo $dis?>><?php echo $ButtonShow?></button></a>
-                </div>
-            </div>
-           
-        </div>
-  </div>
 </div>
 <br><br>
 

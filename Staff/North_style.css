@@ -94,7 +94,7 @@ input{
     border: none;
     background-color: rgb(255, 255, 255);
     border-radius: 4px;
-    box-shadow: inset 500px 0 0 0 #f8cd22 ;
+    box-shadow: inset 500px 0 0 0 #f56e6e ;
     transition: ease-out 0s;
     outline :none;
 }
