@@ -1,9 +1,15 @@
 <?php
+session_start();
+$staffID =$_SESSION['staffID'];
+$staffRole = $_SESSION['role'];
+if(empty($_SESSION['staffID'])){
+  header('Location: CheckStaff.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>MinorCineplex | Add Staff</title>
+<title><?php echo "STAFF | ".$staffID;  ?></title>
 <!---------- Boothstrap ------->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -53,12 +59,7 @@
   </div>
 </nav>
 
-
-
-<br><br><br><br>
-
-
-<!-- 5555555 -->
+<br>
 
 
 
@@ -81,8 +82,12 @@
 </form>
 </div>
 <div class="col" >
-<form method="get" action="CheckStaff.php">
-    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">Staff Check</button>
+<form method="get" action="add-movie.php">
+    <label for="staffID">Select Movie</label>   
+    <select name="staffID" class=" form-control">
+      <option>1</option>
+    </select>
+    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Edit Movie</button>
 </form>
 </div>
 
@@ -93,7 +98,7 @@
 </div>
 </div>
 <br>
-
+<?php if($staffRole=="Manager"){ ?>
 <!---------------------------- Manager ------------------------------>
 <div class="row gx-3">
 <h3>For Manager</h3>
@@ -114,11 +119,22 @@
 </div>
 <div class="col" >
 <form method="get" action="AddStaffWork.php">
-    <label for="staffID"></label>   
+    <label for="staffID">Select Staff</label>   
     <select name="staffID" class=" form-control">
       <option>1</option>
     </select>
-    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Staff Work</button>
+    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Edit Staff Work</button>
+</form>
+</div>
+</div>
+<?php 
+  } 
+?>
+<br>
+<div class="row gx-3 form-group">
+<div class="col" >
+<form method="post" action="CheckStaff_process.php">
+    <button type="submit" name="logOut" class = "btn btn-outline-danger me-2 p-3 d-flex  form-control">LOGOUT</button>
 </form>
 </div>
 </div>
