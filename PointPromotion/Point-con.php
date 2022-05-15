@@ -5,7 +5,7 @@
 <html>
     <head>
         <title>MinorCineplex | PointPromotion</title>
-        <link rel="stylesheet" href="tien_style.scss">
+        <link rel="stylesheet" href="../Popcron/tien_style.scss">
         <!---------- Responsive ------->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!---------- Boothstrap ------->
