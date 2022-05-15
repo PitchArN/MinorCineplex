@@ -17,7 +17,7 @@ if(empty($_SESSION['staffID'])){
 <!---------- Responsive ------->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!---------- CSS -------------->
-<link href = "../popcron/tien_style.css" rel="stylesheet"/> 
+<link href = "North_style.css" rel="stylesheet"/> 
 
 </head>
 <body>
@@ -65,26 +65,29 @@ if(empty($_SESSION['staffID'])){
 
 
 <!---- Sample -->
-<center><div class="modalcontent">
+<div class="modalcontent">
 <br>
 
 
 
 <br>
-<div class="row gx-3">
+<div class = "row d-flex">
 <h3>For Staff</h3>
-</div><br>
+<br>
+</div>
 
-<div class="row gx-3">
 <?php if($staffRole=="MovieStaff"||$staffRole=="Manager"){  ?>
-<div class="col" >
+
+  <div class = "row d-flex">
 <form method="get" action="../add Movie/add-movie.php">
-    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">AddMovie</button>
+    <button type="submit" class = "btn-3">AddMovie</button>
 </form>
 </div>
-<div class="col" >
+
+<br>
+<div class = "row d-flex">
 <form method="post" action="add-movie.php">
-    <label for="movieID">Select Movie</label>   
+    <label for="movieID">Select Movie</label>   <br>
     <select name="movieID" class=" form-control">
     <?php $listMovie = "SELECT MovieID,MovieName FROM movie";
           $listMovieQuery = mysqli_query($connect,$listMovie);
@@ -93,82 +96,98 @@ if(empty($_SESSION['staffID'])){
       <option value="<?php echo $mlist['MovieID']; ?>"><?php echo $mlist['MovieID']." : ".$mlist['MovieName']; ?></option>
     <?php } ?>
     </select>
-    <button type="submit" name="EditMovie" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Edit Movie</button>
+    
+    <button type="submit" name="EditMovie" class = "btn-3">Edit Movie</button>
 </form>
-</div>
+          </div><br>
+          
+        
 <?php }
   if($staffRole=="PopcornStaff"||$staffRole=="Manager"){ 
  ?>
-<div class="col" >
+
+
 <form method="get" action="">
-    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex ">Add Stock</button>
+    <button type="submit" name="EditWork" class = "btn-3 ">Add Stock</button>
 </form>
-</div>
+
+
+
+
 
 <br>
 <?php }if($staffRole=="TicketStaff"||$staffRole=="Manager"){ ?>
-<div class="col" >
+
+
 <form method="get" action="">
-    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex ">BuyTicket</button>
+    <button type="submit" name="EditWork" class = "btn-3">BuyTicket</button>
 </form>
-</div>
+
+
+
+
+
+
+
+
 <?php } ?>
-</div>
+
 
 <br>
 <?php if($staffRole=="Manager"){ ?>
+
+
 <!---------------------------- Manager ------------------------------>
 
-<div class="row gx-3">
-<h3>For Manager</h3>
-</div><br>
 
-<div class="row gx-3">
-<div class="col" >
-<a href="../Analysis/analysisHome.php" class = "btn btn-outline-success me-2 p-3 d-flex justify-content-center">
-    Advance Anaylsis Report
+<h3>For Manager</h3>
+<br>
+
+
+
+<a href="../Analysis/analysisHome.php"> <button class = "btn-3">
+    Advance Anaylsis Report</button>
 </a>
-</div>
-</div><br>
-<div class="row gx-3 form-group">
-  <div class="col" >
+
+<br>
+<br>
+  
 <form method="get" action="NewStaff.php">
-    <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Add Staff</button>
+    <button type="submit" class = "btn-3">Add Staff</button>
 </form>
-</div>
-<div class="col" >
+
 <form method="get" action="AddStaffWork.php">
     <label for="staffID">Select Staff</label>   
     <select name="staffID" class=" form-control">
       <option>1</option>
     </select>
-    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Edit Staff Work</button>
+    <button type="submit" name="EditWork" class = "btn-3">Edit Staff Work</button>
 </form>
-</div>
-</div>
+
+
 <?php 
   } 
 ?>
 <br>
-<div class="row gx-3 form-group">
-<div class="col" >
+
+
 <form method="post" action="CheckStaff_process.php">
-    <button type="submit" name="logOut" class = "btn btn-outline-danger me-2 p-3 d-flex  form-control">LOGOUT</button>
+    <button type="submit" name="logOut" class = "btn-4">LOGOUT</button>
 </form>
-</div>
-</div>
-<br>
-
-<br>
-
-
-
 
 
 <br>
 
+<br>
 
-</div></center>
+
+
+
+
+<br>
+
+
+
 <br><br><br><br><br><br><br><br><br><br><br>
 
 
