@@ -3,6 +3,8 @@
   session_start();
   if(isset($_SESSION['memberID'])){
     $memberID = $_SESSION['memberID'];
+  }else{
+    $memberID = 0;
   }
   if(isset($_SESSION['staffID'])){
     $staffID =$_SESSION['memberID'];

@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MinorCineplex | PointPromotion</title>
+<title>MinorCineplex | Point Store</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="StyleTest2.css">
@@ -55,6 +55,8 @@
     </div>
   </div>
 </nav>
+<br><br>
+<div class="container-fluid d-flex justify-content-center">
         <div class="Promotion"><br>
             <h1>Promotion</h1>
         </div>
@@ -71,6 +73,7 @@
             </div>
             
         </div>
+
         <div class="F1"><br>
             <h1>For Member</h1>
         </div>
@@ -100,13 +103,22 @@
             </div>
            
         </div>
+</div>
+<br><br>
+
+
+
         <!--Contact-->
-        <style> .bg{
+
+
+<style> .bg{
     background: rgba(0,0,0,0.6);
     color: white;
 } 
 </style>
 
+
+<!---------------------------- Footer ------------------------>
 <div class = "bg">
   <div class="container">
   <footer class="row row-cols-5 py-5 border-top">
@@ -114,51 +126,20 @@
       <a href="/" class="d-flex align-items-center mb-3 text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
       </a>
-      <p class="text-muted">© 2022</p>
     </div>
 
     <div class="col">
 
     </div>
 
-    <div class="col" >
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact us</a></li>
-      </ul>
-    </div>
-
-    <div class="col">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-      </ul>
-    </div>
-
-    <div class="col">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-      </ul>
-    </div>
+    
     <div class="d-flex justify-content-between py-4 my-4 border-top">
       <p>© 2022 Minor Cineplex</p>
     </div>
   </footer>
   </div>
 </div>
-    </body>
 
-    </html>
+  
+</body>
+</html>
