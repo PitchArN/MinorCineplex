@@ -1,5 +1,8 @@
 <?php 
     include 'connect.php';
+    session_start();
+    $staffID =$_SESSION['staffID'];
+    $staffRole = $_SESSION['role'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +18,12 @@
 </head>
 <body>
 <br><br>
+<?php if(isset()) ?>
 
+<!------------------------------------ FOR ADD NEW MOVIE -------------------------------->
+<?php
+  }else{
+?>
 
 <form action="add-movie_process.php" enctype="multipart/form-data" method="post">
 <div class="container px-4 bg-light rounded-3">
@@ -116,5 +124,6 @@
 </form>
 </div>
 <br><br>
+<?php } ?>
 </body>
 </html>
