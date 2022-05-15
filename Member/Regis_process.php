@@ -1,5 +1,5 @@
  <?php
-include 'connect.php';
+include '../sql/connect.php';
 
 if(isset($_POST['Regis'])){
 	$Name = mysqli_real_escape_string($connect,$_POST['memberName']);

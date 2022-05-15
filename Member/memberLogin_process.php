@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include '../sql/connect.php';
 session_start();
 //$ses_userid =$_SESSION[staffID];
 //$ses_username = $_SESSION[staffPassword];

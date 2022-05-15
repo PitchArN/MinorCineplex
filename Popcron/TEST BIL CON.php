@@ -1,5 +1,5 @@
 <?php
-	include 'D:\connect.php';
+	include '../sql/connect.php';
 	//$c = 0;
 	//$POP = array($_POST['Sweet'], $_POST['Salty'], $_POST['BBQ']);
 	//while($c <= 2){

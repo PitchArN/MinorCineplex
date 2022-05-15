@@ -1,5 +1,5 @@
 <?php 
-    include 'connect.php';
+    include '../sql/connect.php';
     session_start();
     $staffID =$_SESSION['staffID'];
     $staffRole = $_SESSION['role'];
