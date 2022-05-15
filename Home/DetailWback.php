@@ -1,5 +1,17 @@
-<?php 
+<?php
   include '../sql/connect.php';
+  session_start();
+  if(isset($_SESSION['memberID'])){
+    $memberID = $_SESSION['memberID'];
+  }else{
+    $memberID = 0;
+  }
+  if(isset($_SESSION['staffID'])){
+    $staffID =$_SESSION['staffID'];
+    $staffRole = $_SESSION['role'];
+  }else{
+    $staffID = 0;
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +72,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">
-      <img src="pngtree-initial-m-graphic-design-template-vector-isolated-illustration-png-image_1716255-removebg-preview.PNG" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="../Utility/pngtree-initial-m-graphic-design-template-vector-isolated-illustration-png-image_1716255-removebg-preview.PNG" alt="" width="30" height="24" class="d-inline-block align-text-top">
       Minor Cineplex
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,7 +91,7 @@
           Product
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
+            <li><a class="dropdown-item" href="../Popcron/GoToBuyPop.php">Popcorn</a></li>
             <li><a class="dropdown-item" href="../PointPromotion/Test.php">Another Products</a></li>
         
           </ul>
@@ -88,6 +100,14 @@
           <a class="nav-link disabled">Contact</a>
         </li>
       </ul>
+      <?php
+        if($memberID ==0){
+      ?>
+        <a href="../Member/memberLogin.php"><button class = "btn-2">Login</button></a>
+      <?php }else {
+        echo "ID:".$memberID." ";?>
+        <a href="../Member/memberLogin_process.php?logOut=1"><button class = "btn-2">Logout</button></a>
+      <?php }?>
       <form class="d-flex">
       </form>
       </div>

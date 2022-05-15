@@ -1,14 +1,20 @@
+
 <?php
   include '../sql/connect.php';
   session_start();
   if(isset($_SESSION['memberID'])){
     $memberID = $_SESSION['memberID'];
+  }else{
+    $memberID = 0;
   }
   if(isset($_SESSION['staffID'])){
-    $staffID =$_SESSION['staffID'];
+    $staffID =$_SESSION['memberID'];
     $staffRole = $_SESSION['role'];
+  }else{
+    $staffID = 0;
   }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +63,14 @@
           <a class="nav-link disabled">Contact</a>
         </li>
       </ul>
-      <a href="../Member/memberLogin.php"><button class = "btn-2">Login</button></a>
+      <?php
+        if($memberID ==0){
+      ?>
+        <a href="../Member/memberLogin.php"><button class = "btn-2">Login</button></a>
+      <?php }else {
+        echo "ID:".$memberID." ";?>
+        <a href="../Member/memberLogin_process.php?logOut=1"><button class = "btn-2">Logout</button></a>
+      <?php }?>
       <form class="d-flex">
       </form>
       </div>

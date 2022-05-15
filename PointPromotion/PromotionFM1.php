@@ -9,6 +9,8 @@
   if(isset($_SESSION['staffID'])){
     $staffID =$_SESSION['memberID'];
     $staffRole = $_SESSION['role'];
+  }else{
+    $staffID = 0;
   }
 ?>
 <html>
@@ -41,7 +43,7 @@
           Product
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
+            <li><a class="dropdown-item" href="../Popcron/GoToBuyPop.php">Popcorn</a></li>
             <li><a class="dropdown-item" href="../PointPromotion/Test.php">Another Products</a></li>
         
           </ul>
@@ -50,6 +52,14 @@
           <a class="nav-link disabled">Contact</a>
         </li>
       </ul>
+      <?php
+        if($memberID ==0){
+      ?>
+        <a href="../Member/memberLogin.php"><button class = "btn-2">Login</button></a>
+      <?php }else {
+        echo "ID:".$memberID." ";?>
+        <a href="../Member/memberLogin_process.php?logOut=1"><button class = "btn-2">Logout</button></a>
+      <?php }?>
       <form class="d-flex">
       </form>
       </div>

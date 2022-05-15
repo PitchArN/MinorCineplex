@@ -1,4 +1,5 @@
 <?php
+include '../sql/connect.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,145 +15,205 @@
 
 </head>
 <body>
+<br>
+<?php
+  if (isset($_POST['NewItem'])) {
+    $ID = mysqli_real_escape_string($connect,$_POST['ID']);
+    $Name = mysqli_real_escape_string($connect,$_POST['Name']);
+    $Type = mysqli_real_escape_string($connect,$_POST['Type']);
+    $Price = mysqli_real_escape_string($connect,$_POST['Price']);
+    $Detail = mysqli_real_escape_string($connect,$_POST['detail']);
+    $ProID = mysqli_real_escape_string($connect,$_POST['proID']);
+    $remain= mysqli_real_escape_string($connect,$_POST['remain']);
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-  <a class="navbar-brand" href="#">
-      <img src="../Utility/pngtree-initial-m-graphic-design-template-vector-isolated-illustration-png-image_1716255-removebg-preview.PNG" alt="" width="30" height="24" class="d-inline-block align-text-top">
-      Minor Cineplex
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../Home/HomeWback.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Product
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../Popcron/BuyPop.php">Popcorn</a></li>
-            <li><a class="dropdown-item" href="../PointPromotion/Test.php">Another Products</a></li>
-        
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Contact</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-      </form>
+    $newItem = "INSERT INTO itemstock(ItemID,ItemName,ProductType,ProductDetails,Price,ProID,Remain) VALUES('$ID','$Name','$Type','$Detail','$Price','$ProID','$remain') ";
+    $newItemQuery = mysqli_query($connect,$newItem);
+    if($newItemQuery){
+?>
+      <div class="alert alert-success" role="alert">
+        New Item Added
       </div>
+<?php
+    }else{
+?>
+    <div class="alert alert-danger" role="alert">
+        Error On Add New Item
     </div>
-  </div>
-</nav>
+<?php
+    }
+  }
+?>
+<?php 
+    if (isset($_POST['AddStock'])) {
+    $ID = mysqli_real_escape_string($connect,$_POST['itemID']);
+    $remain= mysqli_real_escape_string($connect,$_POST['remain']);
+    $findItemAmount = "SELECT Remain FROM itemstock WHERE ItemID = '$ID'";
+    $findAmountQuery = mysqli_query($connect,$findItemAmount);
+    $amount = mysqli_fetch_assoc($findAmountQuery);
+    $newAmount = $amount['Remain']+$remain;
 
-<br>
-<!-- 5555555 -->
+    $updateStock = "UPDATE itemstock SET Remain = '$newAmount' WHERE ItemID = '$ID'";
+    $updateStockQuery = mysqli_query($connect,$updateStock);
+    if($updateStockQuery){
+?>
+    <div class="alert alert-success" role="alert">
+        Stock Added
+    </div>
+<?php      
+    }else{
+?>
+    <div class="alert alert-danger" role="alert">
+        Error To Update Stock
+    </div>
+<?php
+    }
 
+  }
+?>
 
-
-<!---- Sample -->
-<form action="Regis_process.php" enctype="multipart/form-data" method="post">
 <div class="container px-4 bg-light rounded-3">
+<!----------- UPDATE AMOUNT ITEM ------------------------->
+
 <br>
-<h1>Member Register</h1>
+<h1>Add Item To Stock</h1>
+<form action="Stock.php" enctype="multipart/form-data" method="post">
+<div class="row gx-3">
+  <div class ="col">
+  <label for="itemID" class="form-label">ProID</label>
+  <select class="form-control" id="itemID" name="itemID">
+    <?php
+      $itemFind = "SELECT * FROM itemstock";
+      $itemQuery = mysqli_query($connect,$itemFind);
+      while($item = mysqli_fetch_assoc($itemQuery)){ 
+    ?>
+    <option value="<?php echo $item['ItemID'];?>">
+      <?php echo $item['ItemID'].":".$item['ItemName']; ?>
+    </option>
+    <?php 
+      }
+    ?>
+  </select>
+</div>
+
+  <div class ="col">
+  <label for="remain" class="form-label">Amount(Add to Stock)</label>
+  <input type="number" class="form-control" id="remain" min="0" name="remain" placeholder="Amount" required>
+  <input type="submit" class = "btn-2"  name="AddStock" value="Add Stock">
+</div>
+</div>
+
+</form>
+<!-------------------------- Add New Item  ----------------------->
+<form action="Stock.php" enctype="multipart/form-data" method="post">
+
+<br>
+<h1>Add New Item</h1>
+<div class="row gx-3">
+    <div class ="col">
+  <label for="ID" class="form-label">ItemID</label>
+  <input type="text" class="form-control" id="ID" name="ID" placeholder="ItemID" required>
+</div>
+
+  <div class ="col">
+  <label for="Name" class="form-label">ItemName</label>
+  <input type="text" class="form-control" id="Name" name="Name" placeholder="ItemName" required>
+</div>
+</div>
 
 <div class="row gx-3">
     <div class ="col">
-  <label for="memberName" class="form-label">Name</label>
-  <input type="text" class="form-control" id="memberName" name="memberName" placeholder="Name" required>
+  <label for="Type" class="form-label">ItemType</label>
+  <select class="form-control" id="Type" name="Type">
+    <option>Popcorn</option>
+    <option>Glass</option>
+    <option>Decoration</option>
+    <option>Snacks</option>
+  </select>
+</div>
+
+  <div class ="col">
+  <label for="Price" class="form-label">Price(In Cash And Point)</label>
+  <input type="number" class="form-control" id="Price" min="0" name="Price" placeholder="Price" required>
 </div>
 </div>
-
-<br>
-
-
 <div class="row gx-3">
-<div class="col">
-  <label for="memberDoB" class="form-label">DateOfBirth</label>
-  <input type="Date" class="form-control" id="memberDoB" name="memberDoB">
+<div class ="col">
+  <label for="detail" class="form-label">Item Detail</label>
+  <textarea id="detail" name="detail" class="form-control"></textarea>
 </div>
-<div class="col">
-  <label for="memberType" class="form-label">Member Type</label>
-      <select id="memberType" name="memberType" class="form-select">
-        <option>Premium</option>
-        <option>Normal</option>
-      </select>
-    </div>
 </div>
 <br>
-
 <div class="row gx-3">
-<div class="col">
-  <label for="memberMail" class="form-label">E-Mail</label>
-  <input type="email" class="form-control" id="memberMail" name="memberMail" required>
+    <div class ="col">
+  <label for="proID" class="form-label">ProID</label>
+  <select class="form-control" id="proID" name="proID">
+    <?php
+      $proFind = "SELECT * FROM promotion";
+      $proQuery = mysqli_query($connect,$proFind);
+      while($pro = mysqli_fetch_assoc($proQuery)){ 
+    ?>
+    <option value="<?php echo $pro['ProID'];?>">
+      <?php echo $pro['ProID'].":".$pro['ProName']; ?>
+    </option>
+    <?php 
+      }
+    ?>
+  </select>
 </div>
-<br>
 
-<div class="col">
-  <label for="memberPassword" class="form-label">Password</label>
-  <input type="password" class="form-control" id="memberPassword" name="memberPassword" required>
+  <div class ="col">
+  <label for="remain" class="form-label">Amount(Add to Stock)</label>
+  <input type="number" class="form-control" id="remain" min="0" name="remain" placeholder="Amount" required>
 </div>
+<br><br><br><br>
 
-<br>
-
-
-<!-------
-<div class="row gx-3">
-  <label for="" class="form-label">Salary</label>
-  <div class="col">
-<div class="border border-3 rounded-3">
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle1">10,000</label>
-</div>
-</div>
-<div class="col">
-<div class="border border-3 rounded-3">
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle2">15,000</label>
-</div>
-</div>
-<div class="col">
-<div class="border border-3 rounded-3">
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle3">20,000</label>
-</div>
-</div>
-<div class="col">
-<div class="border border-3 rounded-3">
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle4">25,000</label>
-</div>
-</div>
-<div class="col">
-<div class="border border-3 rounded-3">
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle5">30,000</label>
-</div>
-</div>
--------->
-
-
-<br>
-
-<center><input type="submit" class = "btn me-2"  name="Regis" value="Register"></center>
+<center><input type="submit" class = "btn-2 me-2"  name="NewItem" value="Add New"></center>
 <br>
 </form>
 </div>
 <br>
+<div class="row">
+  <div class="col">
+<table  class="table">
+    <thead>
+  <tr>
+    <th scope="col">ItemID</th>
+    <th scope="col">ItemName</th>
+    <th scope="col">ProductType</th>
+    <th scope="col">ProductDetails</th>
+    <th scope="col">Price</th>
+
+    <th scope="col">ProID</th>
+    <th scope="col">Remain</th>
+  </tr>
+</thead>
+<tbody>
+<?php 
+    $itemFind = "SELECT * FROM itemstock";
+      $itemQuery = mysqli_query($connect,$itemFind);
+      while($item = mysqli_fetch_assoc($itemQuery)){
+?>
+  <tr>
+  <th><?php echo $item['ItemID']; ?></th>
+  
+  <td><?php echo $item['ItemName']; ?></td>
+  <td><?php echo $item['ProductType']; ?></td>
+  <td><?php echo $item['ProductDetails']; ?></td>
+  <td><?php echo $item['Price']; ?></td>
+  <td><?php echo $item['ProID']; ?></td>
+  <td><?php echo $item['Remain']; ?></td>
+  </tr>
+<?php } ?>
+</tbody>
+
+
+</table>
+</div></div>
 </div>
 <br>
 
 <br><br><br><br>
 
-</div>
 
 
 
