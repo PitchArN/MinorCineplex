@@ -1,5 +1,5 @@
 <?php
-  include 'connect.php';
+  include '../sql/connect.php';
   session_start();
   if(isset($_SESSION['memberID'])){
     $memberID = $_SESSION['memberID'];
