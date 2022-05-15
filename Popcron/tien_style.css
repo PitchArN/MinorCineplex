@@ -27,8 +27,8 @@ html,body {
     left: 16px;
 }
 .image{
-    width: 900px;
-    height: 600px;
+    width: 450px;
+    height: 300px;
     
 }
 .box{
@@ -82,6 +82,178 @@ input{
     outline :none;
 }
 .btn-1:hover{
+    box-shadow: inset 150px 0 0 0 #f77a37  ;
+    cursor: pointer;
+}
+.LoginButton {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.PromotionBanner .Promotion1 .Content1{
+    flex:1 1 250px;
+    text-align: left;
+    padding:10px;
+    text-transform: uppercase;
+}
+.PromotionBanner .Promotion2 .Content2{
+    flex:1 1 250px;
+    text-align: center;
+    padding:10px;
+    text-transform: uppercase;
+}
+.PromotionBanner .Promotion3 .Content3{
+    flex:1 1 250px;
+    text-align: right;
+    padding:10px;
+    text-transform: uppercase;
+}
+.PromotionBanner .Promotion1{
+    background:rgb(0,0,0,0.7);
+    border-radius: 5px;
+    margin:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    overflow: hidden;
+    color:#FFFFFF;
+}
+
+.PromotionBanner{
+    display: block;
+    align-items: left;
+    justify-content: left;
+}
+.ForMember{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+.ForMember .MemberPro1 {
+    background:rgb(0,0,0,0.7);
+    border-radius: 5px;
+    margin:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    color:#FFFFFF;
+}
+.ForMember .MemberPro1 .Procontent1{
+    flex:1 1 250px;
+    text-align: center;
+    padding:10px;
+    text-transform: uppercase;
+}
+.PromotionBanner .Promotion1 .Content1 .btn{
+    display: block;
+    height:40px;
+    width:150px;
+    line-height: 40px;
+    background: #f77a36;
+    color:#FFFFFF;
+    margin:5px auto;
+    text-decoration: none;
+}
+.PromotionBanner .Promotion1 .Content1{
+    flex:1 1 250px;
+    text-align: center;
+    padding:10px;
+    text-transform: uppercase;
+}
+
+.nav-item{
+    color: #FFFFFF;
+}
+.image__img{
+    display: block;
+    width: 100%;
+}
+.image__overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #ffffff ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.image__overlay:hover{
+    opacity: 1;
+}
+.image__title{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+.Promotion {
+    color: #ffffff ;
+}
+.F1 {
+    color: #ffffff ;
+}
+.ForMember .MemberPro1 .Procontent1 .btnFM1{
+    display: block;
+    height:40px;
+    width:150px;
+    line-height: 40px;
+    background: #f77a36;
+    color:#FFFFFF;
+    margin:5px auto;
+    text-decoration: none;
+}
+.ProFM1 {
+    align-items: center;
+    max-width: 50%;
+    background:rgb(0,0,0,0.7);
+    border-radius: 5px;
+    margin:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    overflow: hidden;
+    color:#FFFFFF;
+   
+}
+.ProFM1 .Detail {
+    
+    flex:1 1 250px;
+    text-align: center;
+    padding:10px;
+    text-transform: uppercase;
+}
+.Detail .btnCFM1 {
+    display: block;
+    height:40px;
+    width:150px;
+    line-height: 40px;
+    background: #f77a36;
+    color:#FFFFFF;
+    margin:5px auto;
+    text-decoration: none;
+    text-align: center;
+}
+.btn-2{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f77a37 ;
+    transition: ease-out 0.3s;
+    outline :none;
+}
+.btn-2:hover{
     box-shadow: inset 150px 0 0 0 #f77a37  ;
     cursor: pointer;
 }

@@ -59,11 +59,13 @@
     </div>
   </div>
 </nav>
+<div class="PromotionBanner">
+            <div class="Promotion1">
+                <div class="Content1">
 
 
 
-
-    <center><div class="box">
+    <center><div>
         <h1>Pop Corn</h1>
     </div></center>
 	<?php
@@ -77,15 +79,12 @@
 ?>
 <p></p>
     <form action = "Cart.php" method = "post" enctype = "multipart/form-data">
-     
-    
+
     <div class="row gx-3">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    
 <div class="col">
-    <div class="PromotionBanner">
-            <div class="Promotion1">
-                <div class="Content1">
+
                     
                 <h1>Sweet</h1>
                 <img class="image" src="1.jpg"><br>
@@ -95,15 +94,11 @@
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
-                        <center><input type="number" name = "Sweet" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>" font ></center>
-                </div>
-            </div>
-            </div>
+                        <input type="number" class="form-control" name = "Sweet" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>" font >
+
         </div>
         <div class="col">
-        <div class="PromotionBanner">
-            <div class="Promotion1">
-                <div class="Content1">
+  
                     
                 <h1>Salty</h1>
                 <img class="image" src="2.jpg" ><br>
@@ -113,15 +108,11 @@
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
-        <center><input type="number" name = "Salty" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>"></center>
-                </div>
-            </div>
-            </div>
+        <input type="number" class="form-control" name = "Salty" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>">
+
         </div>
         <div class="col">
-        <div class="PromotionBanner">
-            <div class="Promotion1">
-                <div class="Content1">
+
                     
                 <h1>BQQ</h1>
                 <img class="image" src="3.jpg" ><br>
@@ -131,19 +122,20 @@
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
-        <center><input type="number" name = "BBQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>"></center>
+        <input type="number" class="form-control" name = "BBQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>">
                 </div>
             </div>
-        </div>
-        </div>
-        </div>
+        
 
-        <br><br><br>
-<center><div class="box">
+
+<center><div >
+  <br>
 <center><q>Add all selected popcorn to the cart</q></center><br>
-<center><input type = "submit" name = "AddToCart" class = "btn-3"value = "add to cart"></center>
+<center><input type = "submit" class = "btn-2" name = "AddToCart" value = "add to cart" ></center>
     </div></center>
-
+    </div>
+        </div>
+        </div>
 <br><br><br>
 </form>
 <!-- Contact -->
