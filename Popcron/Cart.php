@@ -1,6 +1,13 @@
 <?php
-	include 'D:\connect.php';
+	include '../sql/connect.php';
 	session_start();
+	if(isset($_SESSION['memberID'])){
+		$memberID = $_SESSION['memberID'];
+	}
+	if(isset($_SESSION['staffID'])){
+		$staffID =$_SESSION['memberID'];
+		$staffRole = $_SESSION['role'];
+	}
 	if(empty($_POST['Sweet']) && empty($_POST['Salty']) && empty($_POST['BBQ'])){
 		$_SESSION['empty'] = 1;
 		header('Location:BuyPop.php');
