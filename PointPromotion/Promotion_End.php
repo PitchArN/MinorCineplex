@@ -9,8 +9,8 @@
 </head>
 <body>
     
-<div class = "wrapper" align = "center">
-  <div id = "modalbox" class="modal">
+  <div class = "wrapper" align = "center">
+    <div id = "modalbox" class="modal">
       <div class = "box">
 <div class="container">
       <div class="row-2  d-flex justify-content-center">
@@ -41,7 +41,7 @@
     <div class="row-1 d-flex justify-content-center">
       <h3>Use this confirmation code at the Cinema</h3>
     </div>
-    <a href = "../PointPromotion/Point-con.php"><button class = "btn-2" type= "button">Finish</button></a>
+    <a href = "../Home/HomeWback.php"><button class = "btn-2" type= "button">Finish</button></a>
     </div>
 </div>
 </div>
