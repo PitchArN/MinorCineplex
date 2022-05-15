@@ -62,6 +62,7 @@
 
 
 
+
     <center><div class="box">
         <h1>Pop Corn</h1>
     </div></center>
@@ -70,71 +71,80 @@
     ?>
 	<br>
 	<center><div class="box"><h5>Cannot create order</h5></div> </center>
-	
 	<?php
   }
   $_SESSION['empty'] = 0;
 ?>
 <p></p>
     <form action = "Cart.php" method = "post" enctype = "multipart/form-data">
-<div class="container">
-    <div class="row">
-<div class="pop">
-                        <img class="image" src="1.jpg">
-                        <h1>Sweet</h1>
-						<?php
+     
+    
+    <div class="row gx-3">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="col">
+    <div class="PromotionBanner">
+            <div class="Promotion1">
+                <div class="Content1">
+                    
+                <h1>Sweet</h1>
+                <img class="image" src="1.jpg"><br>
+                <?php
 							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 1";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
                         <center><input type="number" name = "Sweet" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>" font ></center>
-                    </div>
                 </div>
-                </div>
-
-
-
-    <div class="container">
-        <div class="row">
-    <div class="pop">
-        <img class="image" src="2.jpg" >
-        <h1>Salty</h1>
-						<?php
+            </div>
+            </div>
+        </div>
+        <div class="col">
+        <div class="PromotionBanner">
+            <div class="Promotion1">
+                <div class="Content1">
+                    
+                <h1>Salty</h1>
+                <img class="image" src="2.jpg" ><br>
+                <?php
 							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 2";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
         <center><input type="number" name = "Salty" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>"></center>
-    </div>
-</div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-    <div class="pop">
-        <img class="image" src="3.jpg" >
-        <h1>BQQ</h1>
-						<?php
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+        <div class="PromotionBanner">
+            <div class="Promotion1">
+                <div class="Content1">
+                    
+                <h1>BQQ</h1>
+                <img class="image" src="3.jpg" ><br>
+                <?php
 							$sql = "SELECT Remain FROM itemstock WHERE ItemID = 3";
 							$result = mysqli_query($connect,$sql) or die("Bad query");
 							$row = mysqli_fetch_row($result);
 							echo $row[0];
 						?>
         <center><input type="number" name = "BBQ" placeholder="quantity" min = "0" max = "<?php echo $row[0]; ?>"></center>
-        
-    </div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
 
+        <br><br><br>
 <center><div class="box">
 <center><q>Add all selected popcorn to the cart</q></center><br>
 <center><input type = "submit" name = "AddToCart" class = "btn-3"value = "add to cart"></center>
     </div></center>
 
-
+<br><br><br>
 </form>
 <!-- Contact -->
 
