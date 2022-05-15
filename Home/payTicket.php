@@ -1,5 +1,17 @@
-<?php 
+<?php
   include 'connect.php';
+  session_start();
+  if(isset($_SESSION['memberID'])){
+    $memberID = $_SESSION['memberID'];
+  }else{
+    $memberID = 0;
+  }
+  if(isset($_SESSION['staffID'])){
+    $staffID =$_SESSION['memberID'];
+    $staffRole = $_SESSION['role'];
+  }else{
+    $staffID = 0;
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,8 +64,19 @@
             $updateSeatQuery = mysqli_query($connect,$updateSeat);
 
             //-------------------------- Insert Into Ticket Order
-            $insertTicketOrder = "INSERT INTO ticket_order(TicketOrderID,TimeDate,TicketProductID,MemberID,StaffID,PurchaseType) VALUES('$ticketOrderID','$dateTime','$ticketProductID',0,0,'Online')";
+            $insertTicketOrder = "INSERT INTO ticket_order(TicketOrderID,TimeDate,TicketProductID,MemberID,StaffID,PurchaseType) VALUES('$ticketOrderID','$dateTime','$ticketProductID','$memberID','$staffID','Online')";
             $insertTicketOrderQuery = mysqli_query($connect,$insertTicketOrder);
+            if($memberID != 0){
+              $checkMemberPoint = "SELECT MemberPoint FROM member WHERE MemberID = '$memberID'";
+              $memPointQuery = mysqli_query($connect,$checkMemberPoint);
+              $memPoint = mysqli_fetch_assoc($memPointQuery);
+              $NewPoint = $memPoint['MemberPoint']+10;
+
+
+              $addMemPoint = "UPDATE member SET MemberPoint ='$NewPoint'  WHERE MemberID='$memberID'";
+              $addPointQuery = mysqli_query($connect,$addMemPoint);
+
+            }
 
 
             $ticketProductID++;
