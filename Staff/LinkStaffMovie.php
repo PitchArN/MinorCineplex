@@ -75,7 +75,7 @@ if(empty($_SESSION['staffID'])){
 </div><br>
 
 <div class="row gx-3">
-
+<?php if($staffRole=="MovieStaff"||$staffRole=="Manager"){  ?>
 <div class="col" >
 <form method="get" action="../add Movie/add-movie.php">
     <button type="submit" class = "btn btn-outline-success me-2 p-3 d-flex ">AddMovie</button>
@@ -90,16 +90,29 @@ if(empty($_SESSION['staffID'])){
     <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Edit Movie</button>
 </form>
 </div>
-
+<?php }
+  if($staffRole=="PopcornStaff"||$staffRole=="Manager"){ 
+ ?>
 <div class="col" >
 <form method="get" action="">
     <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex ">Add Stock</button>
 </form>
 </div>
+
+<br>
+<?php }if($staffRole=="TicketStaff"||$staffRole=="Manager"){ ?>
+<div class="col" >
+<form method="get" action="">
+    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex ">BuyTicket</button>
+</form>
 </div>
+<?php } ?>
+</div>
+
 <br>
 <?php if($staffRole=="Manager"){ ?>
 <!---------------------------- Manager ------------------------------>
+
 <div class="row gx-3">
 <h3>For Manager</h3>
 </div><br>

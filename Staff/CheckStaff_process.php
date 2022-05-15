@@ -36,7 +36,7 @@ if(mysqli_num_rows($loginCheckQuery)==1){
 	header('Location: CheckStaff.php');
 }
 }else if(isset($_POST['logOut'])){
-	unset ( $_SESSION[‘StaffID’] );
+	unset ( $_SESSION[‘staffID’] );
 	unset ( $_SESSION[‘role’] );
 	session_destroy();
 	header('Location: LinkStaffMovie.php');
