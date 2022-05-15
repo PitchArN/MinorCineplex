@@ -3,9 +3,9 @@
   session_start();
   if(isset($_SESSION['memberID'])){
     $memberID = $_SESSION['memberID'];
-  }else{
-    $memberID = 0;
   }
+  else
+	$memberID = 0;
   if(isset($_SESSION['staffID'])){
     $staffID =$_SESSION['staffID'];
     $staffRole = $_SESSION['role'];
@@ -82,6 +82,23 @@
               $dis = "disabled";
             }
           ?>
+					<?php
+						$sql = "SELECT Remain FROM itemstock WHERE ItemID = 2";
+						$result = mysqli_query($connect,$sql) or die("Bad query");
+						$row = mysqli_fetch_row($result);
+						if($memberID == 0){
+							$ButtonShow = "Need Login";
+							$dis = "disabled";
+						}
+						else if($row[0] > 0){
+							$ButtonShow = "view offer";
+							$dis = '';
+						}
+						else{
+							$ButtonShow = "Out";
+							$dis = "disabled";
+						}
+					?>
                     <a href="PromotionFM1.php" ><button class="btn-2" <?php echo $dis?>><?php echo $ButtonShow?></button></a>
                 </div>
             </div>
