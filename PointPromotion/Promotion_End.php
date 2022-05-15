@@ -41,7 +41,7 @@
     <div class="row-1 d-flex justify-content-center">
       <h3>Use this confirmation code at the Cinema</h3>
     </div>
-    <a href = "../Home/HomeWback.php"><button class = "btn-2" type= "button">Finish</button></a>
+    <a href = "../PointPromotion/Point-con.php"><button class = "btn-2" type= "button">Finish</button></a>
     </div>
 </div>
 </div>
