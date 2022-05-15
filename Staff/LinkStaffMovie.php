@@ -1,4 +1,5 @@
 <?php
+include 'connect.php';
 session_start();
 $staffID =$_SESSION['staffID'];
 $staffRole = $_SESSION['role'];
@@ -82,12 +83,17 @@ if(empty($_SESSION['staffID'])){
 </form>
 </div>
 <div class="col" >
-<form method="get" action="add-movie.php">
-    <label for="staffID">Select Movie</label>   
-    <select name="staffID" class=" form-control">
-      <option>1</option>
+<form method="post" action="add-movie.php">
+    <label for="movieID">Select Movie</label>   
+    <select name="movieID" class=" form-control">
+    <?php $listMovie = "SELECT MovieID,MovieName FROM movie";
+          $listMovieQuery = mysqli_query($connect,$listMovie);
+          while($mlist = mysqli_fetch_assoc($listMovieQuery)){
+    ?>
+      <option value="<?php echo $mlist['MovieID']; ?>"><?php echo $mlist['MovieID']." : ".$mlist['MovieName']; ?></option>
+    <?php } ?>
     </select>
-    <button type="submit" name="EditWork" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Edit Movie</button>
+    <button type="submit" name="EditMovie" class = "btn btn-outline-success me-2 p-3 d-flex  form-control">Edit Movie</button>
 </form>
 </div>
 <?php }
