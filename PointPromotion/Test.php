@@ -3,6 +3,8 @@
   session_start();
   if(isset($_SESSION['memberID'])){
     $memberID = $_SESSION['memberID'];
+  }else{
+    $memberID = 0;
   }
   if(isset($_SESSION['staffID'])){
     $staffID =$_SESSION['memberID'];
@@ -12,7 +14,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MinorCineplex | Point Store</title>
+<title>MinorCineplex | AnotherProduct</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="StyleTest2.css">
@@ -55,28 +57,41 @@
     </div>
   </div>
 </nav>
-<br><br>
-<div class="container-fluid d-flex justify-content-center">
-        <div class="Promotion"><br>
-            <h1>Promotion</h1>
-        </div>
-        <div class="PromotionBanner">
-            
-            <div class="Promotion1">
-                <div class="Content1">
-                    
-                    <span>Popcorn</span>
-                    <h3>50% 0ff</h3>
-            <p>offer ends after 5 days</p>
-            <a href="Promotion1.php"><button class="btn-1">view offer</button></a>
-                </div>
-            </div>
-            
-        </div>
+<br><br><br><br><br><br>
 
-        <div class="F1"><br>
-            <h1>For Member</h1>
-        </div>
+
+<div class="container">
+<div class="row bg-secondary">
+
+    <div>
+            <div class="carousel-item active">
+            </div>
+            <?php 
+              $today = date("Y-m-d",strtotime("now"));
+              $sql = "SELECT * FROM promotion";
+              $Query = mysqli_query($connect,$sql);
+              while ($result = mysqli_fetch_assoc($Query)) {
+            ?>
+            <div class="row">
+                  <p><?php echo $result['ProID']." : ".$result['ProName']?></p>
+                  <span><?php echo $result['Prodetails']; ?><br>
+                    <?php echo "<b>Condition:</b>".$result['ProCondition']; ?><br>
+                    <?php 
+                      $start = date("d-m-Y",strtotime($result['ProStartDate']));
+                      $end = date("d-m-Y",strtotime($result['ProEndDate']));
+                      echo "<b>Promotion Period: </b><br>".$start."-".$end;
+                    ?>
+                  </span>
+            </div>
+            <?php 
+              }
+            ?>
+    </div>
+</div>
+<br><br>
+<div class="row">
+
+            <h1>POINT STORE</h1>
         
         <div class="ForMember">
             
@@ -103,6 +118,7 @@
             </div>
            
         </div>
+  </div>
 </div>
 <br><br>
 
