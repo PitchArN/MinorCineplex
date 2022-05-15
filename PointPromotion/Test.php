@@ -52,7 +52,7 @@
             <div class="Promotion1">
                 <div class="Content1">
                     
-                    <span>ContentPromote1</span>
+                    <span>Popcorn</span>
                     <h3>50% 0ff</h3>
             <p>offer ends after 5 days</p>
             <a href="Promotion1.php"><button class="btn-1">view offer</button></a>
@@ -68,8 +68,8 @@
             
             <div class="MemberPro1">
                 <div class="Procontent1">
-                    <span>มา 3 คน</span>
-                    <h3>จ่ายแค่ 2 คน! </h3>
+                    <span>Popcorn</span>
+                    <h3>100 point</h3>
                     <p>offer ends after 3 days</p>
                     <a href="PromotionFM1.php" ><button class="btn-2">view offer</button></a>
                 </div>
