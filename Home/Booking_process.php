@@ -86,7 +86,7 @@
       
 <?php 
 //------------ query all promotion
-    $today = date("y-m-d h:i:s",strtotime("now"));
+    $today = date("y-m-d H:i:s",strtotime("now"));
     $promoSearch = "SELECT * FROM promotion WHERE '$today' > ProStartDate AND '$today' < ProEndDate";
     $promoSearchQuery = mysqli_query($connect,$promoSearch);
     while($pro = mysqli_fetch_assoc($promoSearchQuery)){

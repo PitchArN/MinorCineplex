@@ -159,9 +159,19 @@ if(empty($_SESSION['staffID'])){
 <form method="get" action="AddStaffWork.php">
     <label for="staffID">Select Staff</label>   
     <select name="staffID" class=" form-control">
-      <option>1</option>
+    <?php
+      $staffFind = "SELECT * FROM staff";
+      $staffQuery = mysqli_query($connect,$staffFind);
+      while($aStaff = mysqli_fetch_assoc($staffQuery)){ 
+    ?>
+      <option value="<?php echo $aStaff['StaffID'];?>">
+        <?php echo $aStaff['StaffID'].":".$aStaff['StaffName']; ?>
+      </option>
+    <?php 
+      } 
+    ?>
     </select>
-    <button type="submit" name="EditWork" class = "btn-3">Edit Staff Work</button>
+    <button type="submit" class = "btn-3">Edit Staff Work</button>
 </form>
 
 

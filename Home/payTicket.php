@@ -46,7 +46,7 @@
         $ticketProductQuery= mysqli_query($connect,$howManyInTicketProduct);
         $ticketProductID = mysqli_num_rows($ticketProductQuery);
         //--------------------------------------- Query Data to ticket_Order
-        $dateTime = date("y-m-d h:i:s",strtotime("now"));
+        $dateTime = date("y-m-d H:i:s",strtotime("now"));
         $ticketOrderID = strtotime("now");
 
 
@@ -58,7 +58,7 @@
             $insertTicketProductQuery = mysqli_query($connect,$insertTicketProduct);
             
             //------------------------- Update seat4room
-            $startDateTime = date("Y-m-d h:i:s",strtotime($StartDateTime));
+            $startDateTime = date("Y-m-d H:i:s",strtotime($StartDateTime));
             //$startDateTime = strtotime($StartDateTime);
             $updateSeat = "UPDATE seat4room SET SeatStatus = 1 WHERE (SeatID = '$s'AND MovieID = '$movieID' AND StartDateTime = '$startDateTime' )";
             $updateSeatQuery = mysqli_query($connect,$updateSeat);
