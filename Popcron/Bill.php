@@ -2,6 +2,15 @@
 
    include '../sql/connect.php';
   session_start();
+
+  function generateToken() {
+    return bin2hex(random_bytes(32));
+}
+
+// เก็บ token ใน session ถ้ายังไม่มีการสร้าง
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = generateToken();
+}
   if(isset($_SESSION['memberID'])){
     $memberID = $_SESSION['memberID'];
   }else{
@@ -14,6 +23,10 @@
     $staffID = 0;
   }
 
+  function escapeInput($data)
+  {
+    return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
+  }
 	/* if(!empty($_POST['Pro2']))
 		echo $_POST['Pro2']; */
 ?>
@@ -77,11 +90,11 @@
         </li>
       </ul>
       <?php
-        if($memberID ==0){
+        if($memberID == 0){
       ?>
         <a href="../Member/memberLogin.php"><button class = "btn-2">Login</button></a>
       <?php }else {
-        echo "ID:".$memberID." ";?>
+        echo "ID:".escapeInput($memberID)." ";?>
         <a href="../Member/memberLogin_process.php?logOut=1"><button class = "btn-2">Logout</button></a>
       <?php }?>
       <form class="d-flex">
@@ -99,8 +112,6 @@
 <br>
 
         <center>
-
-            
                 <h2>Purchase Method</h2>
                 <button class="btn-2" disabled>Wallet</button>
                 <button class="btn-2" disabled>Shopee</button>

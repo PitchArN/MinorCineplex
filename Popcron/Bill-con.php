@@ -1,20 +1,33 @@
 <?php
 
   include '../sql/connect.php';
-  session_start();
-  if(isset($_SESSION['memberID'])){
-    $memberID = $_SESSION['memberID'];
-  }else{
-    $memberID = 0;
-  }
-  if(isset($_SESSION['staffID'])){
-    $staffID =$_SESSION['staffID'];
-    $staffRole = $_SESSION['role'];
-  }else{
-    $staffID = 0;
-  }
 
-	$POP = array($_POST['Sweet'], $_POST['Salty'], $_POST['BBQ']);
+  function sanitizeInput($input) {
+    return htmlspecialchars(strip_tags($input));
+}
+  session_start();
+  $memberID = isset($_SESSION['memberID']) ? $_SESSION['memberID'] : 0;
+$staffID = isset($_SESSION['staffID']) ? $_SESSION['staffID'] : 0;
+$staffRole = isset($_SESSION['role']) ? $_SESSION['role'] : '';
+
+  
+
+	$POP = array(
+    isset($_POST['Sweet']) ? $_POST['Sweet'] : 0,
+    isset($_POST['Salty']) ? $_POST['Salty'] : 0,
+    isset($_POST['BBQ']) ? $_POST['BBQ'] : 0
+  );
+
+  if ($memberID < 0 || $staffID < 0) {
+    // Handle invalid session IDs
+    die("Invalid session IDs");
+}
+
+// Prevent path traversal by restricting access to specific directories
+if (!preg_match('/^[a-zA-Z0-9\/]+$/', $memberID) || !preg_match('/^[a-zA-Z0-9\/]+$/', $staffID)) {
+    // Handle invalid paths
+    die("Invalid file paths");
+}
 ?>
 <html>
     <head>
