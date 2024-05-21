@@ -1,4 +1,5 @@
 <?php 
+  header("Content-Security-Policy: frame-ancestors 'self'");
     include '../sql/connect.php';
   session_start();
   if(isset($_SESSION['memberID'])){
